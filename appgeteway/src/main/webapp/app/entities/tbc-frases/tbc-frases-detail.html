@@ -1,0 +1,40 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_frases.detail.title">Tbc Frases</span> {{vm.tbc_frases.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="global.field.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_frases.nome}}</span>
+        </dd>
+        <dt><span data-translate="global.field.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_frases.descricao}}</span>
+        </dd>
+
+        <dt><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_frases.tbc_instituicao.id})">{{vm.tbc_frases.tbc_instituicao.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.tbc_sub_grupo">Tbc Sub Grupo</span></dt>
+        <dd>
+            <a ui-sref="tbc-sub-grupo-detail({id:vm.tbc_frases.tbc_sub_grupo.id})">{{vm.tbc_frases.tbc_sub_grupo.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_frases.removido}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-frases-detail.edit({id:vm.tbc_frases.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

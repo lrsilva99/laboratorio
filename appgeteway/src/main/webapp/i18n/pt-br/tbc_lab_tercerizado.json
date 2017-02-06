@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_lab_tercerizado" : {
+            "home": {
+                "title": "Lab Tercerizado"
+            },
+            "detail": {
+                "title": "Lab. Tercerizado registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_lab_tercerizado" : {
+            "created": "Um novo Tbc Lab Tercerizado é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Lab Tercerizado é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Lab Tercerizado é deletado com o identificador {{ param }}"
+        }
+    }
+}

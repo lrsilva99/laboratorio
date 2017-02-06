@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_tipo_cadastro" : {
+            "home": {
+                "title": "Tipo de cadastro"
+            },
+            "detail": {
+                "title": "Tbc Tipo Cadastro"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_tipo_cadastro" : {
+            "created": "Um novo Tbc Tipo Cadastro é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Tipo Cadastro é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Tipo Cadastro é deletado com o identificador {{ param }}"
+        }
+    }
+}

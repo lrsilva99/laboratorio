@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_grupo_analise" : {
+            "home": {
+                "title": "Grupo de análise"
+            },
+            "detail": {
+                "title": "Grupo de análise registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_grupo_analise" : {
+            "created": "Um novo Tbc Grupo Analise é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Grupo Analise é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Grupo Analise é deletado com o identificador {{ param }}"
+        }
+    }
+}

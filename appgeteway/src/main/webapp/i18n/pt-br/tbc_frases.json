@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_frases" : {
+            "home": {
+                "title": "Frases"
+            },
+            "detail": {
+                "title": "Frases registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_frases" : {
+            "created": "Um novo Tbc Frases é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Frases é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Frases é deletado com o identificador {{ param }}"
+        }
+    }
+}

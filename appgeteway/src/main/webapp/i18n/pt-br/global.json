@@ -1,0 +1,172 @@
+{
+    "global": {
+        "title": "Sistema de laboratório",
+        "operacao": "Operação realizada com sucesso",
+        "browsehappy": "Você está usando um navegador <strong>desatualizado</strong>. Favor <a href=\"http://browsehappy.com/?locale=pt_BR\">atualizar o seu navegador</a> para ter uma experiência melhor.",
+        "menu": {
+            "home": "Início",
+            "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
+            "entities": {
+                "main": "Entidades",
+                "config": "Configuração",
+                "tbcInstituicao": "Instituição",
+                "tbcSubGrupo": "Grupo",
+                "tbcGrupoAnalise": "Grupo de análise",
+                "tbcFrases": "Frases",
+                "tbcFrasesOpcoes": "Frases opções",
+                "tbcTipoCadastro": "Tipo de cadastro",
+                "tbcFormulario": "Análises",
+                "tbcLabTercerizado": "Lab. tercerizado",
+                "tbcReport": "Tbc Report",
+                "tbcAnalises": "Tbc Analises",
+                "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
+                "subconfiglab": "Laboratório",
+                "subconfiganalise": "Análise"
+            },
+            "account": {
+                "main": "Conta",
+                "settings": "Configuração",
+                "password": "Senha",
+                "sessions": "Sessões",
+                "login": "Entrar",
+                "logout": "Sair",
+                "register": "Registrar"
+            },
+            "admin": {
+                "main": "Administração",
+                "gateway": "Gateway",
+                "userManagement": "Gerenciamento de usuário",
+                "tracker": "Rastreamento de usuário",
+                "metrics": "Métricas",
+                "health": "Estado do Sistema",
+                "configuration": "Configuração",
+                "logs": "Logs",
+                "audits": "Auditorias",
+                "apidocs": "API",
+                "database": "Banco de dados",
+                "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
+            },
+            "language": "Idioma"
+        },
+        "form": {
+            "username": "Usuário",
+            "username.placeholder": "Seu usuário",
+            "newpassword": "Nova senha",
+            "newpassword.placeholder": "Nova senha",
+            "confirmpassword": "Confirmação de nova senha",
+            "confirmpassword.placeholder": "Confirme a nova senha",
+            "email": "E-mail",
+            "email.placeholder": "Seu e-mail"
+        },
+        "messages": {
+            "info": {
+                "authenticated": "Para <a class=\"alert-link\" href=\"\" ng-click=\"vm.login()\">entrar</a>, utilize as seguintes contas padrões:<br/>- Administrador (usuário=\"admin\" and senha=\"admin\") <br/>- Usuário (usuário=\"user\" and senha=\"user\").",
+                "register": "Não possui uma conta ainda? <a class=\"alert-link\" href=\"\" ng-click=\"vm.register()\">Crie uma nova conta</a>"
+            },
+            "error": {
+                "dontmatch" : "A senha e sua confirmação devem ser iguais!"
+            },
+            "validate": {
+                "newpassword": {
+                    "required": "A senha é obrigatória.",
+                    "minlength": "A senha deve ter pelo menos 5 caracteres",
+                    "maxlength": "A senha não pode ter mais de 50 caracteres",
+                    "strength": "Nível de dificuldade da senha:"
+                },
+                "confirmpassword": {
+                    "required": "A confirmação da senha é obrigatória.",
+                    "minlength": "A confirmação da senha deve ter pelo menos 5 caracteres",
+                    "maxlength": "A confirmação da senha não pode ter mais de 50 caracteres"
+                },
+                "email": {
+                    "required": "O e-mail é obrigatório.",
+                    "invalid": "E-mail inválido.",
+                    "minlength": "O e-mail deve ter pelo menos 5 caracteres",
+                    "maxlength": "O e-mail não pode ter mais de 50 caracteres"
+                }
+            }
+        },
+        "field": {
+            "id"        : "Código",
+            "nome"      : "Nome",
+            "descricao" : "Descrição",
+            "sigla": "Sigla",
+            "uf": "UF",
+            "endereco": "Endereço",
+            "telefone": "Telefone",
+            "removido": "Remover / Reativar",
+            "tbc_instituicao" : "Instituição",
+            "tbc_sub_grupo"   : "Grupo",
+            "tbc_frases"      : "Frases",
+            "tbc_report": "Modelo relatorio",
+            "email"          : "e-mail",
+            "metpop"         : "Método",
+            "numerodias"   : "Dias de liberação",
+            "tbc_grupo_analise" : "Grupo de análise",
+            "tbc_tipo_cadastro" : "Tipo de cadastro",
+            "arquivo" : "Arquivo",
+            "tercerizado": "Tercerizado"
+
+        },
+        "ribbon": {
+            "dev":"Development"
+        }
+    },
+    "entity": {
+        "action": {
+            "addblob": "Adicionar blob",
+            "addimage": "Adicionar imagem",
+            "back": "Voltar",
+            "cancel": "Cancelar",
+            "delete": "Excluir",
+            "edit": "Editar",
+            "open": "Open",
+            "save": "Salvar",
+            "view": "Visualizar",
+            "frases_opçoes": "Opções"
+
+        },
+        "detail": {
+            "field": "Campo",
+            "value": "Valor"
+        },
+        "delete": {
+            "title": "Confirme a exclusão do registro",
+            "question": "Deseja  excluir  o registro <strong> ( {{ id }} ) </strong>?"
+        },
+        "validation": {
+            "required": "O campo é obrigatório.",
+            "minlength": "Este campo deve ter ao menos {{min}} caracteres.",
+            "maxlength": "Este campo não pode ter mais que {{max}} caracteres.",
+            "min": "Este campo deve ser maior que {{min}}.",
+            "max": "Este campo não pode ser maior que {{max}}.",
+            "minbytes": "Este campo deve ter ao menos {{min}} bytes.",
+            "maxbytes": "Este campo não pode ter mais que {{max}} bytes.",
+            "pattern": "Este campo deve estar dentro do seguinte padrão {{pattern}}.",
+            "number": "Este campo é do tipo número.",
+            "datetimelocal": "Este campo é do tipo data/hora."
+
+        },
+        "response" : {
+            "created": "Registro criado. Identificação {{ param }}",
+            "updated": "O registro identificador {{ param }} foi atualizado com sucesso",
+            "deleted": "O registro {{ param }} foi deletado com sucesso"
+        },
+        "home": {
+            "createLabel": "Novo registro",
+            "createOrEditLabel": "Criar ou editar",
+            "search": "Pesquisar"
+        }
+
+    },
+    "error": {
+        "server.not.reachable": "Servidor indisponível",
+        "url.not.found": "Not found",
+        "NotNull": "O Campo {{fieldName}} não pode ser vazio!",
+        "Size": "O campo {{fieldName}} não obedece os requisitos de tamanho mínimo ou máximo!",
+        "userexists": "Usuário já existente!",
+        "emailexists": "Este email já está cadastrado!",
+        "idexists": "Novo(a) {{entityName}} não pode ter uma ID"
+    },
+    "footer": "Desenvolvido por LABOTEC @"
+}

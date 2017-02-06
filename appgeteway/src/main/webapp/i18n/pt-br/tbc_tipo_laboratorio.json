@@ -1,0 +1,28 @@
+{
+    "appgetewayApp": {
+        "tbc_tipo_laboratorio" : {
+            "home": {
+                "title": "Tbc Tipo Laboratorios",
+                "createLabel": "Criar novo Tbc Tipo Laboratorio",
+                "createOrEditLabel": "Criar ou editar Tbc Tipo Laboratorio",
+                "search": "Pesquisar por Tbc Tipo Laboratorio"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Tipo Laboratorio {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Tipo Laboratorio"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_tipo_laboratorio" : {
+            "created": "Um novo Tbc Tipo Laboratorio é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Tipo Laboratorio é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Tipo Laboratorio é deletado com o identificador {{ param }}"
+        }
+    }
+}

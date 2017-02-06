@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_tipo_cadastro" : {
+            "home": {
+                "title": "Tbc Tipo Cadastros",
+                "createLabel": "Create a new Tbc Tipo Cadastro",
+                "createOrEditLabel": "Create or edit a Tbc Tipo Cadastro",
+                "search": "Search for Tbc Tipo Cadastro"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Tipo Cadastro {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Tipo Cadastro"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_tipo_cadastro" : {
+            "created": "A new Tbc Tipo Cadastro is created with identifier {{ param }}",
+            "updated": "A Tbc Tipo Cadastro is updated with identifier {{ param }}",
+            "deleted": "A Tbc Tipo Cadastro is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_sub_grupo" : {
+            "home": {
+                "title": "Grupos"
+            },
+            "detail": {
+                "title": "Grupo registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_sub_grupo" : {
+            "created": "Um novo Tbc Sub Grupo é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Sub Grupo é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Sub Grupo é deletado com o identificador {{ param }}"
+        }
+    }
+}

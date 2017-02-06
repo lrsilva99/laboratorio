@@ -1,0 +1,95 @@
+<div>
+    <h2 data-translate="appgetewayApp.tbc_frases.home.title">Tbc Frases</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tbc-frases.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="entity.home.createLabel">
+                        Create new Tbc Frases
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'entity.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nome"><span data-translate="global.field.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="descricao"><span data-translate="global.field.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="removido"><span data-translate="global.field.removido">Removido</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_instituicao.id"><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_sub_grupo.id"><span data-translate="global.field.tbc_sub_grupo">Tbc Sub Grupo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tbc_frases in vm.tbc_frases track by tbc_frases.id">
+                    <td><a ui-sref="tbc-frases-detail({id:tbc_frases.id})">{{tbc_frases.id}}</a></td>
+                    <td>{{tbc_frases.nome}}</td>
+                    <td>{{tbc_frases.descricao}}</td>
+                    <td>{{tbc_frases.removido}}</td>
+                    <td>
+                        <a ui-sref="tbc-instituicao-detail({id:tbc_frases.tbc_instituicao.id})">{{tbc_frases.tbc_instituicao.nome}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="tbc-sub-grupo-detail({id:tbc_frases.tbc_sub_grupo.id})">{{tbc_frases.tbc_sub_grupo.nome}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="tbc-frases-detail({id:tbc_frases.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-frases.edit({id:tbc_frases.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-frases.delete({id:tbc_frases.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-frases-opcoes({idfrases:tbc_frases.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.frases_opçoes"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

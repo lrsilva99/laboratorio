@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+   <changeSet author="Leonardo (generated)" id="1484580053225-1">
+      <createTable tableName="tbc_sub_grupo">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="tbc_sub_grupoPK"/>
+         </column>
+         <column name="created_by" type="VARCHAR(50)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="created_date" type="TINYBLOB">
+            <constraints nullable="false"/>
+         </column>
+         <column name="last_modified_by" type="VARCHAR(50)"/>
+         <column name="last_modified_date" type="TINYBLOB"/>
+         <column name="descricao" type="VARCHAR(255)"/>
+         <column name="nome" type="VARCHAR(255)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="sigla" type="VARCHAR(20)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="tbc_instituicao_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="Leonardo (generated)" id="1484580053225-2">
+      <addForeignKeyConstraint baseColumnNames="tbc_instituicao_id"
+                               baseTableName="tbc_sub_grupo"
+                               constraintName="FK2iqtv8rjx1jmomrg24jupsclj"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="tbc_instituicao"/>
+   </changeSet>
+</databaseChangeLog>

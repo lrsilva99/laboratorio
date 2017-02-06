@@ -1,0 +1,20 @@
+{
+    "appgetewayApp": {
+        "tbc_frases_opcoes" : {
+            "home": {
+                "title": "Frases opções"
+            },
+            "detail": {
+                "title": "Frases opções registro:"
+            },
+            "selecionada": "Frase selecionada  ({{ param }})"
+        }
+    },
+    "limsApp": {
+        "tbc_frases_opcoes" : {
+            "created": "Um novo Tbc Frases Opcoes é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Frases Opcoes é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Frases Opcoes é deletado com o identificador {{ param }}"
+        }
+    }
+}

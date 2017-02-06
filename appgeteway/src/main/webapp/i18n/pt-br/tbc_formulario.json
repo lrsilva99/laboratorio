@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_formulario" : {
+            "home": {
+                "title": "Análise"
+            },
+            "detail": {
+                "title": "Análise registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_formulario" : {
+            "created": "Um novo Tbc Formulario é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Formulario é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Formulario é deletado com o identificador {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_lab_tercerizado" : {
+            "home": {
+                "title": "Tbc Lab Tercerizados",
+                "createLabel": "Create a new Tbc Lab Tercerizado",
+                "createOrEditLabel": "Create or edit a Tbc Lab Tercerizado",
+                "search": "Search for Tbc Lab Tercerizado"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Lab Tercerizado {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Lab Tercerizado"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_lab_tercerizado" : {
+            "created": "A new Tbc Lab Tercerizado is created with identifier {{ param }}",
+            "updated": "A Tbc Lab Tercerizado is updated with identifier {{ param }}",
+            "deleted": "A Tbc Lab Tercerizado is deleted with identifier {{ param }}"
+        }
+    }
+}

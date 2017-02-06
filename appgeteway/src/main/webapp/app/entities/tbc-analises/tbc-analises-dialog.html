@@ -1,0 +1,138 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTbc_analisesLabel" data-translate="entity.home.createOrEditLabel">Create or edit a Tbc Analises</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.tbc_analises.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.tbc_analises.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="global.field.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="vm.tbc_analises.nome"
+                    required />
+            <div ng-show="editForm.nome.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="global.field.descricao" for="field_descricao">Descricao</label>
+                <textarea class="form-control" name="descricao" id="field_descricao"
+                    ng-model="vm.tbc_analises.descricao"  ></textarea>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="global.field.numerodias" for="field_numerodias">Numerodias</label>
+            <input type="number" class="form-control" name="numerodias" id="field_numerodias"
+                    ng-model="vm.tbc_analises.numerodias"
+                    required />
+            <div ng-show="editForm.numerodias.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.numerodias.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.numerodias.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="global.field.metpop" for="field_metpop">Metpop</label>
+            <input type="text" class="form-control" name="metpop" id="field_metpop"
+                    ng-model="vm.tbc_analises.metpop"
+                    required />
+            <div ng-show="editForm.metpop.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.metpop.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="global.field.tercerizado" for="field_tercerizado">Tercerizado</label>
+            <input type="checkbox" class="form-control" name="tercerizado" id="field_tercerizado"
+                    ng-model="vm.tbc_analises.tercerizado"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="global.field.tbc_sub_grupo" for="field_tbc_sub_grupo">Tbc Sub Grupo</label>
+            <select class="form-control" id="field_tbc_sub_grupo" name="tbc_sub_grupo" ng-model="vm.tbc_analises.tbc_sub_grupo" ng-options="tbc_sub_grupo as tbc_sub_grupo.id for tbc_sub_grupo in vm.tbc_sub_grupos track by tbc_sub_grupo.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_sub_grupo.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tbc_sub_grupo.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="global.field.tbc_grupo_analise" for="field_tbc_grupo_analise">Tbc Grupo Analise</label>
+            <select class="form-control" id="field_tbc_grupo_analise" name="tbc_grupo_analise" ng-model="vm.tbc_analises.tbc_grupo_analise" ng-options="tbc_grupo_analise as tbc_grupo_analise.nome for tbc_grupo_analise in vm.tbc_grupo_analises track by tbc_grupo_analise.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_grupo_analise.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tbc_grupo_analise.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="global.field.tbc_tipo_cadastro" for="field_tbc_tipo_cadastro">Tbc Tipo Cadastro</label>
+            <select class="form-control" id="field_tbc_tipo_cadastro" name="tbc_tipo_cadastro" ng-model="vm.tbc_analises.tbc_tipo_cadastro" ng-options="tbc_tipo_cadastro as tbc_tipo_cadastro.nome for tbc_tipo_cadastro in vm.tbc_tipo_cadastros track by tbc_tipo_cadastro.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_tipo_cadastro.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tbc_tipo_cadastro.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="global.field.tbc_instituicao" for="field_tbc_instituicao">Tbc Instituicao</label>
+            <select class="form-control" id="field_tbc_instituicao" name="tbc_instituicao" ng-model="vm.tbc_analises.tbc_instituicao" ng-options="tbc_instituicao as tbc_instituicao.nome for tbc_instituicao in vm.tbc_instituicaos track by tbc_instituicao.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_instituicao.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tbc_instituicao.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="global.field.tbc_report" for="field_tbc_report">Tbc Report</label>
+            <select class="form-control" id="field_tbc_report" name="tbc_report" ng-model="vm.tbc_analises.tbc_report" ng-options="tbc_report as tbc_report.nome for tbc_report in vm.tbc_reports track by tbc_report.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="activated">
+                <input ng-disabled="vm.tbc_analises.id === null" type="checkbox" id="activated" name="activated" ng-model="vm.tbc_analises.removido">
+                <span data-translate="global.field.removido">Activated</span>
+            </label>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

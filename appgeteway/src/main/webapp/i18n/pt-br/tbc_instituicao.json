@@ -1,0 +1,21 @@
+{
+    "appgetewayApp": {
+        "tbc_instituicao" : {
+            "home": {
+                "title": "Instituição"
+            },
+
+            "detail": {
+                "title": "Instituição registro: "
+            }
+        }
+    },
+
+    "limsApp": {
+        "tbc_instituicao" : {
+            "created": "Registro criado com a identificação {{ param }}.",
+            "updated": "O registro {{ param }} foi atualizado.",
+            "deleted": "o registro {{ param }} foi removido."
+        }
+    }
+}
