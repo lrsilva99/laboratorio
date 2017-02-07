@@ -2,29 +2,11 @@
     "appgetewayApp": {
         "tbc_analises" : {
             "home": {
-                "title": "Tbc Analises",
-                "createLabel": "Create a new Tbc Analises",
-                "createOrEditLabel": "Create or edit a Tbc Analises",
-                "search": "Search for Tbc Analises"
-            },
-            "delete": {
-                "question": "Are you sure you want to delete Tbc Analises {{ id }}?"
+                "title": "Analisys"
             },
             "detail": {
-                "title": "Tbc Analises"
-            },
-            "nome": "Nome",
-            "descricao": "Descricao",
-            "numerodias": "Numerodias",
-            "metpop": "Metpop",
-            "removido": "Removido",
-            "tercerizado": "Tercerizado",
-            "directiva_data_atu": "Directiva Data Atu",
-            "tbc_sub_grupo": "Tbc Sub Grupo",
-            "tbc_grupo_analise": "Tbc Grupo Analise",
-            "tbc_tipo_cadastro": "Tbc Tipo Cadastro",
-            "tbc_instituicao": "Tbc Instituicao",
-            "tbc_report": "Tbc Report"
+                "title": "Analisys record:"
+            }
         }
     },
     "limsApp": {

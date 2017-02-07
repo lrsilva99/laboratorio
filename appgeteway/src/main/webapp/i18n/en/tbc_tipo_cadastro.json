@@ -2,21 +2,11 @@
     "appgetewayApp": {
         "tbc_tipo_cadastro" : {
             "home": {
-                "title": "Tbc Tipo Cadastros",
-                "createLabel": "Create a new Tbc Tipo Cadastro",
-                "createOrEditLabel": "Create or edit a Tbc Tipo Cadastro",
-                "search": "Search for Tbc Tipo Cadastro"
-            },
-            "delete": {
-                "question": "Are you sure you want to delete Tbc Tipo Cadastro {{ id }}?"
+                "title": "Type of registration"
             },
             "detail": {
-                "title": "Tbc Tipo Cadastro"
-            },
-            "nome": "Nome",
-            "descricao": "Descricao",
-            "removido": "Removido",
-            "tbc_instituicao": "Tbc Instituicao"
+                "title": "Type of registration record:"
+            }
         }
     },
     "limsApp": {

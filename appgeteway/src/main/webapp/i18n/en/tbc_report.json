@@ -2,22 +2,11 @@
     "appgetewayApp": {
         "tbc_report" : {
             "home": {
-                "title": "Tbc Reports",
-                "createLabel": "Create a new Tbc Report",
-                "createOrEditLabel": "Create or edit a Tbc Report",
-                "search": "Search for Tbc Report"
-            },
-            "delete": {
-                "question": "Are you sure you want to delete Tbc Report {{ id }}?"
+                "title": "Report"
             },
             "detail": {
-                "title": "Tbc Report"
-            },
-            "nome": "Nome",
-            "descricao": "Descricao",
-            "arquivo": "Arquivo",
-            "removido": "Removido",
-            "tbc_instituicao": "Tbc Instituicao"
+                "title": "Report record:"
+            }
         }
     },
     "limsApp": {

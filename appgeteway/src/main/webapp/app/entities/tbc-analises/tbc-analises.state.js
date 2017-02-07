@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider
         .state('tbc-analises', {
-            parent: 'entity',
+            parent: 'laboratorio',
             url: '/tbc-analises?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
@@ -52,7 +52,7 @@
             }
         })
         .state('tbc-analises-detail', {
-            parent: 'entity',
+            parent: 'laboratorio',
             url: '/tbc-analises/{id}',
             data: {
                 authorities: ['ROLE_USER'],

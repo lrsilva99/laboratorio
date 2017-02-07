@@ -2,25 +2,11 @@
     "appgetewayApp": {
         "tbc_instituicao" : {
             "home": {
-                "title": "Tbc Instituicaos",
-                "createLabel": "Create a new Tbc Instituicao",
-                "createOrEditLabel": "Create or edit a Tbc Instituicao",
-                "search": "Search for Tbc Instituicao"
-            },
-            "delete": {
-                "question": "Are you sure you want to delete Tbc Instituicao {{ id }}?"
+                "title": "Institution"
             },
             "detail": {
-                "title": "Tbc Instituicao"
-            },
-            "nome": "Nome",
-            "descricao": "Descricao",
-            "sigla": "Sigla",
-            "uf": "Uf",
-            "endereco": "Endereco",
-            "telefone": "Telefone",
-            "removido": "Removido",
-            "email": "Email"
+                "title": "Institution record"
+            }
         }
     },
     "limsApp": {

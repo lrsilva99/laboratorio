@@ -2,22 +2,11 @@
     "appgetewayApp": {
         "tbc_sub_grupo" : {
             "home": {
-                "title": "Tbc Sub Grupos",
-                "createLabel": "Create a new Tbc Sub Grupo",
-                "createOrEditLabel": "Create or edit a Tbc Sub Grupo",
-                "search": "Search for Tbc Sub Grupo"
-            },
-            "delete": {
-                "question": "Are you sure you want to delete Tbc Sub Grupo {{ id }}?"
+                "title": "Group"
             },
             "detail": {
-                "title": "Tbc Sub Grupo"
-            },
-            "nome": "Nome",
-            "descricao": "Descricao",
-            "sigla": "Sigla",
-            "removido": "Removido",
-            "tbc_instituicao": "Tbc Instituicao"
+                "title": "Group record:"
+            }
         }
     },
     "limsApp": {

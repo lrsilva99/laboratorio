@@ -1,24 +1,25 @@
 {
     "global": {
-        "title": "Appgeteway",
+        "title": "Laboratory system",
+        "operacao": "Operation performed successfully ",
         "browsehappy": "You are using an <strong>outdated</strong> browser. Please <a href=\"http://browsehappy.com/?locale=en\">upgrade your browser</a> to improve your experience.",
         "menu": {
             "home": "Home",
             "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
             "entities": {
                 "main": "Entities",
+                "config": "c",
                 "tbcInstituicao": "Institution",
                 "tbcSubGrupo": "Group",
                 "tbcGrupoAnalise": "Group analysis",
                 "tbcFrases": "Phrases",
-                "tbcFrasesOpcoes": "Options Phrases",
+                    "tbcFrasesOpcoes": "Options Phrases",
                 "tbcTipoCadastro": "Type of registration",
                 "tbcFormulario": "Analysis",
-                "tbcLabTercerizado": "Outsourced laboratory",
-                "tbcLabTercerizado": "Tbc Lab Tercerizado",
+                "tbcLabTercerizado": "Outsourced lab.",
                 "tbcFormulario": "Tbc Formulario",
-                "tbcReport": "Tbc Report",
-                "tbcAnalises": "Tbc Analises",
+                "tbcReport": "Report",
+                "tbcAnalises": "Analisys",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratory",
                 "subconfiganalise": "Analysis"
@@ -99,7 +100,13 @@
             "tbc_instituicao" : "Institution",
             "tbc_sub_grupo"   : "Goup",
             "tbc_frases"      : "Phrases",
-            "email"          : "e-mail"
+            "email"          : "e-mail",
+            "metpop"         : "Analysis procedure",
+            "numerodias"   : "Deadline for analysis",
+            "tbc_grupo_analise" : "Group Analisys",
+            "tbc_tipo_cadastro" : "Registration template",
+            "arquivo" : "File",
+            "tercerizado": "Outsourced"
         },
         "ribbon": {
             "dev":"Development"
@@ -140,7 +147,7 @@
         },
         "home": {
             "createLabel": "Create a new",
-            "createOrEditLabel": "New ou edit",
+            "createOrEditLabel": "New or edit",
             "search": "search"
         }
     },
