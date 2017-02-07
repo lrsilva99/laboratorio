@@ -2024,8 +2024,8 @@ table {
   background-color: transparent; }
 
 caption {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   color: #777777;
   text-align: left; }
 
@@ -2042,7 +2042,7 @@ th {
   .table > tbody > tr > td,
   .table > tfoot > tr > th,
   .table > tfoot > tr > td {
-    padding: 8px;
+    padding: 0px;
     line-height: 1.42857;
     vertical-align: top;
     border-top: 1px solid #ddd; }
@@ -2306,8 +2306,6 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
-  padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
   color: #555555;
@@ -2403,7 +2401,8 @@ input[type="search"] {
     line-height: 46px; } }
 
 .form-group {
-  margin-bottom: 15px; }
+  margin-bottom: 0px;
+  }
 
 .radio,
 .checkbox {

@@ -235,7 +235,7 @@ Custom alerts for notification
             top: 55px;
         }
         &.bottom {
-            bottom: 55px;
+            bottom: 10px;
         }
     }
 }
@@ -341,5 +341,12 @@ ui bootstrap tweaks
     outline: none;
 }
 
+
+/* ==========================================================================
+Fix error field display
+========================================================================== */
+.form-group .help-block {
+    position: static;
+}
 
 /* jhipster-needle-scss-add-main JHipster will add new css style */

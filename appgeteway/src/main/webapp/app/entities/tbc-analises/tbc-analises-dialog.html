@@ -67,7 +67,7 @@
 
         <div class="form-group">
             <label data-translate="global.field.tbc_sub_grupo" for="field_tbc_sub_grupo">Tbc Sub Grupo</label>
-            <select class="form-control" id="field_tbc_sub_grupo" name="tbc_sub_grupo" ng-model="vm.tbc_analises.tbc_sub_grupo" ng-options="tbc_sub_grupo as tbc_sub_grupo.id for tbc_sub_grupo in vm.tbc_sub_grupos track by tbc_sub_grupo.id" required>
+            <select class="form-control" id="field_tbc_sub_grupo" name="tbc_sub_grupo" ng-model="vm.tbc_analises.tbc_sub_grupo" ng-options="tbc_sub_grupo as tbc_sub_grupo.nome for tbc_sub_grupo in vm.tbc_sub_grupos track by tbc_sub_grupo.id" required>
                 <option value=""></option>
             </select>
         </div>
