@@ -119,7 +119,11 @@ textarea {
   margin: 0; }
 
 button {
-  overflow: visible; }
+  overflow: visible ;
+  padding-right: 10px !important;
+      padding-left: 10px !important;
+
+  }
 
 button,
 select {
@@ -179,11 +183,15 @@ optgroup {
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+
+  }
 
 td,
 th {
-  padding: 0; }
+  padding: 0; border: none !important;
+
+  }
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
@@ -2714,9 +2722,10 @@ select[multiple].input-lg,
     margin-bottom: 0;
     vertical-align: middle; }
   .form-inline .form-control {
-    display: inline-block;
+        display: inline-block;
     width: auto;
-    vertical-align: middle; }
+    vertical-align: middle;
+     }
   .form-inline .form-control-static {
     display: inline-block; }
   .form-inline .input-group {
@@ -2785,7 +2794,7 @@ select[multiple].input-lg,
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
     padding-top: 6px;
-    font-size: 12px; } }
+    font-size: 78px; } }
 
 .btn {
   display: inline-block;
@@ -3656,6 +3665,9 @@ tbody.collapse.in {
 
 .navbar {
   position: relative;
+  /* COLOCAR A COR DO cdma */
+  /* background-color: #EF6B01 !important;*/
+ /* COLOCAR A COR DO cdma */
   min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent; }
@@ -3936,7 +3948,8 @@ tbody.collapse.in {
       margin-right: 0; } }
 
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: #f8f8f8 !impo;
+
   border-color: #e7e7e7; }
   .navbar-default .navbar-brand {
     color: #777; }
@@ -5817,6 +5830,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+     }
 /* endinject */
 /* bower:sass */
 /* endinject */

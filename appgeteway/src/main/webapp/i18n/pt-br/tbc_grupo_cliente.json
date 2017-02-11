@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_grupo_cliente" : {
+            "home": {
+                "title": "Grupo de cliente"
+            },
+            "detail": {
+                "title": "Grupo cliente registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_grupo_cliente" : {
+            "created": "Um novo Tbc Grupo Cliente é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Grupo Cliente é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Grupo Cliente é deletado com o identificador {{ param }}"
+        }
+    }
+}

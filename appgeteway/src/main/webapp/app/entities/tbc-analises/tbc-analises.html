@@ -40,8 +40,6 @@
                     <th jh-sort-by="descricao"><span data-translate="global.field.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="tbc_sub_grupo.id"><span data-translate="global.field.tbc_sub_grupo">Tbc Sub Grupo</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="tbc_grupo_analise.id"><span data-translate="global.field.tbc_grupo_analise">Tbc Grupo Analise</span> <span class="glyphicon glyphicon-sort"></span></th>
-
-                    <th jh-sort-by="tbc_instituicao.id"><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -55,9 +53,6 @@
                     </td>
                     <td>
                         <a ui-sref="tbc-grupo-analise-detail({id:tbc_analises.tbc_grupo_analise.id})">{{tbc_analises.tbc_grupo_analise.nome}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="tbc-instituicao-detail({id:tbc_analises.tbc_instituicao.id})">{{tbc_analises.tbc_instituicao.nome}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
@@ -78,6 +73,12 @@
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-analises-componente({idAnalise:tbc_analises.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.frases_opçoes"></span>
                             </button>
                         </div>
                     </td>

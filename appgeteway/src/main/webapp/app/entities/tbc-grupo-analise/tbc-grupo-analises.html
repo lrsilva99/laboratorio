@@ -38,8 +38,6 @@
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="nome"><span data-translate="global.field.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="descricao"><span data-translate="global.field.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="removido"><span data-translate="global.field.removido">Removido</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="tbc_instituicao.id"><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -48,10 +46,6 @@
                     <td><a ui-sref="tbc-grupo-analise-detail({id:tbc_grupo_analise.id})">{{tbc_grupo_analise.id}}</a></td>
                     <td>{{tbc_grupo_analise.nome}}</td>
                     <td>{{tbc_grupo_analise.descricao}}</td>
-                    <td>{{tbc_grupo_analise.removido}}</td>
-                    <td>
-                        <a ui-sref="tbc-instituicao-detail({id:tbc_grupo_analise.tbc_instituicao.id})">{{tbc_grupo_analise.tbc_instituicao.nome}}</a>
-                    </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

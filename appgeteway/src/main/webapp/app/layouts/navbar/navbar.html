@@ -37,7 +37,7 @@
                     <ul class="dropdown-menu">
                         <li ui-sref-active="active">
                             <a ui-sref="tbc-instituicao" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-tower"></span>&nbsp;
+                                <span class="glyphicon glyphicon-globe"></span>&nbsp;
                                 <span data-translate="global.menu.entities.tbcInstituicao">Tbc Instituicao</span>
                             </a>
                         </li>
@@ -49,10 +49,25 @@
                         </li>
 
                         <li class="divider"></li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-grupo-cliente" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-equalizer"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcGrupoCliente">Tbc Grupo Cliente</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-cliente" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-king"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcCliente">Tbc Cliente</span>
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
 
                         <li ui-sref-active="active">
                             <a ui-sref="tbc-lab-tercerizado" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span class="glyphicon glyphicon-tower"></span>&nbsp;
                                 <span data-translate="global.menu.entities.tbcLabTercerizado">Tbc Lab Tercerizado</span>
                             </a>
                         </li>
@@ -87,24 +102,37 @@
                     <ul class="dropdown-menu" uib-dropdown-menu>
                         <li ui-sref-active="active">
                             <a ui-sref="tbc-frases" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span class="glyphicon glyphicon-tag"></span>&nbsp;
                                 <span data-translate="global.menu.entities.tbcFrases">Tbc Frases</span>
                             </a>
                         </li>
                         <li ui-sref-active="active">
                             <a ui-sref="tbc-tipo-cadastro" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span class="glyphicon glyphicon-minus  "></span>&nbsp;
                                 <span data-translate="global.menu.entities.tbcTipoCadastro">Tbc Tipo Cadastro</span>
                             </a>
                         </li>
 
                         <li ui-sref-active="active">
                             <a ui-sref="tbc-report" ng-click="vm.collapseNavbar()">
-                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span class="glyphicon glyphicon-list   "></span>&nbsp;
                                 <span data-translate="global.menu.entities.tbcReport">Tbc Report</span>
                             </a>
                         </li>
 
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-tipo-campo" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcTipoCampo">Tbc Tipo Campo</span>
+                            </a>
+                        </li>
+
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-cliente" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcCliente">Tbc Cliente</span>
+                            </a>
+                        </li>
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                     </ul>
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" id="entity-menu">

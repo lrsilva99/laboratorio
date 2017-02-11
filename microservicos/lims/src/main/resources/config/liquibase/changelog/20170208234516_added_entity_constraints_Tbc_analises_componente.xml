@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Tbc_analises_componente.
+    -->
+    <changeSet id="20170208234516" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="tbc_instituicao_id"
+                                 baseTableName="tbc_analises_componente"
+                                 constraintName="fk_tbc_analises_componente_tbc_instituicao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_instituicao"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_tipo_campo_id"
+                                 baseTableName="tbc_analises_componente"
+                                 constraintName="fk_tbc_analises_componente_tbc_tipo_campo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_tipo_campo"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_analises_id"
+                                 baseTableName="tbc_analises_componente"
+                                 constraintName="fk_tbc_analises_componente_tbc_analises_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_analises"/>
+
+    </changeSet>
+</databaseChangeLog>

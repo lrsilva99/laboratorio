@@ -19,6 +19,9 @@
                 "tbcLabTercerizado": "Lab. tercerizado",
                 "tbcReport": "Relat. Ensaio",
                 "tbcAnalises": "Análise",
+                "tbcTipoCampo": "Tipo de campo",
+                "tbcGrupoCliente": "Grupo de cliente",
+                "tbcCliente": "Cliente",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratório",
                 "subconfiganalise": "Análise"
@@ -104,8 +107,27 @@
             "numerodias"   : "Dias de liberação",
             "tbc_grupo_analise" : "Grupo de análise",
             "tbc_tipo_cadastro" : "Tipo de cadastro",
+            "tbc_tipo_campo": "Tipo de campo",
+            "tbc_analises": "Análise",
+            "tbc_grupo_cliente": "Grupo do cliente",
             "arquivo" : "Arquivo",
-            "tercerizado": "Tercerizado"
+            "tercerizado": "Tercerizado",
+            "unidade_medida": "Unidade de medida",
+            "valor_padrao": "Valor padrão",
+            "configuracao": "Configuração",
+            "linha": "Linha",
+            "valor_padrao": "Valor padrão",
+            "responsavel": "Reponsável",
+            "bloquear": "Bloqueado",
+            "codigo_cliente": "Cód. do cliente",
+            "bairro": "Bairro",
+            "directiva_data_atu": "Data de atualização directiva",
+            "field_bloquear": "Bloquear",
+            "imprimir": "Imprimir",
+            "enviar_email": "Env. e-mail",
+            "cep": "Cep",
+            "cpf_cnpj": "CPF CNPJ"
+
 
         },
         "ribbon": {

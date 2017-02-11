@@ -38,8 +38,7 @@
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="nome"><span data-translate="global.field.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="descricao"><span data-translate="global.field.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="removido"><span data-translate="global.field.removido">Removido</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="tbc_instituicao.id"><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span> <span class="glyphicon glyphicon-sort"></span></th>
+
                     <th jh-sort-by="tbc_sub_grupo.id"><span data-translate="global.field.tbc_sub_grupo">Tbc Sub Grupo</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
@@ -47,15 +46,9 @@
             <tbody>
                 <tr ng-repeat="tbc_frases in vm.tbc_frases track by tbc_frases.id">
                     <td><a ui-sref="tbc-frases-detail({id:tbc_frases.id})">{{tbc_frases.id}}</a></td>
-                    <td><a ui-sref="tbc-frases-detail({id:tbc_frases.id})">{{tbc_frases.nome}}</a></td>
+                    <td>{{tbc_frases.nome}}</td>
                     <td>{{tbc_frases.descricao}}</td>
-                    <td>{{tbc_frases.removido}}</td>
-                    <td>
-                        <a ui-sref="tbc-instituicao-detail({id:tbc_frases.tbc_instituicao.id})">{{tbc_frases.tbc_instituicao.nome}}</a>
-                    </td>
-                    <td>
-                        <a ui-sref="tbc-sub-grupo-detail({id:tbc_frases.tbc_sub_grupo.id})">{{tbc_frases.tbc_sub_grupo.nome}}</a>
-                    </td>
+
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">
                             <button type="submit"

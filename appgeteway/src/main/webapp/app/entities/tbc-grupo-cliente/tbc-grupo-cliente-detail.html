@@ -1,0 +1,40 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_grupo_cliente.detail.title">Tbc Grupo Cliente</span> {{vm.tbc_grupo_cliente.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="global.field.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_grupo_cliente.nome}}</span>
+        </dd>
+        <dt><span data-translate="global.field.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_grupo_cliente.descricao}}</span>
+        </dd>
+
+        <dt><span data-translate="appgetewayApp.tbc_grupo_cliente.responsavel">Responsavel</span></dt>
+        <dd>
+            <span>{{vm.tbc_grupo_cliente.responsavel}}</span>
+        </dd>
+        <dt><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_grupo_cliente.tbc_instituicao.id})">{{vm.tbc_grupo_cliente.tbc_instituicao.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_grupo_cliente.removido}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-grupo-cliente-detail.edit({id:vm.tbc_grupo_cliente.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

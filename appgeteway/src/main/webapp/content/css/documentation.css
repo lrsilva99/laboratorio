@@ -1,3 +1,71 @@
-/*!
- * Your CSS files will be generated in this directory by "gulp sass"
- */
+
+@media only screen and (max-width: 800px) {
+
+	/* Force table to not be like tables anymore */
+	.table-responsive table,
+	.table-responsive thead,
+	.table-responsive tbody,
+    .table-responsive th,
+	.table-responsive td,
+	.table-responsive tr {
+		display: block;
+	}
+	h2 {
+	font-size: 200% !important;
+	margin-bottom: 0px !important;
+    margin-top: 0px !important;
+
+	}
+	h3 {
+	    	font-size: 100% !important;
+	    	margin: 1px 0 !important;;
+	 }
+
+	.control-label label {
+	font-size: 18px !important;
+	}
+
+
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.table-responsive thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.table-responsive tr { border: none; }
+
+	.table-responsive td {
+		/* Behave  like a "row" */
+		border: none !important;
+		border-bottom: none !important;
+		position: relative ;
+		padding-left: 100%;
+		white-space: normal;
+		text-align:left;
+	}
+
+	.table-responsive td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+		border:0 !important;
+	}
+
+	.botaotopo {
+	    display:scroll;
+	        position:fixed;
+	            bottom:2px;
+	                right:2px;
+    }
+
+}
+

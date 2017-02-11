@@ -9,7 +9,6 @@
 
     function Tbc_frases_opcoesController ($scope, $state, Tbc_frases_opcoes, Tbc_frases_opcoesSearch, ParseLinks, AlertService, paginationConstants, pagingParams,Tbc_frases) {
         var vm = this;
-
         vm.loadPage = loadPage;
         vm.predicate = pagingParams.predicate;
         vm.reverse = pagingParams.ascending;

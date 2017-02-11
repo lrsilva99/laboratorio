@@ -20,6 +20,10 @@
                 "tbcFormulario": "Tbc Formulario",
                 "tbcReport": "Report",
                 "tbcAnalises": "Analisys",
+                "tbcTipoCampo": "Tbc Tipo Campo",
+                "tbcAnalisesComponente": "Tbc Analises Componente",
+                "tbcGrupoCliente": "Tbc Grupo Cliente",
+                "tbcCliente": "Tbc Cliente",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratory",
                 "subconfiganalise": "Analysis"

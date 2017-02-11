@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_cliente" : {
+            "home": {
+                "title": "Cliente"
+            },
+            "detail": {
+                "title": "Cliente registro: "
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_cliente" : {
+            "created": "Um novo Tbc Cliente é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Cliente é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Cliente é deletado com o identificador {{ param }}"
+        }
+    }
+}

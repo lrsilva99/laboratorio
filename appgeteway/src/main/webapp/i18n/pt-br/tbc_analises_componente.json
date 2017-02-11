@@ -1,0 +1,20 @@
+{
+    "appgetewayApp": {
+        "tbc_analises_componente" : {
+            "home": {
+                "title": "Componentes"
+            },
+            "detail": {
+                "title": "Componente registro: "
+            },
+            "selecionada": "Análise selecionada:({{ param }})"
+        }
+    },
+    "limsApp": {
+        "tbc_analises_componente" : {
+            "created": "Um novo Tbc Analises Componente é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Analises Componente é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Analises Componente é deletado com o identificador {{ param }}"
+        }
+    }
+}

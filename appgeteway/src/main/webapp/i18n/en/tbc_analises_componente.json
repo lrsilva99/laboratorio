@@ -1,0 +1,34 @@
+{
+    "appgetewayApp": {
+        "tbc_analises_componente" : {
+            "home": {
+                "title": "Tbc Analises Componentes",
+                "createLabel": "Create a new Tbc Analises Componente",
+                "createOrEditLabel": "Create or edit a Tbc Analises Componente",
+                "search": "Search for Tbc Analises Componente"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Analises Componente {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Analises Componente"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "linha": "Linha",
+            "unidade_medida": "Unidade Medida",
+            "valor_padrao": "Valor Padrao",
+            "configuracao": "Configuracao",
+            "tbc_instituicao": "Tbc Instituicao",
+            "tbc_tipo_campo": "Tbc Tipo Campo",
+            "tbc_analises": "Tbc Analises"
+        }
+    },
+    "limsApp": {
+        "tbc_analises_componente" : {
+            "created": "A new Tbc Analises Componente is created with identifier {{ param }}",
+            "updated": "A Tbc Analises Componente is updated with identifier {{ param }}",
+            "deleted": "A Tbc Analises Componente is deleted with identifier {{ param }}"
+        }
+    }
+}
