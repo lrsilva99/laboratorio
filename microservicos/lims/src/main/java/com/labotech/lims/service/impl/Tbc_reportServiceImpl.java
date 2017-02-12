@@ -26,7 +26,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_reportServiceImpl implements Tbc_reportService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_reportServiceImpl.class);
-    
+
     @Inject
     private Tbc_reportRepository tbc_reportRepository;
 
@@ -48,11 +48,11 @@ public class Tbc_reportServiceImpl implements Tbc_reportService{
 
     /**
      *  Get all the tbc_reports.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_report> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_reports");
         Page<Tbc_report> result = tbc_reportRepository.findAll(pageable);
@@ -65,7 +65,7 @@ public class Tbc_reportServiceImpl implements Tbc_reportService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_report findOne(Long id) {
         log.debug("Request to get Tbc_report : {}", id);
         Tbc_report tbc_report = tbc_reportRepository.findOne(id);
@@ -82,17 +82,17 @@ public class Tbc_reportServiceImpl implements Tbc_reportService{
         tbc_reportRepository.delete(id);
         tbc_reportSearchRepository.delete(id);
     }
-
     /**
-     * Search for the tbc_report corresponding to the query.
+     * Search for the tbc_plano_teste_analise corresponding to the query.
      *
      *  @param query the query of the search
+     *  @param removido the query of the search
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_report> search(String query, Pageable pageable) {
+    public Page<Tbc_report> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_reports for query {}", query);
-        Page<Tbc_report> result = tbc_reportSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_report> result = tbc_reportRepository.search(query, removido, pageable);
         return result;
     }
 }

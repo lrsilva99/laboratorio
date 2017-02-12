@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_analises.
@@ -144,10 +140,14 @@ public class Tbc_analisesResource {
     public ResponseEntity<List<Tbc_analises>> searchTbc_analises(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_analises for query {}", query);
-        Page<Tbc_analises> page = tbc_analisesService.findAllSearch(query, pageable);
+        Page<Tbc_analises> page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_analisesService.search(param, true, pageable);
+        }else
+            page = tbc_analisesService.search(query, false, pageable);
+
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-analises");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }
-
-
 }

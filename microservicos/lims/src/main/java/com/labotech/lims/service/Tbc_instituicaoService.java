@@ -3,7 +3,6 @@ package com.labotech.lims.service;
 import com.labotech.lims.domain.Tbc_instituicao;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
 
 /**
  * Service Interface for managing Tbc_instituicao.
@@ -20,7 +19,7 @@ public interface Tbc_instituicaoService {
 
     /**
      *  Get all the tbc_instituicaos.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -45,9 +44,9 @@ public interface Tbc_instituicaoService {
      * Search for the tbc_instituicao corresponding to the query.
      *
      *  @param query the query of the search
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    Page<Tbc_instituicao> search(String query, Pageable pageable);
+    Page<Tbc_instituicao> search(String query, Boolean removido, Pageable pageable);
 }

@@ -12,11 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * Service Implementation for managing Tbc_grupo_analise.
@@ -26,7 +21,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_grupo_analiseServiceImpl implements Tbc_grupo_analiseService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_grupo_analiseServiceImpl.class);
-    
+
     @Inject
     private Tbc_grupo_analiseRepository tbc_grupo_analiseRepository;
 
@@ -48,11 +43,11 @@ public class Tbc_grupo_analiseServiceImpl implements Tbc_grupo_analiseService{
 
     /**
      *  Get all the tbc_grupo_analises.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_grupo_analise> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_grupo_analises");
         Page<Tbc_grupo_analise> result = tbc_grupo_analiseRepository.findAll(pageable);
@@ -65,7 +60,7 @@ public class Tbc_grupo_analiseServiceImpl implements Tbc_grupo_analiseService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_grupo_analise findOne(Long id) {
         log.debug("Request to get Tbc_grupo_analise : {}", id);
         Tbc_grupo_analise tbc_grupo_analise = tbc_grupo_analiseRepository.findOne(id);
@@ -90,9 +85,9 @@ public class Tbc_grupo_analiseServiceImpl implements Tbc_grupo_analiseService{
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_grupo_analise> search(String query, Pageable pageable) {
+    public Page<Tbc_grupo_analise> search(String query, Boolean removido,Pageable pageable) {
         log.debug("Request to search for a page of Tbc_grupo_analises for query {}", query);
-        Page<Tbc_grupo_analise> result = tbc_grupo_analiseSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_grupo_analise> result = tbc_grupo_analiseRepository.search(query, removido, pageable);
         return result;
     }
 }

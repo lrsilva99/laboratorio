@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_frases.
@@ -35,7 +31,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_frasesResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_frasesResource.class);
-        
+
     @Inject
     private Tbc_frasesService tbc_frasesService;
 
@@ -134,7 +130,7 @@ public class Tbc_frasesResource {
      * SEARCH  /_search/tbc-frases?query=:query : search for the tbc_frases corresponding
      * to the query.
      *
-     * @param query the query of the tbc_frases search 
+     * @param query the query of the tbc_frases search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +140,13 @@ public class Tbc_frasesResource {
     public ResponseEntity<List<Tbc_frases>> searchTbc_frases(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_frases for query {}", query);
-        Page<Tbc_frases> page = tbc_frasesService.search(query, pageable);
+        Page<Tbc_frases> page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_frasesService.search(param, true, pageable);
+        }
+       else
+           page = tbc_frasesService.search(query,false, pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-frases");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

@@ -3,7 +3,7 @@ package com.labotech.lims.service;
 import com.labotech.lims.domain.Tbc_relatorio_ensaio;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
+
 
 /**
  * Service Interface for managing Tbc_relatorio_ensaio.
@@ -20,7 +20,7 @@ public interface Tbc_relatorio_ensaioService {
 
     /**
      *  Get all the tbc_relatorio_ensaios.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -45,9 +45,9 @@ public interface Tbc_relatorio_ensaioService {
      * Search for the tbc_relatorio_ensaio corresponding to the query.
      *
      *  @param query the query of the search
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    Page<Tbc_relatorio_ensaio> search(String query, Pageable pageable);
+    Page<Tbc_relatorio_ensaio> search(String query, Boolean removido, Pageable pageable);
 }

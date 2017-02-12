@@ -22,11 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
-
 /**
  * REST controller for managing Tbc_grupo_analise.
  */
@@ -35,7 +30,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_grupo_analiseResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_grupo_analiseResource.class);
-        
+
     @Inject
     private Tbc_grupo_analiseService tbc_grupo_analiseService;
 
@@ -134,7 +129,7 @@ public class Tbc_grupo_analiseResource {
      * SEARCH  /_search/tbc-grupo-analises?query=:query : search for the tbc_grupo_analise corresponding
      * to the query.
      *
-     * @param query the query of the tbc_grupo_analise search 
+     * @param query the query of the tbc_grupo_analise search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +139,13 @@ public class Tbc_grupo_analiseResource {
     public ResponseEntity<List<Tbc_grupo_analise>> searchTbc_grupo_analises(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_grupo_analises for query {}", query);
-        Page<Tbc_grupo_analise> page = tbc_grupo_analiseService.search(query, pageable);
+        Page<Tbc_grupo_analise> page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_grupo_analiseService.search(param, true, pageable);
+        }
+        else
+            page = tbc_grupo_analiseService.search(query, false,pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-grupo-analises");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

@@ -22,6 +22,8 @@
     <include file="classpath:config/liquibase/changelog/20170208234516_added_entity_Tbc_analises_componente.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170210141020_added_entity_Tbc_grupo_cliente.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/2017021012425_added_entity_Tbc_cliente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211124422_added_entity_Tbc_plano_teste.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211143717_added_entity_Tbc_plano_teste_analise.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20170116101235_added_entity_constraints_Tbc_sub_grupo.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170116232156_added_entity_constraints_Tbc_grupo_analise.xml" relativeToChangelogFile="false"/>
@@ -38,5 +40,7 @@
     <include file="classpath:config/liquibase/changelog/20170208234516_added_entity_constraints_Tbc_analises_componente.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170210141020_added_entity_constraints_Tbc_grupo_cliente.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/2017021012425_added_entity_constraints_Tbc_cliente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211124422_added_entity_constraints_Tbc_plano_teste.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211143717_added_entity_constraints_Tbc_plano_teste_analise.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

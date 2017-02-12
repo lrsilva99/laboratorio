@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_grupo_cliente.
@@ -35,7 +31,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_grupo_clienteResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_grupo_clienteResource.class);
-        
+
     @Inject
     private Tbc_grupo_clienteService tbc_grupo_clienteService;
 
@@ -134,7 +130,7 @@ public class Tbc_grupo_clienteResource {
      * SEARCH  /_search/tbc-grupo-clientes?query=:query : search for the tbc_grupo_cliente corresponding
      * to the query.
      *
-     * @param query the query of the tbc_grupo_cliente search 
+     * @param query the query of the tbc_grupo_cliente search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +140,13 @@ public class Tbc_grupo_clienteResource {
     public ResponseEntity<List<Tbc_grupo_cliente>> searchTbc_grupo_clientes(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_grupo_clientes for query {}", query);
-        Page<Tbc_grupo_cliente> page = tbc_grupo_clienteService.search(query, pageable);
+        Page<Tbc_grupo_cliente> page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_grupo_clienteService.search(param,true, pageable);
+        }
+        else
+            page = tbc_grupo_clienteService.search(query, false,pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-grupo-clientes");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

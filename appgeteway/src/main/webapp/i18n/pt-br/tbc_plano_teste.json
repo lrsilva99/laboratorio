@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_plano_teste" : {
+            "home": {
+                "title": "Plano de teste"
+            },
+            "detail": {
+                "title": "Plano de teste registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_plano_teste" : {
+            "created": "Um novo Tbc Plano Teste é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Plano Teste é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Plano Teste é deletado com o identificador {{ param }}"
+        }
+    }
+}

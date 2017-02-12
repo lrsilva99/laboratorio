@@ -78,7 +78,7 @@
             }
             vm.links = null;
             vm.page = 1;
-            vm.predicate = '_score';
+            vm.predicate = 'nome';
             vm.reverse = false;
             vm.currentSearch = searchQuery;
             vm.transition();

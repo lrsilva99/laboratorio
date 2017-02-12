@@ -3,7 +3,7 @@ package com.labotech.lims.service;
 import com.labotech.lims.domain.Tbc_formulario;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
+
 
 /**
  * Service Interface for managing Tbc_formulario.
@@ -20,7 +20,7 @@ public interface Tbc_formularioService {
 
     /**
      *  Get all the tbc_formularios.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -45,7 +45,7 @@ public interface Tbc_formularioService {
      * Search for the tbc_formulario corresponding to the query.
      *
      *  @param query the query of the search
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */

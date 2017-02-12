@@ -3,7 +3,7 @@ package com.labotech.lims.service;
 import com.labotech.lims.domain.Tbc_frases_opcoes;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
+
 
 /**
  * Service Interface for managing Tbc_frases_opcoes.

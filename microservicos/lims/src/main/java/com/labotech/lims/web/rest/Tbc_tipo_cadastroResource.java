@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_tipo_cadastro.
@@ -35,7 +31,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_tipo_cadastroResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_tipo_cadastroResource.class);
-        
+
     @Inject
     private Tbc_tipo_cadastroService tbc_tipo_cadastroService;
 
@@ -134,7 +130,7 @@ public class Tbc_tipo_cadastroResource {
      * SEARCH  /_search/tbc-tipo-cadastros?query=:query : search for the tbc_tipo_cadastro corresponding
      * to the query.
      *
-     * @param query the query of the tbc_tipo_cadastro search 
+     * @param query the query of the tbc_tipo_cadastro search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +140,12 @@ public class Tbc_tipo_cadastroResource {
     public ResponseEntity<List<Tbc_tipo_cadastro>> searchTbc_tipo_cadastros(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_tipo_cadastros for query {}", query);
-        Page<Tbc_tipo_cadastro> page = tbc_tipo_cadastroService.search(query, pageable);
+        Page<Tbc_tipo_cadastro>  page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_tipo_cadastroService.search(param, true, pageable);
+        }else
+            page = tbc_tipo_cadastroService.search(query, false, pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-tipo-cadastros");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

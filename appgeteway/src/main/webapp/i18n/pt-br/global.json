@@ -22,6 +22,7 @@
                 "tbcTipoCampo": "Tipo de campo",
                 "tbcGrupoCliente": "Grupo de cliente",
                 "tbcCliente": "Cliente",
+                "tbcPlanoTeste": "Plano de teste",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratório",
                 "subconfiganalise": "Análise"

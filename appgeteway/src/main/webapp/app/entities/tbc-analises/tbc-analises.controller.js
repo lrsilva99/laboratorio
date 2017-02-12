@@ -31,7 +31,7 @@
                     query: pagingParams.search,
                     page: pagingParams.page - 1,
                     size: vm.itemsPerPage,
-                    sort: ''
+                    sort: sort()
                 }, onSuccess, onError);
             } else {
                 Tbc_analises.query({
@@ -78,7 +78,7 @@
             }
             vm.links = null;
             vm.page = 1;
-            vm.predicate = '_score';
+            vm.predicate = 'nome';
             vm.reverse = false;
             vm.currentSearch = searchQuery;
             vm.transition();

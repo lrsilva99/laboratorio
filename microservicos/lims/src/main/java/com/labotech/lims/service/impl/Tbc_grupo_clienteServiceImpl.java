@@ -26,7 +26,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_grupo_clienteServiceImpl implements Tbc_grupo_clienteService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_grupo_clienteServiceImpl.class);
-    
+
     @Inject
     private Tbc_grupo_clienteRepository tbc_grupo_clienteRepository;
 
@@ -48,11 +48,11 @@ public class Tbc_grupo_clienteServiceImpl implements Tbc_grupo_clienteService{
 
     /**
      *  Get all the tbc_grupo_clientes.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_grupo_cliente> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_grupo_clientes");
         Page<Tbc_grupo_cliente> result = tbc_grupo_clienteRepository.findAll(pageable);
@@ -65,7 +65,7 @@ public class Tbc_grupo_clienteServiceImpl implements Tbc_grupo_clienteService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_grupo_cliente findOne(Long id) {
         log.debug("Request to get Tbc_grupo_cliente : {}", id);
         Tbc_grupo_cliente tbc_grupo_cliente = tbc_grupo_clienteRepository.findOne(id);
@@ -90,9 +90,9 @@ public class Tbc_grupo_clienteServiceImpl implements Tbc_grupo_clienteService{
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_grupo_cliente> search(String query, Pageable pageable) {
+    public Page<Tbc_grupo_cliente> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_grupo_clientes for query {}", query);
-        Page<Tbc_grupo_cliente> result = tbc_grupo_clienteSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_grupo_cliente> result = tbc_grupo_clienteRepository.search(query, removido, pageable);
         return result;
     }
 }

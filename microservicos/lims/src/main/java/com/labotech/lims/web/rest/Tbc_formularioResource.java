@@ -22,10 +22,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_formulario.
@@ -35,7 +32,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_formularioResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_formularioResource.class);
-        
+
     @Inject
     private Tbc_formularioService tbc_formularioService;
 
@@ -134,7 +131,7 @@ public class Tbc_formularioResource {
      * SEARCH  /_search/tbc-formularios?query=:query : search for the tbc_formulario corresponding
      * to the query.
      *
-     * @param query the query of the tbc_formulario search 
+     * @param query the query of the tbc_formulario search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers

@@ -3,7 +3,7 @@ package com.labotech.lims.service;
 import com.labotech.lims.domain.Tbc_grupo_cliente;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
+
 
 /**
  * Service Interface for managing Tbc_grupo_cliente.
@@ -20,7 +20,7 @@ public interface Tbc_grupo_clienteService {
 
     /**
      *  Get all the tbc_grupo_clientes.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -45,9 +45,9 @@ public interface Tbc_grupo_clienteService {
      * Search for the tbc_grupo_cliente corresponding to the query.
      *
      *  @param query the query of the search
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    Page<Tbc_grupo_cliente> search(String query, Pageable pageable);
+    Page<Tbc_grupo_cliente> search(String query, Boolean removido, Pageable pageable);
 }

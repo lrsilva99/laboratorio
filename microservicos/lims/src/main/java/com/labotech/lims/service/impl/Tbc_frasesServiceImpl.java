@@ -12,11 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * Service Implementation for managing Tbc_frases.
@@ -26,7 +21,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_frasesServiceImpl implements Tbc_frasesService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_frasesServiceImpl.class);
-    
+
     @Inject
     private Tbc_frasesRepository tbc_frasesRepository;
 
@@ -48,11 +43,11 @@ public class Tbc_frasesServiceImpl implements Tbc_frasesService{
 
     /**
      *  Get all the tbc_frases.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_frases> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_frases");
         Page<Tbc_frases> result = tbc_frasesRepository.findAll(pageable);
@@ -65,7 +60,7 @@ public class Tbc_frasesServiceImpl implements Tbc_frasesService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_frases findOne(Long id) {
         log.debug("Request to get Tbc_frases : {}", id);
         Tbc_frases tbc_frases = tbc_frasesRepository.findOne(id);
@@ -90,9 +85,9 @@ public class Tbc_frasesServiceImpl implements Tbc_frasesService{
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_frases> search(String query, Pageable pageable) {
+    public Page<Tbc_frases> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_frases for query {}", query);
-        Page<Tbc_frases> result = tbc_frasesSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_frases> result = tbc_frasesRepository.search(query, removido, pageable);
         return result;
     }
 }

@@ -26,7 +26,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_instituicaoServiceImpl implements Tbc_instituicaoService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_instituicaoServiceImpl.class);
-    
+
     @Inject
     private Tbc_instituicaoRepository tbc_instituicaoRepository;
 
@@ -48,11 +48,11 @@ public class Tbc_instituicaoServiceImpl implements Tbc_instituicaoService{
 
     /**
      *  Get all the tbc_instituicaos.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_instituicao> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_instituicaos");
         Page<Tbc_instituicao> result = tbc_instituicaoRepository.findAll(pageable);
@@ -65,7 +65,7 @@ public class Tbc_instituicaoServiceImpl implements Tbc_instituicaoService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_instituicao findOne(Long id) {
         log.debug("Request to get Tbc_instituicao : {}", id);
         Tbc_instituicao tbc_instituicao = tbc_instituicaoRepository.findOne(id);
@@ -90,9 +90,9 @@ public class Tbc_instituicaoServiceImpl implements Tbc_instituicaoService{
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_instituicao> search(String query, Pageable pageable) {
+    public Page<Tbc_instituicao> search(String query,Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_instituicaos for query {}", query);
-        Page<Tbc_instituicao> result = tbc_instituicaoSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_instituicao> result = tbc_instituicaoRepository.search(query,removido, pageable);
         return result;
     }
 }

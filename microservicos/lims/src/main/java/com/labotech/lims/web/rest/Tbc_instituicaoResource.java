@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_instituicao.
@@ -35,7 +31,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_instituicaoResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_instituicaoResource.class);
-        
+
     @Inject
     private Tbc_instituicaoService tbc_instituicaoService;
 
@@ -134,7 +130,7 @@ public class Tbc_instituicaoResource {
      * SEARCH  /_search/tbc-instituicaos?query=:query : search for the tbc_instituicao corresponding
      * to the query.
      *
-     * @param query the query of the tbc_instituicao search 
+     * @param query the query of the tbc_instituicao search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +140,13 @@ public class Tbc_instituicaoResource {
     public ResponseEntity<List<Tbc_instituicao>> searchTbc_instituicaos(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_instituicaos for query {}", query);
-        Page<Tbc_instituicao> page = tbc_instituicaoService.search(query, pageable);
+        Page<Tbc_instituicao> page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_instituicaoService.search(param, true, pageable);
+        }
+        else
+            page = tbc_instituicaoService.search(query, false, pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-instituicaos");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

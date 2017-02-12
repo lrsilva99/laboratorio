@@ -26,7 +26,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_relatorio_ensaioServiceImpl implements Tbc_relatorio_ensaioService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_relatorio_ensaioServiceImpl.class);
-    
+
     @Inject
     private Tbc_relatorio_ensaioRepository tbc_relatorio_ensaioRepository;
 
@@ -48,11 +48,11 @@ public class Tbc_relatorio_ensaioServiceImpl implements Tbc_relatorio_ensaioServ
 
     /**
      *  Get all the tbc_relatorio_ensaios.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_relatorio_ensaio> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_relatorio_ensaios");
         Page<Tbc_relatorio_ensaio> result = tbc_relatorio_ensaioRepository.findAll(pageable);
@@ -65,7 +65,7 @@ public class Tbc_relatorio_ensaioServiceImpl implements Tbc_relatorio_ensaioServ
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_relatorio_ensaio findOne(Long id) {
         log.debug("Request to get Tbc_relatorio_ensaio : {}", id);
         Tbc_relatorio_ensaio tbc_relatorio_ensaio = tbc_relatorio_ensaioRepository.findOne(id);
@@ -84,15 +84,16 @@ public class Tbc_relatorio_ensaioServiceImpl implements Tbc_relatorio_ensaioServ
     }
 
     /**
-     * Search for the tbc_relatorio_ensaio corresponding to the query.
+     * Search for the tbc_plano_teste_analise corresponding to the query.
      *
      *  @param query the query of the search
+     *  @param removido the query of the search
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_relatorio_ensaio> search(String query, Pageable pageable) {
+    public Page<Tbc_relatorio_ensaio> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_relatorio_ensaios for query {}", query);
-        Page<Tbc_relatorio_ensaio> result = tbc_relatorio_ensaioSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_relatorio_ensaio> result = tbc_relatorio_ensaioRepository.search(query, removido, pageable);
         return result;
     }
 }

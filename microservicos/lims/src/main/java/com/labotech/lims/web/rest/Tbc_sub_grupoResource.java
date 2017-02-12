@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_sub_grupo.
@@ -35,7 +31,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_sub_grupoResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_sub_grupoResource.class);
-        
+
     @Inject
     private Tbc_sub_grupoService tbc_sub_grupoService;
 
@@ -134,7 +130,7 @@ public class Tbc_sub_grupoResource {
      * SEARCH  /_search/tbc-sub-grupos?query=:query : search for the tbc_sub_grupo corresponding
      * to the query.
      *
-     * @param query the query of the tbc_sub_grupo search 
+     * @param query the query of the tbc_sub_grupo search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +140,12 @@ public class Tbc_sub_grupoResource {
     public ResponseEntity<List<Tbc_sub_grupo>> searchTbc_sub_grupos(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_sub_grupos for query {}", query);
-        Page<Tbc_sub_grupo> page = tbc_sub_grupoService.search(query, pageable);
+        Page<Tbc_sub_grupo>  page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_sub_grupoService.search(param, true, pageable);
+        }else
+            page = tbc_sub_grupoService.search(query, false, pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-sub-grupos");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

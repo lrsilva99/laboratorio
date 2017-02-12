@@ -11,7 +11,8 @@
             </button>
             <a class="navbar-brand logo" href="#/" ng-click="vm.collapseNavbar()">
                 <img class="logo-img" src="content/images/logo-jhipster.png" alt="logo"/>
-                <span data-translate="global.title">Appgeteway</span> <span class="navbar-version">v{{VERSION}}</span>
+                <span data-translate="global.title">Appgeteway</span>
+                <span class="navbar-version">v{{VERSION}}</span>
             </a>
         </div>
         <div class="navbar-collapse" uib-collapse="vm.isNavbarCollapsed" ng-switch="vm.isAuthenticated()">
@@ -89,6 +90,13 @@
                                 </a>
                             </li>
 
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-plano-teste" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-compressed"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcPlanoTeste">Tbc Plano Teste</span>
+                            </a>
+                        </li>
+
 
 
                         <!-- /\ Menu Análise-->
@@ -133,6 +141,7 @@
                                 <span data-translate="global.menu.entities.tbcCliente">Tbc Cliente</span>
                             </a>
                         </li>
+
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
                     </ul>
                     <a class="dropdown-toggle" uib-dropdown-toggle href="" id="entity-menu">

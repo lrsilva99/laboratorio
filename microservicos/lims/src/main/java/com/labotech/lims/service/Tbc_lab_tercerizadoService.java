@@ -3,7 +3,7 @@ package com.labotech.lims.service;
 import com.labotech.lims.domain.Tbc_lab_tercerizado;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
+
 
 /**
  * Service Interface for managing Tbc_lab_tercerizado.
@@ -20,7 +20,7 @@ public interface Tbc_lab_tercerizadoService {
 
     /**
      *  Get all the tbc_lab_tercerizados.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
@@ -45,9 +45,9 @@ public interface Tbc_lab_tercerizadoService {
      * Search for the tbc_lab_tercerizado corresponding to the query.
      *
      *  @param query the query of the search
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    Page<Tbc_lab_tercerizado> search(String query, Pageable pageable);
+    Page<Tbc_lab_tercerizado> search(String query, Boolean removido, Pageable pageable);
 }

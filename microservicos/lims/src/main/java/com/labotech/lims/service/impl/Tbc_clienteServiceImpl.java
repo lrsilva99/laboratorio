@@ -12,11 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * Service Implementation for managing Tbc_cliente.
@@ -26,7 +21,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_clienteServiceImpl implements Tbc_clienteService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_clienteServiceImpl.class);
-    
+
     @Inject
     private Tbc_clienteRepository tbc_clienteRepository;
 
@@ -48,11 +43,11 @@ public class Tbc_clienteServiceImpl implements Tbc_clienteService{
 
     /**
      *  Get all the tbc_clientes.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_cliente> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_clientes");
         Page<Tbc_cliente> result = tbc_clienteRepository.findAll(pageable);
@@ -65,7 +60,7 @@ public class Tbc_clienteServiceImpl implements Tbc_clienteService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_cliente findOne(Long id) {
         log.debug("Request to get Tbc_cliente : {}", id);
         Tbc_cliente tbc_cliente = tbc_clienteRepository.findOne(id);
@@ -85,14 +80,14 @@ public class Tbc_clienteServiceImpl implements Tbc_clienteService{
 
     /**
      * Search for the tbc_cliente corresponding to the query.
-     *
+     * *  @param removido the query of the search removido
      *  @param query the query of the search
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_cliente> search(String query, Pageable pageable) {
-        log.debug("Request to search for a page of Tbc_clientes for query {}", query);
-        Page<Tbc_cliente> result = tbc_clienteSearchRepository.search(queryStringQuery(query), pageable);
+    public Page<Tbc_cliente> search(String query,Boolean removido, Pageable pageable) {
+        log.debug("Request to search for a page of Tbc_clientes for param {}", query);
+        Page<Tbc_cliente> result = tbc_clienteRepository.search(query,removido, pageable);
         return result;
     }
 }

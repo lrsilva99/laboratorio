@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_report.
@@ -35,7 +31,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_reportResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_reportResource.class);
-        
+
     @Inject
     private Tbc_reportService tbc_reportService;
 
@@ -134,7 +130,7 @@ public class Tbc_reportResource {
      * SEARCH  /_search/tbc-reports?query=:query : search for the tbc_report corresponding
      * to the query.
      *
-     * @param query the query of the tbc_report search 
+     * @param query the query of the tbc_report search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +140,12 @@ public class Tbc_reportResource {
     public ResponseEntity<List<Tbc_report>> searchTbc_reports(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_reports for query {}", query);
-        Page<Tbc_report> page = tbc_reportService.search(query, pageable);
+        Page<Tbc_report>  page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_reportService.search(param, true, pageable);
+        }else
+            page = tbc_reportService.search(query, false, pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-reports");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

@@ -26,7 +26,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_tipo_cadastroServiceImpl implements Tbc_tipo_cadastroService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_tipo_cadastroServiceImpl.class);
-    
+
     @Inject
     private Tbc_tipo_cadastroRepository tbc_tipo_cadastroRepository;
 
@@ -48,11 +48,11 @@ public class Tbc_tipo_cadastroServiceImpl implements Tbc_tipo_cadastroService{
 
     /**
      *  Get all the tbc_tipo_cadastros.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_tipo_cadastro> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_tipo_cadastros");
         Page<Tbc_tipo_cadastro> result = tbc_tipo_cadastroRepository.findAll(pageable);
@@ -65,7 +65,7 @@ public class Tbc_tipo_cadastroServiceImpl implements Tbc_tipo_cadastroService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_tipo_cadastro findOne(Long id) {
         log.debug("Request to get Tbc_tipo_cadastro : {}", id);
         Tbc_tipo_cadastro tbc_tipo_cadastro = tbc_tipo_cadastroRepository.findOne(id);
@@ -90,9 +90,9 @@ public class Tbc_tipo_cadastroServiceImpl implements Tbc_tipo_cadastroService{
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_tipo_cadastro> search(String query, Pageable pageable) {
+    public Page<Tbc_tipo_cadastro> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_tipo_cadastros for query {}", query);
-        Page<Tbc_tipo_cadastro> result = tbc_tipo_cadastroSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_tipo_cadastro> result = tbc_tipo_cadastroRepository.search(query, removido, pageable);
         return result;
     }
 }

@@ -22,10 +22,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * REST controller for managing Tbc_lab_tercerizado.
@@ -35,7 +31,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_lab_tercerizadoResource {
 
     private final Logger log = LoggerFactory.getLogger(Tbc_lab_tercerizadoResource.class);
-        
+
     @Inject
     private Tbc_lab_tercerizadoService tbc_lab_tercerizadoService;
 
@@ -134,7 +130,7 @@ public class Tbc_lab_tercerizadoResource {
      * SEARCH  /_search/tbc-lab-tercerizados?query=:query : search for the tbc_lab_tercerizado corresponding
      * to the query.
      *
-     * @param query the query of the tbc_lab_tercerizado search 
+     * @param query the query of the tbc_lab_tercerizado search
      * @param pageable the pagination information
      * @return the result of the search
      * @throws URISyntaxException if there is an error to generate the pagination HTTP headers
@@ -144,7 +140,12 @@ public class Tbc_lab_tercerizadoResource {
     public ResponseEntity<List<Tbc_lab_tercerizado>> searchTbc_lab_tercerizados(@RequestParam String query, @ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to search for a page of Tbc_lab_tercerizados for query {}", query);
-        Page<Tbc_lab_tercerizado> page = tbc_lab_tercerizadoService.search(query, pageable);
+        Page<Tbc_lab_tercerizado> page = null;
+        if (query.contains("@r@") || query.contains("@R@") ) {
+            String param =  query.replaceAll("@r@","").replaceAll("@R@","");
+            page = tbc_lab_tercerizadoService.search(param, true, pageable);
+        }else
+            page = tbc_lab_tercerizadoService.search(query, false,pageable);
         HttpHeaders headers = PaginationUtil.generateSearchPaginationHttpHeaders(query, page, "/api/_search/tbc-lab-tercerizados");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

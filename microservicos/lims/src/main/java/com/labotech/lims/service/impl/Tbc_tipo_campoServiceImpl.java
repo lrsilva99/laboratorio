@@ -26,7 +26,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_tipo_campoServiceImpl implements Tbc_tipo_campoService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_tipo_campoServiceImpl.class);
-    
+
     @Inject
     private Tbc_tipo_campoRepository tbc_tipo_campoRepository;
 
@@ -48,11 +48,11 @@ public class Tbc_tipo_campoServiceImpl implements Tbc_tipo_campoService{
 
     /**
      *  Get all the tbc_tipo_campos.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_tipo_campo> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_tipo_campos");
         Page<Tbc_tipo_campo> result = tbc_tipo_campoRepository.findAll(pageable);
@@ -65,7 +65,7 @@ public class Tbc_tipo_campoServiceImpl implements Tbc_tipo_campoService{
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_tipo_campo findOne(Long id) {
         log.debug("Request to get Tbc_tipo_campo : {}", id);
         Tbc_tipo_campo tbc_tipo_campo = tbc_tipo_campoRepository.findOne(id);
@@ -84,15 +84,16 @@ public class Tbc_tipo_campoServiceImpl implements Tbc_tipo_campoService{
     }
 
     /**
-     * Search for the tbc_tipo_campo corresponding to the query.
+     * Search for the tbc_plano_teste_analise corresponding to the query.
      *
      *  @param query the query of the search
+     *  @param removido the query of the search
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_tipo_campo> search(String query, Pageable pageable) {
+    public Page<Tbc_tipo_campo> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_tipo_campos for query {}", query);
-        Page<Tbc_tipo_campo> result = tbc_tipo_campoSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_tipo_campo> result = tbc_tipo_campoRepository.search(query,removido, pageable);
         return result;
     }
 }

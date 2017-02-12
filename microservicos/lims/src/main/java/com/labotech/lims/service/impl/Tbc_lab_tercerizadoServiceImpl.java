@@ -12,12 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
-
 /**
  * Service Implementation for managing Tbc_lab_tercerizado.
  */
@@ -26,7 +20,7 @@ import static org.elasticsearch.index.query.QueryBuilders.*;
 public class Tbc_lab_tercerizadoServiceImpl implements Tbc_lab_tercerizadoService{
 
     private final Logger log = LoggerFactory.getLogger(Tbc_lab_tercerizadoServiceImpl.class);
-    
+
     @Inject
     private Tbc_lab_tercerizadoRepository tbc_lab_tercerizadoRepository;
 
@@ -48,11 +42,11 @@ public class Tbc_lab_tercerizadoServiceImpl implements Tbc_lab_tercerizadoServic
 
     /**
      *  Get all the tbc_lab_tercerizados.
-     *  
+     *
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Page<Tbc_lab_tercerizado> findAll(Pageable pageable) {
         log.debug("Request to get all Tbc_lab_tercerizados");
         Page<Tbc_lab_tercerizado> result = tbc_lab_tercerizadoRepository.findAll(pageable);
@@ -65,7 +59,7 @@ public class Tbc_lab_tercerizadoServiceImpl implements Tbc_lab_tercerizadoServic
      *  @param id the id of the entity
      *  @return the entity
      */
-    @Transactional(readOnly = true) 
+    @Transactional(readOnly = true)
     public Tbc_lab_tercerizado findOne(Long id) {
         log.debug("Request to get Tbc_lab_tercerizado : {}", id);
         Tbc_lab_tercerizado tbc_lab_tercerizado = tbc_lab_tercerizadoRepository.findOne(id);
@@ -90,9 +84,9 @@ public class Tbc_lab_tercerizadoServiceImpl implements Tbc_lab_tercerizadoServic
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_lab_tercerizado> search(String query, Pageable pageable) {
+    public Page<Tbc_lab_tercerizado> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_lab_tercerizados for query {}", query);
-        Page<Tbc_lab_tercerizado> result = tbc_lab_tercerizadoSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_lab_tercerizado> result = tbc_lab_tercerizadoRepository.search(query, removido, pageable);
         return result;
     }
 }

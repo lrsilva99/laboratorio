@@ -12,11 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
-
-import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
  * Service Implementation for managing Tbc_analises.
@@ -90,22 +85,10 @@ public class Tbc_analisesServiceImpl implements Tbc_analisesService{
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_analises> search(String query, Pageable pageable) {
+    public Page<Tbc_analises> search(String query, Boolean removido, Pageable pageable) {
         log.debug("Request to search for a page of Tbc_analises for query {}", query);
-        Page<Tbc_analises> result = tbc_analisesSearchRepository.search(queryStringQuery(query), pageable);
+        Page<Tbc_analises> result = tbc_analisesRepository.search(query,removido, pageable);
         return result;
     }
 
-    /**
-     * Search for the tbc_analises corresponding to the query.
-     *
-     *  @param query the query of the search
-     *  @return the list of entities
-     */
-    @Transactional(readOnly = true)
-    public Page<Tbc_analises> findAllSearch(String query, Pageable pageable) {
-        log.debug("Request to search for a page of Tbc_analises for query {}", query);
-        Page<Tbc_analises> result = tbc_analisesRepository.findAllSearch(query, pageable);
-        return result;
-    }
 }

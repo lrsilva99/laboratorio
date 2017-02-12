@@ -3,7 +3,6 @@ package com.labotech.lims.service;
 import com.labotech.lims.domain.Tbc_analises_componente;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import java.util.List;
 
 /**
  * Service Interface for managing Tbc_analises_componente.
