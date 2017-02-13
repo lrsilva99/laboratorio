@@ -16,10 +16,10 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface Tbc_tipo_campoRepository extends JpaRepository<Tbc_tipo_campo,Long> {
 
-    @Query("select u from Tbc_tipo_campo u where u.nome like  %?1% and removido = ?2")
+    @Query("select u from Tbc_tipo_campo u where u.nome like  %?1% ")
     Page<Tbc_tipo_campo> search(@Param("search") String search, @Param("removido") Boolean removido,Pageable pageable);
 
-    @Query("select u from Tbc_tipo_campo u where removido = false")
+    @Query("select u from Tbc_tipo_campo u")
     Page<Tbc_tipo_campo> findAll(Pageable pageable);
 
 

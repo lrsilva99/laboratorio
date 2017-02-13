@@ -19,7 +19,8 @@
                     }
                     return data;
                 }
-            }
+            },
+            'update': { method:'PUT' }
         });
     }
 })();

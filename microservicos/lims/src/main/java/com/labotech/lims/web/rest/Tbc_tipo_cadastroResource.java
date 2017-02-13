@@ -46,6 +46,7 @@ public class Tbc_tipo_cadastroResource {
     @Timed
     public ResponseEntity<Tbc_tipo_cadastro> createTbc_tipo_cadastro(@Valid @RequestBody Tbc_tipo_cadastro tbc_tipo_cadastro) throws URISyntaxException {
         log.debug("REST request to save Tbc_tipo_cadastro : {}", tbc_tipo_cadastro);
+        tbc_tipo_cadastro.setRemovido(false);
         if (tbc_tipo_cadastro.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_tipo_cadastro", "idexists", "A new tbc_tipo_cadastro cannot already have an ID")).body(null);
         }

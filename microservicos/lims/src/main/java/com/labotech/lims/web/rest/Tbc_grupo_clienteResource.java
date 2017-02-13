@@ -46,6 +46,7 @@ public class Tbc_grupo_clienteResource {
     @Timed
     public ResponseEntity<Tbc_grupo_cliente> createTbc_grupo_cliente(@Valid @RequestBody Tbc_grupo_cliente tbc_grupo_cliente) throws URISyntaxException {
         log.debug("REST request to save Tbc_grupo_cliente : {}", tbc_grupo_cliente);
+        tbc_grupo_cliente.setRemovido(false);
         if (tbc_grupo_cliente.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_grupo_cliente", "idexists", "A new tbc_grupo_cliente cannot already have an ID")).body(null);
         }

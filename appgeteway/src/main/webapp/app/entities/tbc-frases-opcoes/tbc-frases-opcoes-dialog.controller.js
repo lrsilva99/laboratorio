@@ -15,6 +15,7 @@
         vm.save = save;
         vm.tbc_frases = Tbc_frases.query();
         vm.idfrase = $stateParams.idfrases;
+        vm.tbc_frases_opcoes.tbc_frases = Tbc_frases.get({id: $stateParams.idfrases})
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

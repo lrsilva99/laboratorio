@@ -1,15 +1,6 @@
 
 @media only screen and (max-width: 800px) {
 
-	/* Force table to not be like tables anymore */
-	.table-responsive table,
-	.table-responsive thead,
-	.table-responsive tbody,
-    .table-responsive th,
-	.table-responsive td,
-	.table-responsive tr {
-		display: block;
-	}
 	h2 {
 	font-size: 200% !important;
 	margin-bottom: 0px !important;
@@ -24,6 +15,12 @@
 	.control-label label {
 	font-size: 18px !important;
 	}
+	.col-xs-4 {
+	    width: 10.33333%;
+	    }
+	    .input-group-btn{
+
+	    }
 
     .navbar-brand {
       float: left;
@@ -31,6 +28,18 @@
       font-size: 15px;
       line-height: 10px;
       height: 50px; }
+
+
+
+	/* Force table to not be like tables anymore */
+	.table-responsive table,
+	.table-responsive thead,
+	.table-responsive tbody,
+    .table-responsive th,
+	.table-responsive td,
+	.table-responsive tr {
+		display: block;
+	}
 
 
 	/* Hide table headers (but not display: none;, for accessibility) */

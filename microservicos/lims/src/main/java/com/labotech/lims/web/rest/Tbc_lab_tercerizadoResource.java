@@ -46,6 +46,7 @@ public class Tbc_lab_tercerizadoResource {
     @Timed
     public ResponseEntity<Tbc_lab_tercerizado> createTbc_lab_tercerizado(@Valid @RequestBody Tbc_lab_tercerizado tbc_lab_tercerizado) throws URISyntaxException {
         log.debug("REST request to save Tbc_lab_tercerizado : {}", tbc_lab_tercerizado);
+        tbc_lab_tercerizado.setRemovido(false);
         if (tbc_lab_tercerizado.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_lab_tercerizado", "idexists", "A new tbc_lab_tercerizado cannot already have an ID")).body(null);
         }

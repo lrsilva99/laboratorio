@@ -46,6 +46,7 @@ public class Tbc_frasesResource {
     @Timed
     public ResponseEntity<Tbc_frases> createTbc_frases(@Valid @RequestBody Tbc_frases tbc_frases) throws URISyntaxException {
         log.debug("REST request to save Tbc_frases : {}", tbc_frases);
+        tbc_frases.setRemovido(false);
         if (tbc_frases.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_frases", "idexists", "A new tbc_frases cannot already have an ID")).body(null);
         }

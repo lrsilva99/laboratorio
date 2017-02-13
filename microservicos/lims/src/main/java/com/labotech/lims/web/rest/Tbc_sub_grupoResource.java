@@ -46,6 +46,7 @@ public class Tbc_sub_grupoResource {
     @Timed
     public ResponseEntity<Tbc_sub_grupo> createTbc_sub_grupo(@Valid @RequestBody Tbc_sub_grupo tbc_sub_grupo) throws URISyntaxException {
         log.debug("REST request to save Tbc_sub_grupo : {}", tbc_sub_grupo);
+        tbc_sub_grupo.setRemovido(false);
         if (tbc_sub_grupo.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_sub_grupo", "idexists", "A new tbc_sub_grupo cannot already have an ID")).body(null);
         }

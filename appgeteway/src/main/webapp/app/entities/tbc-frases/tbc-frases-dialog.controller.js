@@ -16,7 +16,6 @@
         vm.tbc_instituicaos = Tbc_instituicao.query();
         vm.tbc_sub_grupos = Tbc_sub_grupo.query();
 
-
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
         });

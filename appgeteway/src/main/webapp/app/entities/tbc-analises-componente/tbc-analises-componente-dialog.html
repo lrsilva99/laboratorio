@@ -55,7 +55,11 @@
 
         <div class="form-group">
             <label data-translate="global.field.tbc_instituicao" for="field_tbc_instituicao">Tbc Instituicao</label>
-            <select class="form-control" id="field_tbc_instituicao" name="tbc_instituicao" ng-model="vm.tbc_analises_componente.tbc_instituicao" ng-options="tbc_instituicao as tbc_instituicao.nome for tbc_instituicao in vm.tbc_instituicaos track by tbc_instituicao.id" required>
+            <select class="form-control"
+                    id="field_tbc_instituicao"
+                    name="tbc_instituicao"
+                    ng-model="vm.tbc_analises_componente.tbc_instituicao"
+                    ng-options="tbc_instituicao as tbc_instituicao.nome for tbc_instituicao in vm.tbc_instituicaos track by tbc_instituicao.id" required>
                 <option value=""></option>
             </select>
         </div>
@@ -67,7 +71,11 @@
         </div>
         <div class="form-group">
             <label data-translate="global.field.tbc_tipo_campo" for="field_tbc_tipo_campo">Tbc Tipo Campo</label>
-            <select class="form-control" id="field_tbc_tipo_campo" name="tbc_tipo_campo" ng-model="vm.tbc_analises_componente.tbc_tipo_campo" ng-options="tbc_tipo_campo as tbc_tipo_campo.nome for tbc_tipo_campo in vm.tbc_tipo_campos track by tbc_tipo_campo.id" required>
+            <select class="form-control"
+                    id="field_tbc_tipo_campo"
+                    name="tbc_tipo_campo"
+                    ng-model="vm.tbc_analises_componente.tbc_tipo_campo"
+                    ng-options="tbc_tipo_campo as tbc_tipo_campo.nome for tbc_tipo_campo in vm.tbc_tipo_campos track by tbc_tipo_campo.id" required>
                 <option value=""></option>
             </select>
         </div>
@@ -77,12 +85,7 @@
                 This field is required.
             </p>
         </div>
-        <div class="form-group">
-            <label data-translate="global.field.tbc_analises" for="field_tbc_analises">Tbc Analises</label>
-            <select class="form-control" id="field_tbc_analises" name="tbc_analises" ng-model="vm.tbc_analises_componente.tbc_analises" ng-options="tbc_analises as tbc_analises.nome for tbc_analises in vm.tbc_analises track by tbc_analises.id" required>
-                <option value=""></option>
-            </select>
-        </div>
+
         <div ng-show="editForm.tbc_analises.$invalid">
             <p class="help-block"
                 ng-show="editForm.tbc_analises.$error.required" data-translate="entity.validation.required">

@@ -46,6 +46,7 @@ public class Tbc_relatorio_ensaioResource {
     @Timed
     public ResponseEntity<Tbc_relatorio_ensaio> createTbc_relatorio_ensaio(@Valid @RequestBody Tbc_relatorio_ensaio tbc_relatorio_ensaio) throws URISyntaxException {
         log.debug("REST request to save Tbc_relatorio_ensaio : {}", tbc_relatorio_ensaio);
+        tbc_relatorio_ensaio.setRemovido(false);
         if (tbc_relatorio_ensaio.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_relatorio_ensaio", "idexists", "A new tbc_relatorio_ensaio cannot already have an ID")).body(null);
         }

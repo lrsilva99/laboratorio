@@ -46,6 +46,7 @@ public class Tbc_frases_opcoesResource {
     @Timed
     public ResponseEntity<Tbc_frases_opcoes> createTbc_frases_opcoes(@Valid @RequestBody Tbc_frases_opcoes tbc_frases_opcoes) throws URISyntaxException {
         log.debug("REST request to save Tbc_frases_opcoes : {}", tbc_frases_opcoes);
+        tbc_frases_opcoes.setRemovido(false);
         if (tbc_frases_opcoes.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_frases_opcoes", "idexists", "A new tbc_frases_opcoes cannot already have an ID")).body(null);
         }

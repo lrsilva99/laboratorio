@@ -46,6 +46,7 @@ public class Tbc_reportResource {
     @Timed
     public ResponseEntity<Tbc_report> createTbc_report(@Valid @RequestBody Tbc_report tbc_report) throws URISyntaxException {
         log.debug("REST request to save Tbc_report : {}", tbc_report);
+        tbc_report.setRemovido(false);
         if (tbc_report.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_report", "idexists", "A new tbc_report cannot already have an ID")).body(null);
         }

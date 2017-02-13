@@ -45,6 +45,7 @@ public class Tbc_plano_testeResource {
     @Timed
     public ResponseEntity<Tbc_plano_teste> createTbc_plano_teste(@Valid @RequestBody Tbc_plano_teste tbc_plano_teste) throws URISyntaxException {
         log.debug("REST request to save Tbc_plano_teste : {}", tbc_plano_teste);
+        tbc_plano_teste.setRemovido(false);
         if (tbc_plano_teste.getId() != null) {
             return ResponseEntity.badRequest().headers(HeaderUtil.createFailureAlert("tbc_plano_teste", "idexists", "A new tbc_plano_teste cannot already have an ID")).body(null);
         }
