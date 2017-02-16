@@ -70,8 +70,8 @@
             $state.transitionTo($state.$current, {
                 page: vm.page,
                 sort: vm.predicate + ',' + (vm.reverse ? 'asc' : 'desc'),
-                idFrase: vm.idFrase,
-                search: vm.currentSearch
+                search: vm.currentSearch,
+                idFrase: vm.idFrase
             });
         }
 
@@ -81,7 +81,7 @@
             }
             vm.links = null;
             vm.page = 1;
-            vm.predicate = '_score';
+            vm.predicate = 'nome';
             vm.reverse = false;
             vm.currentSearch = searchQuery;
             vm.transition();

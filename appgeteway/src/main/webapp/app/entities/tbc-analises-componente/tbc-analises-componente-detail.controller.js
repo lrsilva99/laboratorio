@@ -11,7 +11,7 @@
         var vm = this;
 
         vm.tbc_analises_componente = entity;
-        vm.previousState = previousState.name;
+        vm.previousState = previousState.name.concat("({idAnalise:",vm.tbc_analises_componente.tbc_analises.id,"})");
         vm.byteSize = DataUtils.byteSize;
         vm.openFile = DataUtils.openFile;
 

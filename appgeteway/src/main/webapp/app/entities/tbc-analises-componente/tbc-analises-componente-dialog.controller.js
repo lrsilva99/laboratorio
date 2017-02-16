@@ -17,7 +17,6 @@
         vm.save = save;
         vm.tbc_instituicaos = Tbc_instituicao.query();
         vm.tbc_tipo_campos = Tbc_tipo_campo.query();
-        vm.tbc_analises = Tbc_analises.query();
         vm.idAnalise = $stateParams.idAnalise;
         vm.Analises = Tbc_analises.get({id : vm.idAnalise});
         vm.tbc_analises_componente.tbc_analises = vm.Analises;

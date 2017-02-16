@@ -86,10 +86,10 @@ public class Tbc_plano_teste_analiseResource {
      */
     @GetMapping("/tbc-plano-teste-analises")
     @Timed
-    public ResponseEntity<List<Tbc_plano_teste_analise>> getAllTbc_plano_teste_analises(@ApiParam Pageable pageable)
+    public ResponseEntity<List<Tbc_plano_teste_analise>> getAllTbc_plano_teste_analises(@RequestParam(value = "idPlanoTeste") @ApiParam Long idPlanoTeste,@ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of Tbc_plano_teste_analises");
-        Page<Tbc_plano_teste_analise> page = tbc_plano_teste_analiseService.findAll(pageable);
+        Page<Tbc_plano_teste_analise> page = tbc_plano_teste_analiseService.findAll(idPlanoTeste,pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tbc-plano-teste-analises");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
     }

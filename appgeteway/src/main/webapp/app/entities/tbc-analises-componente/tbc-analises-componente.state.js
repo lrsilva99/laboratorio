@@ -11,7 +11,7 @@
         $stateProvider
         .state('tbc-analises-componente', {
             parent: 'laboratorio',
-            url: '/tbc-analises-componente/{idAnalise}/edit',
+            url: '/tbc-analises-componente/{idAnalise}/editpage&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
                 pageTitle: 'appgetewayApp.tbc_analises_componente.home.title'

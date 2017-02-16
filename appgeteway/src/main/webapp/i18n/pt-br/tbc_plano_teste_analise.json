@@ -1,0 +1,20 @@
+{
+    "appgetewayApp": {
+        "tbc_plano_teste_analise" : {
+            "home": {
+                "title": "Plano teste análise"
+            },
+            "detail": {
+                "title": "Plano teste análise registro:"
+            },
+            "selecionada": "Plano de teste selecionada:({{ param }})"
+        }
+    },
+    "limsApp": {
+        "tbc_plano_teste_analise" : {
+            "created": "Um novo Tbc Plano Teste Analise é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Plano Teste Analise é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Plano Teste Analise é deletado com o identificador {{ param }}"
+        }
+    }
+}

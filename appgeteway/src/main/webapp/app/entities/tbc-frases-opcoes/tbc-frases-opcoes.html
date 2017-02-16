@@ -1,5 +1,8 @@
 <div>
     <h2 data-translate="appgetewayApp.tbc_frases_opcoes.home.title">Tbc Frases Opcoes</h2>
+    <td>
+        <a   ui-sref="tbc-frases" data-translate="appgetewayApp.tbc_frases_opcoes.selecionada" translate-values="{param: '{{vm.Frases.nome}}'}">voltar</a>
+    </td>
 
     <jhi-alert></jhi-alert>
     <div class="container-fluid">
@@ -62,6 +65,7 @@
         <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
     </div>
     <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
-        <h3 data-translate="appgetewayApp.tbc_frases_opcoes.selecionada" translate-values="{param: '{{vm.Frases.nome}}'}">Are you sure you want to delete this Tbc Frases Opcoes?</h3>
+    <h3 >Are you sure you want to delete this Tbc Frases Opcoes?</h3>
+
 
 </div>

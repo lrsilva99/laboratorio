@@ -25,6 +25,7 @@
                 "tbcGrupoCliente": "Tbc Grupo Cliente",
                 "tbcCliente": "Tbc Cliente",
                 "tbcPlanoTeste": "Tbc Plano Teste",
+                "tbcPlanoTesteAnalise": "Tbc Plano Teste Analise",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratory",
                 "subconfiganalise": "Analysis"

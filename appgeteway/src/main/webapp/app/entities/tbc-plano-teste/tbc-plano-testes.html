@@ -38,7 +38,7 @@
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="nome"><span data-translate="global.field.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th jh-sort-by="descricao"><span data-translate="global.field.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="tbc_tipo_cadastro.id"><span data-translate="global.field.tbc_tipo_cadastro">Tbc Tipo Cadastro</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_tipo_cadastro.nome"><span data-translate="global.field.tbc_tipo_cadastro">Tbc Tipo Cadastro</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -70,6 +70,12 @@
                                     class="btn btn-danger btn-sm">
                                 <span class="glyphicon glyphicon-remove-circle"></span>
                                 <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-plano-teste-analise({idPlanoTeste:tbc_plano_teste.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-share"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.frases_opçoes"></span>
                             </button>
                         </div>
                     </td>

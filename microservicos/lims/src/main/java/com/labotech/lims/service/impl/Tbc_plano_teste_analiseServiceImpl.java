@@ -50,9 +50,9 @@ public class Tbc_plano_teste_analiseServiceImpl implements Tbc_plano_teste_anali
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_plano_teste_analise> findAll(Pageable pageable) {
+    public Page<Tbc_plano_teste_analise> findAll(Long idPlanoTeste, Pageable pageable) {
         log.debug("Request to get all Tbc_plano_teste_analises");
-        Page<Tbc_plano_teste_analise> result = tbc_plano_teste_analiseRepository.findAll(pageable);
+        Page<Tbc_plano_teste_analise> result = tbc_plano_teste_analiseRepository.findAll(idPlanoTeste,pageable);
         return result;
     }
 

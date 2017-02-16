@@ -23,6 +23,7 @@
                 "tbcGrupoCliente": "Grupo de cliente",
                 "tbcCliente": "Cliente",
                 "tbcPlanoTeste": "Plano de teste",
+                "tbcPlanoTesteAnalise": "Tbc Plano Teste Analise",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratório",
                 "subconfiganalise": "Análise"
@@ -127,7 +128,9 @@
             "imprimir": "Imprimir",
             "enviar_email": "Env. e-mail",
             "cep": "Cep",
-            "cpf_cnpj": "CPF CNPJ"
+            "cpf_cnpj": "CPF CNPJ",
+            "ordem": "Ordem",
+            "tbc_plano_teste": "Plano de teste"
 
 
         },
@@ -178,7 +181,8 @@
         "home": {
             "createLabel": "Novo registro",
             "createOrEditLabel": "Criar ou editar",
-            "search": "Pesquisar"
+            "search": "Pesquisar",
+            "searchcombo": "Análises"
         }
 
     },

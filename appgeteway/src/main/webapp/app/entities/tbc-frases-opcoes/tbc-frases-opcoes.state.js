@@ -11,7 +11,7 @@
         $stateProvider
         .state('tbc-frases-opcoes', {
             parent: 'entity',
-              url: '/{idfrases}/edit',
+              url: '/{idfrases}/editpage&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
                 pageTitle: 'appgetewayApp.tbc_frases_opcoes.home.title'

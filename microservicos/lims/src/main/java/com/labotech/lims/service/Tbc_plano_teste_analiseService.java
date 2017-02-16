@@ -24,7 +24,7 @@ public interface Tbc_plano_teste_analiseService {
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    Page<Tbc_plano_teste_analise> findAll(Pageable pageable);
+    Page<Tbc_plano_teste_analise> findAll(Long idPlanoTeste, Pageable pageable);
 
     /**
      *  Get the "id" tbc_plano_teste_analise.

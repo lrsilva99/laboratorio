@@ -90,6 +90,7 @@ public class Tbc_analisesResource {
     public ResponseEntity<List<Tbc_analises>> getAllTbc_analises(@ApiParam Pageable pageable)
         throws URISyntaxException {
         log.debug("REST request to get a page of Tbc_analises");
+        log.debug("Paginação teste: ", pageable);
         Page<Tbc_analises> page = tbc_analisesService.findAll(pageable);
         HttpHeaders headers = PaginationUtil.generatePaginationHttpHeaders(page, "/api/tbc-analises");
         return new ResponseEntity<>(page.getContent(), headers, HttpStatus.OK);
