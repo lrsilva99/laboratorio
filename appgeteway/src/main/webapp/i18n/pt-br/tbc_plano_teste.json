@@ -1,0 +1,31 @@
+{
+    "appgetewayApp": {
+        "tbc_plano_teste" : {
+            "home": {
+                "title": "Tbc Plano Testes",
+                "createLabel": "Criar novo Tbc Plano Teste",
+                "createOrEditLabel": "Criar ou editar Tbc Plano Teste",
+                "search": "Pesquisar por Tbc Plano Teste"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Plano Teste {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Plano Teste"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_tipo_cadastro": "Tbc Tipo Cadastro",
+            "tbc_sub_grupo": "Tbc Sub Grupo",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_plano_teste" : {
+            "created": "Um novo Tbc Plano Teste é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Plano Teste é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Plano Teste é deletado com o identificador {{ param }}"
+        }
+    }
+}

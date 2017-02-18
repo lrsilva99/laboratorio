@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Tbc_cliente.
+    -->
+    <changeSet id="2017021012425-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tbc_instituicao_id"
+                                 baseTableName="tbc_cliente"
+                                 constraintName="fk_tbc_cliente_tbc_instituicao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_instituicao"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_grupo_cliente_id"
+                                 baseTableName="tbc_cliente"
+                                 constraintName="fk_tbc_cliente_tbc_grupo_cliente_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_grupo_cliente"/>
+
+    </changeSet>
+</databaseChangeLog>

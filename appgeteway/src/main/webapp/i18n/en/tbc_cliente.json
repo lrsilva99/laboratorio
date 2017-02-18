@@ -1,0 +1,40 @@
+{
+    "appgetewayApp": {
+        "tbc_cliente" : {
+            "home": {
+                "title": "Tbc Clientes",
+                "createLabel": "Create a new Tbc Cliente",
+                "createOrEditLabel": "Create or edit a Tbc Cliente",
+                "search": "Search for Tbc Cliente"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Cliente {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Cliente"
+            },
+            "nome": "Nome",
+            "cep": "Cep",
+            "endereco": "Endereco",
+            "email": "Email",
+            "imprimir": "Imprimir",
+            "enviar_email": "Enviar Email",
+            "directiva_data_atu": "Directiva Data Atu",
+            "cpf_cnpj": "Cpf Cnpj",
+            "codigo_cliente": "Codigo Cliente",
+            "removido": "Removido",
+            "bairro": "Bairro",
+            "bloquear": "Bloquear",
+            "descricao": "Descricao",
+            "tbc_instituicao": "Tbc Instituicao",
+            "tbc_grupo_cliente": "Tbc Grupo Cliente"
+        }
+    },
+    "limsApp": {
+        "tbc_cliente" : {
+            "created": "A new Tbc Cliente is created with identifier {{ param }}",
+            "updated": "A Tbc Cliente is updated with identifier {{ param }}",
+            "deleted": "A Tbc Cliente is deleted with identifier {{ param }}"
+        }
+    }
+}

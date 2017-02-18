@@ -1,0 +1,47 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_instituicao",
+            "otherEntityName": "tbc_instituicao",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "arquivo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "removido",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170205092037",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbc_report",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_plano_teste_analise.detail.title">Tbc Plano Teste Analise</span> {{vm.tbc_plano_teste_analise.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste_analise.ordem">Ordem</span></dt>
+        <dd>
+            <span>{{vm.tbc_plano_teste_analise.ordem}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste_analise.tbc_plano_teste">Tbc Plano Teste</span></dt>
+        <dd>
+            <a ui-sref="tbc-plano-teste-detail({id:vm.tbc_plano_teste_analise.tbc_plano_teste.id})">{{vm.tbc_plano_teste_analise.tbc_plano_teste.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste_analise.tbc_analises">Tbc Analises</span></dt>
+        <dd>
+            <a ui-sref="tbc-analises-detail({id:vm.tbc_plano_teste_analise.tbc_analises.id})">{{vm.tbc_plano_teste_analise.tbc_analises.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-plano-teste-analise-detail.edit({id:vm.tbc_plano_teste_analise.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,159 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTbc_clienteLabel" data-translate="appgetewayApp.tbc_cliente.home.createOrEditLabel">Create or edit a Tbc Cliente</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.tbc_cliente.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.tbc_cliente.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.nome" for="field_nome">Nome</label>
+            <input type="text" class="form-control" name="nome" id="field_nome"
+                    ng-model="vm.tbc_cliente.nome"
+                    required />
+            <div ng-show="editForm.nome.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nome.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.cep" for="field_cep">Cep</label>
+            <input type="text" class="form-control" name="cep" id="field_cep"
+                    ng-model="vm.tbc_cliente.cep"
+                    required />
+            <div ng-show="editForm.cep.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cep.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.endereco" for="field_endereco">Endereco</label>
+                <textarea class="form-control" name="endereco" id="field_endereco"
+                    ng-model="vm.tbc_cliente.endereco" required ></textarea>
+            <div ng-show="editForm.endereco.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.endereco.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.email" for="field_email">Email</label>
+                <textarea class="form-control" name="email" id="field_email"
+                    ng-model="vm.tbc_cliente.email"  ></textarea>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.imprimir" for="field_imprimir">Imprimir</label>
+            <input type="checkbox" class="form-control" name="imprimir" id="field_imprimir"
+                    ng-model="vm.tbc_cliente.imprimir"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.enviar_email" for="field_enviar_email">Enviar Email</label>
+            <input type="checkbox" class="form-control" name="enviar_email" id="field_enviar_email"
+                    ng-model="vm.tbc_cliente.enviar_email"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.directiva_data_atu" for="field_directiva_data_atu">Directiva Data Atu</label>
+                <div class="input-group">
+                    <input id="field_directiva_data_atu" type="text" class="form-control" name="directiva_data_atu" datetime-picker="{{dateformat}}" ng-model="vm.tbc_cliente.directiva_data_atu" is-open="vm.datePickerOpenStatus.directiva_data_atu"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('directiva_data_atu')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.cpf_cnpj" for="field_cpf_cnpj">Cpf Cnpj</label>
+            <input type="text" class="form-control" name="cpf_cnpj" id="field_cpf_cnpj"
+                    ng-model="vm.tbc_cliente.cpf_cnpj"
+                    required />
+            <div ng-show="editForm.cpf_cnpj.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.cpf_cnpj.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.codigo_cliente" for="field_codigo_cliente">Codigo Cliente</label>
+            <input type="text" class="form-control" name="codigo_cliente" id="field_codigo_cliente"
+                    ng-model="vm.tbc_cliente.codigo_cliente"
+                    required />
+            <div ng-show="editForm.codigo_cliente.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.codigo_cliente.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.removido" for="field_removido">Removido</label>
+            <input type="checkbox" class="form-control" name="removido" id="field_removido"
+                    ng-model="vm.tbc_cliente.removido"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.bairro" for="field_bairro">Bairro</label>
+            <input type="text" class="form-control" name="bairro" id="field_bairro"
+                    ng-model="vm.tbc_cliente.bairro"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.bloquear" for="field_bloquear">Bloquear</label>
+            <input type="checkbox" class="form-control" name="bloquear" id="field_bloquear"
+                    ng-model="vm.tbc_cliente.bloquear"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_cliente.descricao" for="field_descricao">Descricao</label>
+                <textarea class="form-control" name="descricao" id="field_descricao"
+                    ng-model="vm.tbc_cliente.descricao"  ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="appgetewayApp.tbc_cliente.tbc_instituicao" for="field_tbc_instituicao">Tbc Instituicao</label>
+            <select class="form-control" id="field_tbc_instituicao" name="tbc_instituicao" ng-model="vm.tbc_cliente.tbc_instituicao" ng-options="tbc_instituicao as tbc_instituicao.id for tbc_instituicao in vm.tbc_instituicaos track by tbc_instituicao.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_instituicao.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tbc_instituicao.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="appgetewayApp.tbc_cliente.tbc_grupo_cliente" for="field_tbc_grupo_cliente">Tbc Grupo Cliente</label>
+            <select class="form-control" id="field_tbc_grupo_cliente" name="tbc_grupo_cliente" ng-model="vm.tbc_cliente.tbc_grupo_cliente" ng-options="tbc_grupo_cliente as tbc_grupo_cliente.id for tbc_grupo_cliente in vm.tbc_grupo_clientes track by tbc_grupo_cliente.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_grupo_cliente.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tbc_grupo_cliente.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

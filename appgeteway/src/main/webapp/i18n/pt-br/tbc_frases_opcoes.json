@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_frases_opcoes" : {
+            "home": {
+                "title": "Tbc Frases Opcoes",
+                "createLabel": "Criar novo Tbc Frases Opcoes",
+                "createOrEditLabel": "Criar ou editar Tbc Frases Opcoes",
+                "search": "Pesquisar por Tbc Frases Opcoes"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Frases Opcoes {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Frases Opcoes"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_frases": "Tbc Frases"
+        }
+    },
+    "limsApp": {
+        "tbc_frases_opcoes" : {
+            "created": "Um novo Tbc Frases Opcoes é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Frases Opcoes é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Frases Opcoes é deletado com o identificador {{ param }}"
+        }
+    }
+}

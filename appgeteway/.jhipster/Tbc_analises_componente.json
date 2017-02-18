@@ -1,0 +1,72 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_instituicao",
+            "otherEntityName": "tbc_instituicao",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_tipo_campo",
+            "otherEntityName": "tbc_tipo_campo",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_analises",
+            "otherEntityName": "tbc_analises",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "linha",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "unidade_medida",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "valor_padrao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "configuracao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        }
+    ],
+    "changelogDate": "20170208234516",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbc_analises_componente",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

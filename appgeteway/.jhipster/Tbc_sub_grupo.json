@@ -1,0 +1,50 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_instituicao",
+            "otherEntityName": "tbc_instituicao",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "sigla",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength",
+                "maxlength"
+            ],
+            "fieldValidateRulesMinlength": "1",
+            "fieldValidateRulesMaxlength": 20
+        },
+        {
+            "fieldName": "removido",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170116101235",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbc_sub_grupo",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

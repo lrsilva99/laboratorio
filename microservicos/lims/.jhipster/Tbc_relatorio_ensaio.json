@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_instituicao",
+            "otherEntityName": "tbc_instituicao",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "caminho",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "removido",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170125101827",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbc_relatorio_ensaio",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

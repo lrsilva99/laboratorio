@@ -1,0 +1,79 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_cliente.detail.title">Tbc Cliente</span> {{vm.tbc_cliente.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbc_cliente.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.nome}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.cep">Cep</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.cep}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.endereco">Endereco</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.endereco}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.email">Email</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.email}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.imprimir">Imprimir</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.imprimir}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.enviar_email">Enviar Email</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.enviar_email}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.directiva_data_atu">Directiva Data Atu</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.directiva_data_atu | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.cpf_cnpj">Cpf Cnpj</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.cpf_cnpj}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.codigo_cliente">Codigo Cliente</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.codigo_cliente}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.removido}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.bairro">Bairro</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.bairro}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.bloquear">Bloquear</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.bloquear}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_cliente.descricao}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_cliente.tbc_instituicao.id})">{{vm.tbc_cliente.tbc_instituicao.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_cliente.tbc_grupo_cliente">Tbc Grupo Cliente</span></dt>
+        <dd>
+            <a ui-sref="tbc-grupo-cliente-detail({id:vm.tbc_cliente.tbc_grupo_cliente.id})">{{vm.tbc_cliente.tbc_grupo_cliente.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-cliente-detail.edit({id:vm.tbc_cliente.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

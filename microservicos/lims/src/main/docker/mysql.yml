@@ -1,0 +1,14 @@
+version: '2'
+services:
+    lims-mysql:
+        container_name: lims-mysql
+        image: mysql:5.7.13
+        # volumes:
+        #     - ~/volumes/jhipster/lims/mysql/:/var/lib/mysql/
+        environment:
+            - MYSQL_USER=root
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+            - MYSQL_DATABASE=lims
+        ports:
+            - 3306:3306
+        command: mysqld --lower_case_table_names=1 --skip-ssl

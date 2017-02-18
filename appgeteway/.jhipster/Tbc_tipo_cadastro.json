@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_instituicao",
+            "otherEntityName": "tbc_instituicao",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "removido",
+            "fieldType": "Boolean",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20170121164540",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbc_tipo_cadastro",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

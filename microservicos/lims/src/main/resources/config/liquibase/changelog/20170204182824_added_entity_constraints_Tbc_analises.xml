@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Tbc_analises.
+    -->
+    <changeSet id="20170204182824-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tbc_sub_grupo_id"
+                                 baseTableName="tbc_analises"
+                                 constraintName="fk_tbc_analises_tbc_sub_grupo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_sub_grupo"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_grupo_analise_id"
+                                 baseTableName="tbc_analises"
+                                 constraintName="fk_tbc_analises_tbc_grupo_analise_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_grupo_analise"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_tipo_cadastro_id"
+                                 baseTableName="tbc_analises"
+                                 constraintName="fk_tbc_analises_tbc_tipo_cadastro_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_tipo_cadastro"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_instituicao_id"
+                                 baseTableName="tbc_analises"
+                                 constraintName="fk_tbc_analises_tbc_instituicao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_instituicao"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_report_id"
+                                 baseTableName="tbc_analises"
+                                 constraintName="fk_tbc_analises_tbc_report_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_report"/>
+
+    </changeSet>
+</databaseChangeLog>

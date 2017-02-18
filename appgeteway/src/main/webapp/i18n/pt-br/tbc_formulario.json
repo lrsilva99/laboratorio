@@ -1,0 +1,34 @@
+{
+    "appgetewayApp": {
+        "tbc_formulario" : {
+            "home": {
+                "title": "Tbc Formularios",
+                "createLabel": "Criar novo Tbc Formulario",
+                "createOrEditLabel": "Criar ou editar Tbc Formulario",
+                "search": "Pesquisar por Tbc Formulario"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Formulario {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Formulario"
+            },
+            "nome": "Nome",
+            "metodo": "Metodo",
+            "descricao": "Descricao",
+            "diasliberacao": "Diasliberacao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao",
+            "tbc_sub_grupo": "Tbc Sub Grupo",
+            "tbc_grupo_analise": "Tbc Grupo Analise",
+            "tbc_tipo_cadastro": "Tbc Tipo Cadastro"
+        }
+    },
+    "limsApp": {
+        "tbc_formulario" : {
+            "created": "Um novo Tbc Formulario é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Formulario é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Formulario é deletado com o identificador {{ param }}"
+        }
+    }
+}

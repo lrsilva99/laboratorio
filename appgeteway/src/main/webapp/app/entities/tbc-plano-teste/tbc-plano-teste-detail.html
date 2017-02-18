@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_plano_teste.detail.title">Tbc Plano Teste</span> {{vm.tbc_plano_teste.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_plano_teste.nome}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_plano_teste.descricao}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_plano_teste.removido}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste.tbc_tipo_cadastro">Tbc Tipo Cadastro</span></dt>
+        <dd>
+            <a ui-sref="tbc-tipo-cadastro-detail({id:vm.tbc_plano_teste.tbc_tipo_cadastro.id})">{{vm.tbc_plano_teste.tbc_tipo_cadastro.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste.tbc_sub_grupo">Tbc Sub Grupo</span></dt>
+        <dd>
+            <a ui-sref="tbc-sub-grupo-detail({id:vm.tbc_plano_teste.tbc_sub_grupo.id})">{{vm.tbc_plano_teste.tbc_sub_grupo.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_plano_teste.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_plano_teste.tbc_instituicao.id})">{{vm.tbc_plano_teste.tbc_instituicao.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-plano-teste-detail.edit({id:vm.tbc_plano_teste.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

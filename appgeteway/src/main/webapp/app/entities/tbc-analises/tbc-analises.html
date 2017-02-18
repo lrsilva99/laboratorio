@@ -1,0 +1,109 @@
+<div>
+    <h2 data-translate="appgetewayApp.tbc_analises.home.title">Tbc Analises</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tbc-analises.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="appgetewayApp.tbc_analises.home.createLabel">
+                        Create new Tbc Analises
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'appgetewayApp.tbc_analises.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
+                    <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nome"><span data-translate="appgetewayApp.tbc_analises.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="descricao"><span data-translate="appgetewayApp.tbc_analises.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="numerodias"><span data-translate="appgetewayApp.tbc_analises.numerodias">Numerodias</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="metpop"><span data-translate="appgetewayApp.tbc_analises.metpop">Metpop</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="removido"><span data-translate="appgetewayApp.tbc_analises.removido">Removido</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tercerizado"><span data-translate="appgetewayApp.tbc_analises.tercerizado">Tercerizado</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="directiva_data_atu"><span data-translate="appgetewayApp.tbc_analises.directiva_data_atu">Directiva Data Atu</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_sub_grupo.id"><span data-translate="appgetewayApp.tbc_analises.tbc_sub_grupo">Tbc Sub Grupo</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_grupo_analise.id"><span data-translate="appgetewayApp.tbc_analises.tbc_grupo_analise">Tbc Grupo Analise</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_tipo_cadastro.id"><span data-translate="appgetewayApp.tbc_analises.tbc_tipo_cadastro">Tbc Tipo Cadastro</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_instituicao.id"><span data-translate="appgetewayApp.tbc_analises.tbc_instituicao">Tbc Instituicao</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tbc_report.id"><span data-translate="appgetewayApp.tbc_analises.tbc_report">Tbc Report</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tbc_analises in vm.tbc_analises track by tbc_analises.id">
+                    <td><a ui-sref="tbc-analises-detail({id:tbc_analises.id})">{{tbc_analises.id}}</a></td>
+                    <td>{{tbc_analises.nome}}</td>
+                    <td>{{tbc_analises.descricao}}</td>
+                    <td>{{tbc_analises.numerodias}}</td>
+                    <td>{{tbc_analises.metpop}}</td>
+                    <td>{{tbc_analises.removido}}</td>
+                    <td>{{tbc_analises.tercerizado}}</td>
+                    <td>{{tbc_analises.directiva_data_atu | date:'medium'}}</td>
+                    <td>
+                        <a ui-sref="tbc-sub-grupo-detail({id:tbc_analises.tbc_sub_grupo.id})">{{tbc_analises.tbc_sub_grupo.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="tbc-grupo-analise-detail({id:tbc_analises.tbc_grupo_analise.id})">{{tbc_analises.tbc_grupo_analise.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="tbc-tipo-cadastro-detail({id:tbc_analises.tbc_tipo_cadastro.id})">{{tbc_analises.tbc_tipo_cadastro.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="tbc-instituicao-detail({id:tbc_analises.tbc_instituicao.id})">{{tbc_analises.tbc_instituicao.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="tbc-report-detail({id:tbc_analises.tbc_report.id})">{{tbc_analises.tbc_report.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="tbc-analises-detail({id:tbc_analises.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-analises.edit({id:tbc_analises.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-analises.delete({id:tbc_analises.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+</div>

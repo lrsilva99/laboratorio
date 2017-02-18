@@ -1,0 +1,75 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_instituicao",
+            "otherEntityName": "tbc_instituicao",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_sub_grupo",
+            "otherEntityName": "tbc_sub_grupo",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_grupo_analise",
+            "otherEntityName": "tbc_grupo_analise",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_tipo_cadastro",
+            "otherEntityName": "tbc_tipo_cadastro",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "metodo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diasliberacao",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "removido",
+            "fieldType": "Boolean",
+            "fieldValidateRules": []
+        }
+    ],
+    "changelogDate": "20170121163237",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbc_formulario",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

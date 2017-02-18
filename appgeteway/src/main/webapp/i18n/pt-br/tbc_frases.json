@@ -1,0 +1,31 @@
+{
+    "appgetewayApp": {
+        "tbc_frases" : {
+            "home": {
+                "title": "Tbc Frases",
+                "createLabel": "Criar novo Tbc Frases",
+                "createOrEditLabel": "Criar ou editar Tbc Frases",
+                "search": "Pesquisar por Tbc Frases"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Frases {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Frases"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao",
+            "tbc_sub_grupo": "Tbc Sub Grupo",
+            "tbc_frases_opcoes": "Tbc Frases Opcoes"
+        }
+    },
+    "limsApp": {
+        "tbc_frases" : {
+            "created": "Um novo Tbc Frases é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Frases é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Frases é deletado com o identificador {{ param }}"
+        }
+    }
+}

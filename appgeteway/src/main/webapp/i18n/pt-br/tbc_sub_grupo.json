@@ -1,0 +1,30 @@
+{
+    "appgetewayApp": {
+        "tbc_sub_grupo" : {
+            "home": {
+                "title": "Tbc Sub Grupos",
+                "createLabel": "Criar novo Tbc Sub Grupo",
+                "createOrEditLabel": "Criar ou editar Tbc Sub Grupo",
+                "search": "Pesquisar por Tbc Sub Grupo"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Sub Grupo {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Sub Grupo"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "sigla": "Sigla",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_sub_grupo" : {
+            "created": "Um novo Tbc Sub Grupo é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Sub Grupo é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Sub Grupo é deletado com o identificador {{ param }}"
+        }
+    }
+}

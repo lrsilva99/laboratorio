@@ -1,0 +1,28 @@
+{
+    "appgetewayApp": {
+        "tbc_plano_teste_analise" : {
+            "home": {
+                "title": "Tbc Plano Teste Analises",
+                "createLabel": "Create a new Tbc Plano Teste Analise",
+                "createOrEditLabel": "Create or edit a Tbc Plano Teste Analise",
+                "search": "Search for Tbc Plano Teste Analise"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Plano Teste Analise {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Plano Teste Analise"
+            },
+            "ordem": "Ordem",
+            "tbc_plano_teste": "Tbc Plano Teste",
+            "tbc_analises": "Tbc Analises"
+        }
+    },
+    "limsApp": {
+        "tbc_plano_teste_analise" : {
+            "created": "A new Tbc Plano Teste Analise is created with identifier {{ param }}",
+            "updated": "A Tbc Plano Teste Analise is updated with identifier {{ param }}",
+            "deleted": "A Tbc Plano Teste Analise is deleted with identifier {{ param }}"
+        }
+    }
+}

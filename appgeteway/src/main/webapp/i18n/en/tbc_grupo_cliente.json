@@ -1,0 +1,30 @@
+{
+    "appgetewayApp": {
+        "tbc_grupo_cliente" : {
+            "home": {
+                "title": "Tbc Grupo Clientes",
+                "createLabel": "Create a new Tbc Grupo Cliente",
+                "createOrEditLabel": "Create or edit a Tbc Grupo Cliente",
+                "search": "Search for Tbc Grupo Cliente"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Grupo Cliente {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Grupo Cliente"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "responsavel": "Responsavel",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_grupo_cliente" : {
+            "created": "A new Tbc Grupo Cliente is created with identifier {{ param }}",
+            "updated": "A Tbc Grupo Cliente is updated with identifier {{ param }}",
+            "deleted": "A Tbc Grupo Cliente is deleted with identifier {{ param }}"
+        }
+    }
+}

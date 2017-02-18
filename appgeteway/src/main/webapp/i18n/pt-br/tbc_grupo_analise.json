@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_grupo_analise" : {
+            "home": {
+                "title": "Tbc Grupo Analises",
+                "createLabel": "Criar novo Tbc Grupo Analise",
+                "createOrEditLabel": "Criar ou editar Tbc Grupo Analise",
+                "search": "Pesquisar por Tbc Grupo Analise"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Grupo Analise {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Grupo Analise"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_grupo_analise" : {
+            "created": "Um novo Tbc Grupo Analise é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Grupo Analise é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Grupo Analise é deletado com o identificador {{ param }}"
+        }
+    }
+}

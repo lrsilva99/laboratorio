@@ -1,0 +1,33 @@
+{
+    "appgetewayApp": {
+        "tbc_instituicao" : {
+            "home": {
+                "title": "Tbc Instituicaos",
+                "createLabel": "Criar novo Tbc Instituicao",
+                "createOrEditLabel": "Criar ou editar Tbc Instituicao",
+                "search": "Pesquisar por Tbc Instituicao"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Instituicao {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Instituicao"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "sigla": "Sigla",
+            "uf": "Uf",
+            "endereco": "Endereco",
+            "telefone": "Telefone",
+            "removido": "Removido",
+            "email": "Email"
+        }
+    },
+    "limsApp": {
+        "tbc_instituicao" : {
+            "created": "Um novo Tbc Instituicao é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Instituicao é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Instituicao é deletado com o identificador {{ param }}"
+        }
+    }
+}

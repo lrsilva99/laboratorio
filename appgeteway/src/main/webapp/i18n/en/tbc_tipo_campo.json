@@ -1,0 +1,27 @@
+{
+    "appgetewayApp": {
+        "tbc_tipo_campo" : {
+            "home": {
+                "title": "Tbc Tipo Campos",
+                "createLabel": "Create a new Tbc Tipo Campo",
+                "createOrEditLabel": "Create or edit a Tbc Tipo Campo",
+                "search": "Search for Tbc Tipo Campo"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Tipo Campo {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Tipo Campo"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao"
+        }
+    },
+    "limsApp": {
+        "tbc_tipo_campo" : {
+            "created": "A new Tbc Tipo Campo is created with identifier {{ param }}",
+            "updated": "A Tbc Tipo Campo is updated with identifier {{ param }}",
+            "deleted": "A Tbc Tipo Campo is deleted with identifier {{ param }}"
+        }
+    }
+}

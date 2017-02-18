@@ -1,0 +1,67 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_analises.detail.title">Tbc Analises</span> {{vm.tbc_analises.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbc_analises.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_analises.nome}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_analises.descricao}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.numerodias">Numerodias</span></dt>
+        <dd>
+            <span>{{vm.tbc_analises.numerodias}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.metpop">Metpop</span></dt>
+        <dd>
+            <span>{{vm.tbc_analises.metpop}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_analises.removido}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.tercerizado">Tercerizado</span></dt>
+        <dd>
+            <span>{{vm.tbc_analises.tercerizado}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.directiva_data_atu">Directiva Data Atu</span></dt>
+        <dd>
+            <span>{{vm.tbc_analises.directiva_data_atu | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.tbc_sub_grupo">Tbc Sub Grupo</span></dt>
+        <dd>
+            <a ui-sref="tbc-sub-grupo-detail({id:vm.tbc_analises.tbc_sub_grupo.id})">{{vm.tbc_analises.tbc_sub_grupo.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.tbc_grupo_analise">Tbc Grupo Analise</span></dt>
+        <dd>
+            <a ui-sref="tbc-grupo-analise-detail({id:vm.tbc_analises.tbc_grupo_analise.id})">{{vm.tbc_analises.tbc_grupo_analise.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.tbc_tipo_cadastro">Tbc Tipo Cadastro</span></dt>
+        <dd>
+            <a ui-sref="tbc-tipo-cadastro-detail({id:vm.tbc_analises.tbc_tipo_cadastro.id})">{{vm.tbc_analises.tbc_tipo_cadastro.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_analises.tbc_instituicao.id})">{{vm.tbc_analises.tbc_instituicao.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_analises.tbc_report">Tbc Report</span></dt>
+        <dd>
+            <a ui-sref="tbc-report-detail({id:vm.tbc_analises.tbc_report.id})">{{vm.tbc_analises.tbc_report.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-analises-detail.edit({id:vm.tbc_analises.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_grupo_analise" : {
+            "home": {
+                "title": "Tbc Grupo Analises",
+                "createLabel": "Create a new Tbc Grupo Analise",
+                "createOrEditLabel": "Create or edit a Tbc Grupo Analise",
+                "search": "Search for Tbc Grupo Analise"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Grupo Analise {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Grupo Analise"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_grupo_analise" : {
+            "created": "A new Tbc Grupo Analise is created with identifier {{ param }}",
+            "updated": "A Tbc Grupo Analise is updated with identifier {{ param }}",
+            "deleted": "A Tbc Grupo Analise is deleted with identifier {{ param }}"
+        }
+    }
+}

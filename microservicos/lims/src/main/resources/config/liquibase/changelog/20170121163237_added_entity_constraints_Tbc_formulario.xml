@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Tbc_formulario.
+    -->
+    <changeSet id="20170121163237-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tbc_instituicao_id"
+                                 baseTableName="tbc_formulario"
+                                 constraintName="fk_tbc_formulario_tbc_instituicao_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_instituicao"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_sub_grupo_id"
+                                 baseTableName="tbc_formulario"
+                                 constraintName="fk_tbc_formulario_tbc_sub_grupo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_sub_grupo"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_grupo_analise_id"
+                                 baseTableName="tbc_formulario"
+                                 constraintName="fk_tbc_formulario_tbc_grupo_analise_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_grupo_analise"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_tipo_cadastro_id"
+                                 baseTableName="tbc_formulario"
+                                 constraintName="fk_tbc_formulario_tbc_tipo_cadastro_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_tipo_cadastro"/>
+
+    </changeSet>
+</databaseChangeLog>

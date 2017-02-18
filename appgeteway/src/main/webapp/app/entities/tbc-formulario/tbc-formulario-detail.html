@@ -1,0 +1,55 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_formulario.detail.title">Tbc Formulario</span> {{vm.tbc_formulario.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbc_formulario.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario.nome}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.metodo">Metodo</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario.metodo}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario.descricao}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.diasliberacao">Diasliberacao</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario.diasliberacao}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario.removido}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_formulario.tbc_instituicao.id})">{{vm.tbc_formulario.tbc_instituicao.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.tbc_sub_grupo">Tbc Sub Grupo</span></dt>
+        <dd>
+            <a ui-sref="tbc-sub-grupo-detail({id:vm.tbc_formulario.tbc_sub_grupo.id})">{{vm.tbc_formulario.tbc_sub_grupo.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.tbc_grupo_analise">Tbc Grupo Analise</span></dt>
+        <dd>
+            <a ui-sref="tbc-grupo-analise-detail({id:vm.tbc_formulario.tbc_grupo_analise.id})">{{vm.tbc_formulario.tbc_grupo_analise.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_formulario.tbc_tipo_cadastro">Tbc Tipo Cadastro</span></dt>
+        <dd>
+            <a ui-sref="tbc-tipo-cadastro-detail({id:vm.tbc_formulario.tbc_tipo_cadastro.id})">{{vm.tbc_formulario.tbc_tipo_cadastro.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-formulario-detail.edit({id:vm.tbc_formulario.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

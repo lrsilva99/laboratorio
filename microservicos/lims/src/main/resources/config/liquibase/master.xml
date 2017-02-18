@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+    <include file="classpath:config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170115225331_added_entity_Tbc_instituicao.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170115225449_added_entity_EntityAuditEvent.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170116101235_added_entity_Tbc_sub_grupo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170116232156_added_entity_Tbc_grupo_analise.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170117200507_added_entity_Tbc_frases.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170117200743_added_entity_Tbc_frases_opcoes.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121163237_added_entity_Tbc_formulario.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121164540_added_entity_Tbc_tipo_cadastro.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121164704_added_entity_Tbc_tipo_laboratorio.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170125101827_added_entity_Tbc_relatorio_ensaio.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170204182824_added_entity_Tbc_analises.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170205083406_added_entity_Tbc_lab_tercerizado.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170205092037_added_entity_Tbc_report.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170207174353_added_entity_Tbc_tipo_campo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170208234516_added_entity_Tbc_analises_componente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170210141020_added_entity_Tbc_grupo_cliente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017021012425_added_entity_Tbc_cliente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211124422_added_entity_Tbc_plano_teste.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211143717_added_entity_Tbc_plano_teste_analise.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170116101235_added_entity_constraints_Tbc_sub_grupo.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170116232156_added_entity_constraints_Tbc_grupo_analise.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170117200507_added_entity_constraints_Tbc_frases.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170117200743_added_entity_constraints_Tbc_frases_opcoes.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121163237_added_entity_constraints_Tbc_formulario.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121164540_added_entity_constraints_Tbc_tipo_cadastro.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170121164704_added_entity_constraints_Tbc_tipo_laboratorio.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170125101827_added_entity_constraints_Tbc_relatorio_ensaio.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170204182824_added_entity_constraints_Tbc_analises.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170205083406_added_entity_constraints_Tbc_lab_tercerizado.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170205092037_added_entity_constraints_Tbc_report.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170208142825_added_entity_constraints_Tbc_analises_componente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170208234516_added_entity_constraints_Tbc_analises_componente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170210141020_added_entity_constraints_Tbc_grupo_cliente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/2017021012425_added_entity_constraints_Tbc_cliente.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211124422_added_entity_constraints_Tbc_plano_teste.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170211143717_added_entity_constraints_Tbc_plano_teste_analise.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+</databaseChangeLog>
