@@ -104,7 +104,38 @@
 
                 </li>
                 <!-- /\ Menu administração -->
+                <!-- \/ Menu grandes animais -->
+                <li ng-class="{active: vm.$state.includes('grandesanimais')}" ng-switch-when="true" uib-dropdown dropdown>
+                    <a class="dropdown-toggle" uib-dropdown-toggle href="" id="grandes-menu">
+                        <span>
+                            <span class="glyphicon glyphicon-level-up"></span>&nbsp;
+                            <span class="hidden-sm" data-translate="global.menu.entities.subgrandesanimais">Laboratorio</span>
+                            <b class="caret"></b>
+                        </span>
 
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-fazenda" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-university"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcFazenda">Tbc Fazenda</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-cooperativa" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-university"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcCooperativa">Tbc Cooperativa</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-proprietario" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-tree"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcProprietario">Tbc Proprietario</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- /\ Menu grandes animais -->
 
                 <li ng-class="{active: vm.$state.includes('entity')}" ng-switch-when="true" uib-dropdown dropdown>
                     <ul class="dropdown-menu" uib-dropdown-menu>
@@ -132,6 +163,31 @@
                             <a ui-sref="tbc-tipo-campo" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                 <span data-translate="global.menu.entities.tbcTipoCampo">Tbc Tipo Campo</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-convenio" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-hospital-o"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcConvenio">Tbc Convenio</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-especie" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-paw"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcEspecie">Tbc Especie</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-matriz" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-envira"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcMatriz">Tbc Matriz</span>
+                            </a>
+                        </li>
+
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-formulario" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcFormulario">Tbc Formulario</span>
                             </a>
                         </li>
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->

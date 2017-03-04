@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_fazenda" : {
+            "home": {
+                "title": "Fazenda"
+            },
+            "detail": {
+                "title": "Fazenda registro"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_fazenda" : {
+            "created": "Um novo Tbc Fazenda é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Fazenda é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Fazenda é deletado com o identificador {{ param }}"
+        }
+    }
+}

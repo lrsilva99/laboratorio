@@ -15,7 +15,12 @@
         $stateProvider.state('laboratorio', {
                     abstract: true,
                     parent: 'app'
-                });
+        }),
+        $stateProvider.state('grandesanimais', {
+                    abstract: true,
+                    parent: 'app'
+         });
+
         ;
     }
 })();

@@ -1,0 +1,32 @@
+{
+    "appgetewayApp": {
+        "tbc_formulario_compnentes" : {
+            "home": {
+                "title": "Tbc Formulario Compnentes",
+                "createLabel": "Create a new Tbc Formulario Compnentes",
+                "createOrEditLabel": "Create or edit a Tbc Formulario Compnentes",
+                "search": "Search for Tbc Formulario Compnentes"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Formulario Compnentes {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Formulario Compnentes"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "linha": "Linha",
+            "unidade_medida": "Unidade Medida",
+            "valor_padrao": "Valor Padrao",
+            "configuracao": "Configuracao",
+            "tbc_formulario": "Tbc Formulario"
+        }
+    },
+    "limsApp": {
+        "tbc_formulario_compnentes" : {
+            "created": "A new Tbc Formulario Compnentes is created with identifier {{ param }}",
+            "updated": "A Tbc Formulario Compnentes is updated with identifier {{ param }}",
+            "deleted": "A Tbc Formulario Compnentes is deleted with identifier {{ param }}"
+        }
+    }
+}

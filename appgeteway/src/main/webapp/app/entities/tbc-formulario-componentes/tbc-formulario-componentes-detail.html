@@ -1,0 +1,51 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_formulario_componentes.detail.title">Tbc Formulario Componentes</span> {{vm.tbc_formulario_componentes.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="global.field.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.nome}}</span>
+        </dd>
+        <dt><span data-translate="global.field.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.descricao}}</span>
+        </dd>
+        <dt><span data-translate="global.field.linha">Linha</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.linha}}</span>
+        </dd>
+        <dt><span data-translate="global.field.unidade_medida">Unidade Medida</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.unidade_medida}}</span>
+        </dd>
+        <dt><span data-translate="global.field.valor_padrao">Valor Padrao</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.valor_padrao}}</span>
+        </dd>
+        <dt><span data-translate="global.field.configuracao">Configuracao</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.configuracao}}</span>
+        </dd>
+        <dt><span data-translate="global.field.tbc_formulario">Tbc Formulario</span></dt>
+        <dd>
+            <a ui-sref="tbc-formulario-detail({id:vm.tbc_formulario_componentes.tbc_formulario.id})">{{vm.tbc_formulario_componentes.tbc_formulario.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.tbc_tipo_campo">Tbc Tipo Campo</span></dt>
+        <dd>
+            <a ui-sref="tbc-tipo-campo-detail({id:vm.tbc_formulario_componentes.tbc_tipo_campo.id})">{{vm.tbc_formulario_componentes.tbc_tipo_campo.nome}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="tbc-formulario-componentes({idFormulario:vm.tbc_formulario_componentes.tbc_formulario.id})"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-formulario-componentes-detail.edit({id:vm.tbc_formulario_componentes.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

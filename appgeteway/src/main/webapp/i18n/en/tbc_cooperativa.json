@@ -1,0 +1,31 @@
+{
+    "appgetewayApp": {
+        "tbc_cooperativa" : {
+            "home": {
+                "title": "Tbc Cooperativas",
+                "createLabel": "Create a new Tbc Cooperativa",
+                "createOrEditLabel": "Create or edit a Tbc Cooperativa",
+                "search": "Search for Tbc Cooperativa"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Cooperativa {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Cooperativa"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "email": "Email",
+            "telefone": "Telefone",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_cooperativa" : {
+            "created": "A new Tbc Cooperativa is created with identifier {{ param }}",
+            "updated": "A Tbc Cooperativa is updated with identifier {{ param }}",
+            "deleted": "A Tbc Cooperativa is deleted with identifier {{ param }}"
+        }
+    }
+}

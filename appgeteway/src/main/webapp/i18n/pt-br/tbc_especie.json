@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_especie" : {
+            "home": {
+                "title": "Espécie"
+            },
+            "detail": {
+                "title": "Especie registro: "
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_especie" : {
+            "created": "Um novo Tbc Especie é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Especie é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Especie é deletado com o identificador {{ param }}"
+        }
+    }
+}

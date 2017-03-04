@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/bootstrap-material-design.css">
     <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.css">
     <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css">
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css" >
+
+
     <!-- endinject -->
 
 
@@ -132,6 +135,13 @@
     <script src="app/entities/tbc-report/tbc-report.service.js"></script>
     <script src="app/entities/tbc-report/tbc-report.search.service.js"></script>
     <script src="app/entities/tbc-report/tbc-report.controller.js"></script>
+    <script src="app/entities/tbc-proprietario/tbc-proprietario-dialog.controller.js"></script>
+    <script src="app/entities/tbc-proprietario/tbc-proprietario-detail.controller.js"></script>
+    <script src="app/entities/tbc-proprietario/tbc-proprietario-delete-dialog.controller.js"></script>
+    <script src="app/entities/tbc-proprietario/tbc-proprietario.state.js"></script>
+    <script src="app/entities/tbc-proprietario/tbc-proprietario.service.js"></script>
+    <script src="app/entities/tbc-proprietario/tbc-proprietario.search.service.js"></script>
+    <script src="app/entities/tbc-proprietario/tbc-proprietario.controller.js"></script>
     <script src="app/entities/tbc-plano-teste-analise/tbc-plano-teste-analise-dialog.controller.js"></script>
     <script src="app/entities/tbc-plano-teste-analise/tbc-plano-teste-analise-detail.controller.js"></script>
     <script src="app/entities/tbc-plano-teste-analise/tbc-plano-teste-analise-delete-dialog.controller.js"></script>
@@ -146,6 +156,13 @@
     <script src="app/entities/tbc-plano-teste/tbc-plano-teste.service.js"></script>
     <script src="app/entities/tbc-plano-teste/tbc-plano-teste.search.service.js"></script>
     <script src="app/entities/tbc-plano-teste/tbc-plano-teste.controller.js"></script>
+    <script src="app/entities/tbc-matriz/tbc-matriz-dialog.controller.js"></script>
+    <script src="app/entities/tbc-matriz/tbc-matriz-detail.controller.js"></script>
+    <script src="app/entities/tbc-matriz/tbc-matriz-delete-dialog.controller.js"></script>
+    <script src="app/entities/tbc-matriz/tbc-matriz.state.js"></script>
+    <script src="app/entities/tbc-matriz/tbc-matriz.service.js"></script>
+    <script src="app/entities/tbc-matriz/tbc-matriz.search.service.js"></script>
+    <script src="app/entities/tbc-matriz/tbc-matriz.controller.js"></script>
     <script src="app/entities/tbc-lab-tercerizado/tbc-lab-tercerizado-dialog.controller.js"></script>
     <script src="app/entities/tbc-lab-tercerizado/tbc-lab-tercerizado-detail.controller.js"></script>
     <script src="app/entities/tbc-lab-tercerizado/tbc-lab-tercerizado-delete-dialog.controller.js"></script>
@@ -188,6 +205,13 @@
     <script src="app/entities/tbc-frases/tbc-frases.service.js"></script>
     <script src="app/entities/tbc-frases/tbc-frases.search.service.js"></script>
     <script src="app/entities/tbc-frases/tbc-frases.controller.js"></script>
+    <script src="app/entities/tbc-formulario-componentes/tbc-formulario-componentes-dialog.controller.js"></script>
+    <script src="app/entities/tbc-formulario-componentes/tbc-formulario-componentes-detail.controller.js"></script>
+    <script src="app/entities/tbc-formulario-componentes/tbc-formulario-componentes-delete-dialog.controller.js"></script>
+    <script src="app/entities/tbc-formulario-componentes/tbc-formulario-componentes.state.js"></script>
+    <script src="app/entities/tbc-formulario-componentes/tbc-formulario-componentes.service.js"></script>
+    <script src="app/entities/tbc-formulario-componentes/tbc-formulario-componentes.search.service.js"></script>
+    <script src="app/entities/tbc-formulario-componentes/tbc-formulario-componentes.controller.js"></script>
     <script src="app/entities/tbc-formulario/tbc-formulario-dialog.controller.js"></script>
     <script src="app/entities/tbc-formulario/tbc-formulario-detail.controller.js"></script>
     <script src="app/entities/tbc-formulario/tbc-formulario-delete-dialog.controller.js"></script>
@@ -195,6 +219,34 @@
     <script src="app/entities/tbc-formulario/tbc-formulario.service.js"></script>
     <script src="app/entities/tbc-formulario/tbc-formulario.search.service.js"></script>
     <script src="app/entities/tbc-formulario/tbc-formulario.controller.js"></script>
+    <script src="app/entities/tbc-fazenda/tbc-fazenda-dialog.controller.js"></script>
+    <script src="app/entities/tbc-fazenda/tbc-fazenda-detail.controller.js"></script>
+    <script src="app/entities/tbc-fazenda/tbc-fazenda-delete-dialog.controller.js"></script>
+    <script src="app/entities/tbc-fazenda/tbc-fazenda.state.js"></script>
+    <script src="app/entities/tbc-fazenda/tbc-fazenda.service.js"></script>
+    <script src="app/entities/tbc-fazenda/tbc-fazenda.search.service.js"></script>
+    <script src="app/entities/tbc-fazenda/tbc-fazenda.controller.js"></script>
+    <script src="app/entities/tbc-especie/tbc-especie-dialog.controller.js"></script>
+    <script src="app/entities/tbc-especie/tbc-especie-detail.controller.js"></script>
+    <script src="app/entities/tbc-especie/tbc-especie-delete-dialog.controller.js"></script>
+    <script src="app/entities/tbc-especie/tbc-especie.state.js"></script>
+    <script src="app/entities/tbc-especie/tbc-especie.service.js"></script>
+    <script src="app/entities/tbc-especie/tbc-especie.search.service.js"></script>
+    <script src="app/entities/tbc-especie/tbc-especie.controller.js"></script>
+    <script src="app/entities/tbc-cooperativa/tbc-cooperativa-dialog.controller.js"></script>
+    <script src="app/entities/tbc-cooperativa/tbc-cooperativa-detail.controller.js"></script>
+    <script src="app/entities/tbc-cooperativa/tbc-cooperativa-delete-dialog.controller.js"></script>
+    <script src="app/entities/tbc-cooperativa/tbc-cooperativa.state.js"></script>
+    <script src="app/entities/tbc-cooperativa/tbc-cooperativa.service.js"></script>
+    <script src="app/entities/tbc-cooperativa/tbc-cooperativa.search.service.js"></script>
+    <script src="app/entities/tbc-cooperativa/tbc-cooperativa.controller.js"></script>
+    <script src="app/entities/tbc-convenio/tbc-convenio-dialog.controller.js"></script>
+    <script src="app/entities/tbc-convenio/tbc-convenio-detail.controller.js"></script>
+    <script src="app/entities/tbc-convenio/tbc-convenio-delete-dialog.controller.js"></script>
+    <script src="app/entities/tbc-convenio/tbc-convenio.state.js"></script>
+    <script src="app/entities/tbc-convenio/tbc-convenio.service.js"></script>
+    <script src="app/entities/tbc-convenio/tbc-convenio.search.service.js"></script>
+    <script src="app/entities/tbc-convenio/tbc-convenio.controller.js"></script>
     <script src="app/entities/tbc-cliente/tbc-cliente-dialog.controller.js"></script>
     <script src="app/entities/tbc-cliente/tbc-cliente-detail.controller.js"></script>
     <script src="app/entities/tbc-cliente/tbc-cliente-delete-dialog.controller.js"></script>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Tbc_formulario_componentes.
+    -->
+    <changeSet id="20170303184221-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tbc_formulario_id"
+                                 baseTableName="tbc_formulario_componentes"
+                                 constraintName="fk_tbc_formulario_componentes_tbc_formulario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_formulario"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_tipo_campo_id"
+                                 baseTableName="tbc_formulario_componentes"
+                                 constraintName="fk_tbc_formulario_componentes_tbc_tipo_campo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_tipo_campo"/>
+
+    </changeSet>
+</databaseChangeLog>

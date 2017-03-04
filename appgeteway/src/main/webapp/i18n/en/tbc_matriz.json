@@ -1,0 +1,30 @@
+{
+    "appgetewayApp": {
+        "tbc_matriz" : {
+            "home": {
+                "title": "Tbc Matrizs",
+                "createLabel": "Create a new Tbc Matriz",
+                "createOrEditLabel": "Create or edit a Tbc Matriz",
+                "search": "Search for Tbc Matriz"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Matriz {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Matriz"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao",
+            "tbc_tipo_cadastro": "Tbc Tipo Cadastro"
+        }
+    },
+    "limsApp": {
+        "tbc_matriz" : {
+            "created": "A new Tbc Matriz is created with identifier {{ param }}",
+            "updated": "A Tbc Matriz is updated with identifier {{ param }}",
+            "deleted": "A Tbc Matriz is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -68,7 +68,7 @@ class Tbc_formularioGatlingTest extends Simulation {
             .exec(http("Create new tbc_formulario")
             .post("/lims/api/tbc-formularios")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "nome":"SAMPLE_TEXT", "metodo":"SAMPLE_TEXT", "descricao":"SAMPLE_TEXT", "diasliberacao":"0", "removido":null}""")).asJSON
+            .body(StringBody("""{"id":null, "nome":"SAMPLE_TEXT", "descricao":"SAMPLE_TEXT", "removido":null, "tipo_identificacao":"SAMPLE_TEXT"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_tbc_formulario_url"))).exitHereIfFailed
             .pause(10)

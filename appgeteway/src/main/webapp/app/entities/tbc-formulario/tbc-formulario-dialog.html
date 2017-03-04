@@ -26,28 +26,22 @@
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label" data-translate="global.field.metodo" for="field_metodo">Metodo</label>
-            <input type="text" class="form-control" name="metodo" id="field_metodo"
-                    ng-model="vm.tbc_formulario.metodo"
-                    required />
-            <div ng-show="editForm.metodo.$invalid">
-                <p class="help-block"
-                    ng-show="editForm.metodo.$error.required" data-translate="entity.validation.required">
-                    This field is required.
-                </p>
-            </div>
-        </div>
-        <div class="form-group">
             <label class="control-label" data-translate="global.field.descricao" for="field_descricao">Descricao</label>
             <input type="text" class="form-control" name="descricao" id="field_descricao"
                     ng-model="vm.tbc_formulario.descricao"
                      />
         </div>
         <div class="form-group">
-            <label class="control-label" data-translate="global.field.diasliberacao" for="field_diasliberacao">Diasliberacao</label>
-            <input type="number" class="form-control" name="diasliberacao" id="field_diasliberacao"
-                    ng-model="vm.tbc_formulario.diasliberacao"
-                     />
+            <label class="control-label" data-translate="global.field.tipo_identificacao" for="field_tipo_identificacao">Tipo Identificacao</label>
+            <input type="text" class="form-control" name="tipo_identificacao" id="field_tipo_identificacao"
+                    ng-model="vm.tbc_formulario.tipo_identificacao"
+                    required />
+            <div ng-show="editForm.tipo_identificacao.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tipo_identificacao.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
         </div>
 
         <div class="form-group">
@@ -75,18 +69,6 @@
             </p>
         </div>
         <div class="form-group">
-            <label data-translate="global.field.tbc_grupo_analise" for="field_tbc_grupo_analise">Tbc Grupo Analise</label>
-            <select class="form-control" id="field_tbc_grupo_analise" name="tbc_grupo_analise" ng-model="vm.tbc_formulario.tbc_grupo_analise" ng-options="tbc_grupo_analise as tbc_grupo_analise.nome for tbc_grupo_analise in vm.tbc_grupo_analises track by tbc_grupo_analise.id" required>
-                <option value=""></option>
-            </select>
-        </div>
-        <div ng-show="editForm.tbc_grupo_analise.$invalid">
-            <p class="help-block"
-                ng-show="editForm.tbc_grupo_analise.$error.required" data-translate="entity.validation.required">
-                This field is required.
-            </p>
-        </div>
-        <div class="form-group">
             <label data-translate="global.field.tbc_tipo_cadastro" for="field_tbc_tipo_cadastro">Tbc Tipo Cadastro</label>
             <select class="form-control" id="field_tbc_tipo_cadastro" name="tbc_tipo_cadastro" ng-model="vm.tbc_formulario.tbc_tipo_cadastro" ng-options="tbc_tipo_cadastro as tbc_tipo_cadastro.nome for tbc_tipo_cadastro in vm.tbc_tipo_cadastros track by tbc_tipo_cadastro.id">
                 <option value=""></option>
@@ -94,7 +76,7 @@
         </div>
         <div class="form-group">
             <label for="activated">
-                <input ng-disabled="vm.tbc_formulario.id === null" type="checkbox" id="activated" name="activated" ng-model="vm.tbc_formulario.removido">
+                <input ng-disabled="vm.tbc_formulario.id === null" type="checkbox" id="activated" name="activated" data-reverse ng-model="vm.tbc_formulario.removido">
                 <span data-translate="global.field.removido">Activated</span>
             </label>
         </div>

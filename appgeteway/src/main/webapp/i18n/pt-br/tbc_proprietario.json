@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_proprietario" : {
+            "home": {
+                "title": "Proprietário"
+            },
+            "detail": {
+                "title": "Proprietário registro: "
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_proprietario" : {
+            "created": "Um novo Tbc Proprietario é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Proprietario é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Proprietario é deletado com o identificador {{ param }}"
+        }
+    }
+}

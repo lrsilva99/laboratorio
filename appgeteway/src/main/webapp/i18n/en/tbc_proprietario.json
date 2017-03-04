@@ -1,0 +1,32 @@
+{
+    "appgetewayApp": {
+        "tbc_proprietario" : {
+            "home": {
+                "title": "Tbc Proprietarios",
+                "createLabel": "Create a new Tbc Proprietario",
+                "createOrEditLabel": "Create or edit a Tbc Proprietario",
+                "search": "Search for Tbc Proprietario"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Proprietario {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Proprietario"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "endereco": "Endereco",
+            "cpf_cnpj": "Cpf Cnpj",
+            "email": "Email",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_proprietario" : {
+            "created": "A new Tbc Proprietario is created with identifier {{ param }}",
+            "updated": "A Tbc Proprietario is updated with identifier {{ param }}",
+            "deleted": "A Tbc Proprietario is deleted with identifier {{ param }}"
+        }
+    }
+}

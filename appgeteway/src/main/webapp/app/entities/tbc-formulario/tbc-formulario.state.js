@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider
         .state('tbc-formulario', {
-            parent: 'laboratorio',
+            parent: 'entity',
             url: '/tbc-formulario?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
@@ -52,7 +52,7 @@
             }
         })
         .state('tbc-formulario-detail', {
-            parent: 'laboratorio',
+            parent: 'entity',
             url: '/tbc-formulario/{id}',
             data: {
                 authorities: ['ROLE_USER'],
@@ -125,10 +125,9 @@
                         entity: function () {
                             return {
                                 nome: null,
-                                metodo: null,
                                 descricao: null,
-                                diasliberacao: null,
                                 removido: null,
+                                tipo_identificacao: null,
                                 id: null
                             };
                         }

@@ -20,15 +20,6 @@
             "otherEntityField": "id"
         },
         {
-            "relationshipName": "tbc_grupo_analise",
-            "otherEntityName": "tbc_grupo_analise",
-            "relationshipType": "many-to-one",
-            "relationshipValidateRules": [
-                "required"
-            ],
-            "otherEntityField": "id"
-        },
-        {
             "relationshipName": "tbc_tipo_cadastro",
             "otherEntityName": "tbc_tipo_cadastro",
             "relationshipType": "many-to-one",
@@ -44,24 +35,20 @@
             ]
         },
         {
-            "fieldName": "metodo",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
             "fieldName": "descricao",
             "fieldType": "String"
-        },
-        {
-            "fieldName": "diasliberacao",
-            "fieldType": "Integer"
         },
         {
             "fieldName": "removido",
             "fieldType": "Boolean",
             "fieldValidateRules": []
+        },
+        {
+            "fieldName": "tipo_identificacao",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
         }
     ],
     "changelogDate": "20170121163237",

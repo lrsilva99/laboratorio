@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_cooperativa" : {
+            "home": {
+                "title": "Cooperativa"
+            },
+            "detail": {
+                "title": "Cooperativa registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_cooperativa" : {
+            "created": "Um novo Tbc Cooperativa é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Cooperativa é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Cooperativa é deletado com o identificador {{ param }}"
+        }
+    }
+}

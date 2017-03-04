@@ -28,15 +28,7 @@
                 <constraints nullable="false" />
             </column>
             
-            <column name="metodo" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
-            
             <column name="descricao" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            
-            <column name="diasliberacao" type="integer">
                 <constraints nullable="true" />
             </column>
             
@@ -44,15 +36,15 @@
                 <constraints nullable="true" />
             </column>
             
+            <column name="tipo_identificacao" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
             <column name="tbc_instituicao_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 
             <column name="tbc_sub_grupo_id" type="bigint">
-                <constraints nullable="false" />
-            </column>
-
-            <column name="tbc_grupo_analise_id" type="bigint">
                 <constraints nullable="false" />
             </column>
 

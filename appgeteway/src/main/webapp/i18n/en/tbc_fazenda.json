@@ -1,0 +1,30 @@
+{
+    "appgetewayApp": {
+        "tbc_fazenda" : {
+            "home": {
+                "title": "Tbc Fazendas",
+                "createLabel": "Create a new Tbc Fazenda",
+                "createOrEditLabel": "Create or edit a Tbc Fazenda",
+                "search": "Search for Tbc Fazenda"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Fazenda {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Fazenda"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "email": "Email",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_fazenda" : {
+            "created": "A new Tbc Fazenda is created with identifier {{ param }}",
+            "updated": "A Tbc Fazenda is updated with identifier {{ param }}",
+            "deleted": "A Tbc Fazenda is deleted with identifier {{ param }}"
+        }
+    }
+}

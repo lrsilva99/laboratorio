@@ -1,0 +1,20 @@
+{
+    "appgetewayApp": {
+        "tbc_formulario_componentes" : {
+            "home": {
+                "title": "Componentes"
+            },
+            "detail": {
+                "title": "Componentes registro: "
+            },
+            "selecionada": "Análise selecionada:({{ param }})"
+        }
+    },
+    "limsApp": {
+        "tbc_formulario_componentes" : {
+            "created": "Um novo Tbc Formulario Componentes é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Formulario Componentes é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Formulario Componentes é deletado com o identificador {{ param }}"
+        }
+    }
+}

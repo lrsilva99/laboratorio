@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "Sistema de laboratório",
+        "title": "SIS LAB",
         "operacao": "Operação realizada com sucesso",
         "browsehappy": "Você está usando um navegador <strong>desatualizado</strong>. Favor <a href=\"http://browsehappy.com/?locale=pt_BR\">atualizar o seu navegador</a> para ter uma experiência melhor.",
         "menu": {
@@ -24,9 +24,17 @@
                 "tbcCliente": "Cliente",
                 "tbcPlanoTeste": "Plano de teste",
                 "tbcPlanoTesteAnalise": "Tbc Plano Teste Analise",
+                "tbcConvenio": "Convênio",
+                "tbcEspecie": "Espécie",
+                "tbcMatriz": "Matriz",
+                "tbcFazenda": "Fazenda",
+                "tbcCooperativa": "Cooperativa",
+                "tbcProprietario": "Proprietário",
+                "tbcFormulario": "Formulário",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratório",
-                "subconfiganalise": "Análise"
+                "subconfiganalise": "Análise",
+                "subgrandesanimais": "Grandes Animal"
             },
             "account": {
                 "main": "Conta",
@@ -130,7 +138,11 @@
             "cep": "Cep",
             "cpf_cnpj": "CPF CNPJ",
             "ordem": "Ordem",
-            "tbc_plano_teste": "Plano de teste"
+            "tbc_plano_teste": "Plano de teste",
+            "cnpj": "CNPJ",
+            "codigo": "Código",
+            "tipo_identificacao": "Inicias identificação",
+            "tbc_formulario" : "Formulário"
 
 
         },
@@ -184,7 +196,6 @@
             "search": "Pesquisar",
             "searchcombo": "Análises"
         }
-
     },
     "error": {
         "server.not.reachable": "Servidor indisponível",

@@ -14,13 +14,11 @@
                 "title": "Tbc Formulario"
             },
             "nome": "Nome",
-            "metodo": "Metodo",
             "descricao": "Descricao",
-            "diasliberacao": "Diasliberacao",
             "removido": "Removido",
+            "tipo_identificacao": "Tipo Identificacao",
             "tbc_instituicao": "Tbc Instituicao",
             "tbc_sub_grupo": "Tbc Sub Grupo",
-            "tbc_grupo_analise": "Tbc Grupo Analise",
             "tbc_tipo_cadastro": "Tbc Tipo Cadastro"
         }
     },

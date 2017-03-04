@@ -5,7 +5,6 @@ import com.labotech.lims.LimsApp;
 import com.labotech.lims.domain.Tbc_formulario;
 import com.labotech.lims.domain.Tbc_instituicao;
 import com.labotech.lims.domain.Tbc_sub_grupo;
-import com.labotech.lims.domain.Tbc_grupo_analise;
 import com.labotech.lims.repository.Tbc_formularioRepository;
 import com.labotech.lims.service.Tbc_formularioService;
 import com.labotech.lims.repository.search.Tbc_formularioSearchRepository;
@@ -45,17 +44,14 @@ public class Tbc_formularioResourceIntTest {
     private static final String DEFAULT_NOME = "AAAAAAAAAA";
     private static final String UPDATED_NOME = "BBBBBBBBBB";
 
-    private static final String DEFAULT_METODO = "AAAAAAAAAA";
-    private static final String UPDATED_METODO = "BBBBBBBBBB";
-
     private static final String DEFAULT_DESCRICAO = "AAAAAAAAAA";
     private static final String UPDATED_DESCRICAO = "BBBBBBBBBB";
 
-    private static final Integer DEFAULT_DIASLIBERACAO = 1;
-    private static final Integer UPDATED_DIASLIBERACAO = 2;
-
     private static final Boolean DEFAULT_REMOVIDO = false;
     private static final Boolean UPDATED_REMOVIDO = true;
+
+    private static final String DEFAULT_TIPO_IDENTIFICACAO = "AAAAAAAAAA";
+    private static final String UPDATED_TIPO_IDENTIFICACAO = "BBBBBBBBBB";
 
     @Inject
     private Tbc_formularioRepository tbc_formularioRepository;
@@ -98,10 +94,9 @@ public class Tbc_formularioResourceIntTest {
     public static Tbc_formulario createEntity(EntityManager em) {
         Tbc_formulario tbc_formulario = new Tbc_formulario()
                 .nome(DEFAULT_NOME)
-                .metodo(DEFAULT_METODO)
                 .descricao(DEFAULT_DESCRICAO)
-                .diasliberacao(DEFAULT_DIASLIBERACAO)
-                .removido(DEFAULT_REMOVIDO);
+                .removido(DEFAULT_REMOVIDO)
+                .tipo_identificacao(DEFAULT_TIPO_IDENTIFICACAO);
         // Add required entity
         Tbc_instituicao tbc_instituicao = Tbc_instituicaoResourceIntTest.createEntity(em);
         em.persist(tbc_instituicao);
@@ -112,11 +107,6 @@ public class Tbc_formularioResourceIntTest {
         em.persist(tbc_sub_grupo);
         em.flush();
         tbc_formulario.setTbc_sub_grupo(tbc_sub_grupo);
-        // Add required entity
-        Tbc_grupo_analise tbc_grupo_analise = Tbc_grupo_analiseResourceIntTest.createEntity(em);
-        em.persist(tbc_grupo_analise);
-        em.flush();
-        tbc_formulario.setTbc_grupo_analise(tbc_grupo_analise);
         return tbc_formulario;
     }
 
@@ -143,10 +133,9 @@ public class Tbc_formularioResourceIntTest {
         assertThat(tbc_formularioList).hasSize(databaseSizeBeforeCreate + 1);
         Tbc_formulario testTbc_formulario = tbc_formularioList.get(tbc_formularioList.size() - 1);
         assertThat(testTbc_formulario.getNome()).isEqualTo(DEFAULT_NOME);
-        assertThat(testTbc_formulario.getMetodo()).isEqualTo(DEFAULT_METODO);
         assertThat(testTbc_formulario.getDescricao()).isEqualTo(DEFAULT_DESCRICAO);
-        assertThat(testTbc_formulario.getDiasliberacao()).isEqualTo(DEFAULT_DIASLIBERACAO);
         assertThat(testTbc_formulario.isRemovido()).isEqualTo(DEFAULT_REMOVIDO);
+        assertThat(testTbc_formulario.getTipo_identificacao()).isEqualTo(DEFAULT_TIPO_IDENTIFICACAO);
 
         // Validate the Tbc_formulario in ElasticSearch
         Tbc_formulario tbc_formularioEs = tbc_formularioSearchRepository.findOne(testTbc_formulario.getId());
@@ -193,10 +182,10 @@ public class Tbc_formularioResourceIntTest {
 
     @Test
     @Transactional
-    public void checkMetodoIsRequired() throws Exception {
+    public void checkTipo_identificacaoIsRequired() throws Exception {
         int databaseSizeBeforeTest = tbc_formularioRepository.findAll().size();
         // set the field null
-        tbc_formulario.setMetodo(null);
+        tbc_formulario.setTipo_identificacao(null);
 
         // Create the Tbc_formulario, which fails.
 
@@ -221,10 +210,9 @@ public class Tbc_formularioResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(tbc_formulario.getId().intValue())))
             .andExpect(jsonPath("$.[*].nome").value(hasItem(DEFAULT_NOME.toString())))
-            .andExpect(jsonPath("$.[*].metodo").value(hasItem(DEFAULT_METODO.toString())))
             .andExpect(jsonPath("$.[*].descricao").value(hasItem(DEFAULT_DESCRICAO.toString())))
-            .andExpect(jsonPath("$.[*].diasliberacao").value(hasItem(DEFAULT_DIASLIBERACAO)))
-            .andExpect(jsonPath("$.[*].removido").value(hasItem(DEFAULT_REMOVIDO.booleanValue())));
+            .andExpect(jsonPath("$.[*].removido").value(hasItem(DEFAULT_REMOVIDO.booleanValue())))
+            .andExpect(jsonPath("$.[*].tipo_identificacao").value(hasItem(DEFAULT_TIPO_IDENTIFICACAO.toString())));
     }
 
     @Test
@@ -239,10 +227,9 @@ public class Tbc_formularioResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(tbc_formulario.getId().intValue()))
             .andExpect(jsonPath("$.nome").value(DEFAULT_NOME.toString()))
-            .andExpect(jsonPath("$.metodo").value(DEFAULT_METODO.toString()))
             .andExpect(jsonPath("$.descricao").value(DEFAULT_DESCRICAO.toString()))
-            .andExpect(jsonPath("$.diasliberacao").value(DEFAULT_DIASLIBERACAO))
-            .andExpect(jsonPath("$.removido").value(DEFAULT_REMOVIDO.booleanValue()));
+            .andExpect(jsonPath("$.removido").value(DEFAULT_REMOVIDO.booleanValue()))
+            .andExpect(jsonPath("$.tipo_identificacao").value(DEFAULT_TIPO_IDENTIFICACAO.toString()));
     }
 
     @Test
@@ -265,10 +252,9 @@ public class Tbc_formularioResourceIntTest {
         Tbc_formulario updatedTbc_formulario = tbc_formularioRepository.findOne(tbc_formulario.getId());
         updatedTbc_formulario
                 .nome(UPDATED_NOME)
-                .metodo(UPDATED_METODO)
                 .descricao(UPDATED_DESCRICAO)
-                .diasliberacao(UPDATED_DIASLIBERACAO)
-                .removido(UPDATED_REMOVIDO);
+                .removido(UPDATED_REMOVIDO)
+                .tipo_identificacao(UPDATED_TIPO_IDENTIFICACAO);
 
         restTbc_formularioMockMvc.perform(put("/api/tbc-formularios")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -280,10 +266,9 @@ public class Tbc_formularioResourceIntTest {
         assertThat(tbc_formularioList).hasSize(databaseSizeBeforeUpdate);
         Tbc_formulario testTbc_formulario = tbc_formularioList.get(tbc_formularioList.size() - 1);
         assertThat(testTbc_formulario.getNome()).isEqualTo(UPDATED_NOME);
-        assertThat(testTbc_formulario.getMetodo()).isEqualTo(UPDATED_METODO);
         assertThat(testTbc_formulario.getDescricao()).isEqualTo(UPDATED_DESCRICAO);
-        assertThat(testTbc_formulario.getDiasliberacao()).isEqualTo(UPDATED_DIASLIBERACAO);
         assertThat(testTbc_formulario.isRemovido()).isEqualTo(UPDATED_REMOVIDO);
+        assertThat(testTbc_formulario.getTipo_identificacao()).isEqualTo(UPDATED_TIPO_IDENTIFICACAO);
 
         // Validate the Tbc_formulario in ElasticSearch
         Tbc_formulario tbc_formularioEs = tbc_formularioSearchRepository.findOne(testTbc_formulario.getId());
@@ -342,9 +327,8 @@ public class Tbc_formularioResourceIntTest {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(tbc_formulario.getId().intValue())))
             .andExpect(jsonPath("$.[*].nome").value(hasItem(DEFAULT_NOME.toString())))
-            .andExpect(jsonPath("$.[*].metodo").value(hasItem(DEFAULT_METODO.toString())))
             .andExpect(jsonPath("$.[*].descricao").value(hasItem(DEFAULT_DESCRICAO.toString())))
-            .andExpect(jsonPath("$.[*].diasliberacao").value(hasItem(DEFAULT_DIASLIBERACAO)))
-            .andExpect(jsonPath("$.[*].removido").value(hasItem(DEFAULT_REMOVIDO.booleanValue())));
+            .andExpect(jsonPath("$.[*].removido").value(hasItem(DEFAULT_REMOVIDO.booleanValue())))
+            .andExpect(jsonPath("$.[*].tipo_identificacao").value(hasItem(DEFAULT_TIPO_IDENTIFICACAO.toString())));
     }
 }

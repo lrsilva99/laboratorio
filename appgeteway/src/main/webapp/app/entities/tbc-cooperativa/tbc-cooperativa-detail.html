@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_cooperativa.detail.title">Tbc Cooperativa</span> {{vm.tbc_cooperativa.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="global.field.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_cooperativa.nome}}</span>
+        </dd>
+        <dt><span data-translate="global.field.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_cooperativa.descricao}}</span>
+        </dd>
+        <dt><span data-translate="global.field.tbc_cooperativa.email">Email</span></dt>
+        <dd>
+            <span>{{vm.tbc_cooperativa.email}}</span>
+        </dd>
+        <dt><span data-translate="global.field.telefone">Telefone</span></dt>
+        <dd>
+            <span>{{vm.tbc_cooperativa.telefone}}</span>
+        </dd>
+        <dt><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_cooperativa.tbc_instituicao.id})">{{vm.tbc_cooperativa.tbc_instituicao.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_cooperativa.removido}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-cooperativa-detail.edit({id:vm.tbc_cooperativa.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_matriz" : {
+            "home": {
+                "title": "Matriz"
+            },
+            "detail": {
+                "title": "Matriz registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_matriz" : {
+            "created": "Um novo Tbc Matriz é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Matriz é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Matriz é deletado com o identificador {{ param }}"
+        }
+    }
+}

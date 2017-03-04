@@ -1,0 +1,31 @@
+{
+    "appgetewayApp": {
+        "tbc_especie" : {
+            "home": {
+                "title": "Tbc Especies",
+                "createLabel": "Create a new Tbc Especie",
+                "createOrEditLabel": "Create or edit a Tbc Especie",
+                "search": "Search for Tbc Especie"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Especie {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Especie"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "codigo": "Codigo",
+            "tbc_instituicao": "Tbc Instituicao",
+            "tbc_tipo_cadastro": "Tbc Tipo Cadastro"
+        }
+    },
+    "limsApp": {
+        "tbc_especie" : {
+            "created": "A new Tbc Especie is created with identifier {{ param }}",
+            "updated": "A Tbc Especie is updated with identifier {{ param }}",
+            "deleted": "A Tbc Especie is deleted with identifier {{ param }}"
+        }
+    }
+}

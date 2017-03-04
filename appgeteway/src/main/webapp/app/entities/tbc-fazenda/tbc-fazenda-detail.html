@@ -1,0 +1,40 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_fazenda.detail.title">Tbc Fazenda</span> {{vm.tbc_fazenda.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="global.field.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_fazenda.nome}}</span>
+        </dd>
+        <dt><span data-translate="global.field.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_fazenda.descricao}}</span>
+        </dd>
+
+        <dt><span data-translate="global.field.email">Email</span></dt>
+        <dd>
+            <span>{{vm.tbc_fazenda.email}}</span>
+        </dd>
+        <dt><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_fazenda.tbc_instituicao.id})">{{vm.tbc_fazenda.tbc_instituicao.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_fazenda.removido}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-fazenda-detail.edit({id:vm.tbc_fazenda.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

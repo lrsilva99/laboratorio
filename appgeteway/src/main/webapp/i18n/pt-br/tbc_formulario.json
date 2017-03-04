@@ -2,10 +2,10 @@
     "appgetewayApp": {
         "tbc_formulario" : {
             "home": {
-                "title": "Análise"
+                "title": "Formulário"
             },
             "detail": {
-                "title": "Análise registro:"
+                "title": "Formulário registro: "
             }
         }
     },

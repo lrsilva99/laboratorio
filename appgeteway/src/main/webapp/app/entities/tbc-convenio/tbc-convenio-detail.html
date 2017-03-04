@@ -1,0 +1,40 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_convenio.detail.title">Tbc Convenio</span> {{vm.tbc_convenio.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="global.field.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_convenio.nome}}</span>
+        </dd>
+        <dt><span data-translate="global.field.cnpj">Cnpj</span></dt>
+        <dd>
+            <span>{{vm.tbc_convenio.cnpj}}</span>
+        </dd>
+        <dt><span data-translate="global.field.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_convenio.descricao}}</span>
+        </dd>
+
+        <dt><span data-translate="global.field.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_convenio.tbc_instituicao.id})">{{vm.tbc_convenio.tbc_instituicao.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_convenio.removido}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-convenio-detail.edit({id:vm.tbc_convenio.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,33 @@
+{
+    "appgetewayApp": {
+        "tbc_formulario_componentes" : {
+            "home": {
+                "title": "Tbc Formulario Componentes",
+                "createLabel": "Create a new Tbc Formulario Componentes",
+                "createOrEditLabel": "Create or edit a Tbc Formulario Componentes",
+                "search": "Search for Tbc Formulario Componentes"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Formulario Componentes {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Formulario Componentes"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "linha": "Linha",
+            "unidade_medida": "Unidade Medida",
+            "valor_padrao": "Valor Padrao",
+            "configuracao": "Configuracao",
+            "tbc_formulario": "Tbc Formulario",
+            "tbc_tipo_campo": "Tbc Tipo Campo"
+        }
+    },
+    "limsApp": {
+        "tbc_formulario_componentes" : {
+            "created": "A new Tbc Formulario Componentes is created with identifier {{ param }}",
+            "updated": "A Tbc Formulario Componentes is updated with identifier {{ param }}",
+            "deleted": "A Tbc Formulario Componentes is deleted with identifier {{ param }}"
+        }
+    }
+}

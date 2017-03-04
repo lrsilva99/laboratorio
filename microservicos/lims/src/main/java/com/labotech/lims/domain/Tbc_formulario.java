@@ -28,18 +28,15 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
     @Column(name = "nome", nullable = false)
     private String nome;
 
-    @NotNull
-    @Column(name = "metodo", nullable = false)
-    private String metodo;
-
     @Column(name = "descricao")
     private String descricao;
 
-    @Column(name = "diasliberacao")
-    private Integer diasliberacao;
-
     @Column(name = "removido")
     private Boolean removido;
+
+    @NotNull
+    @Column(name = "tipo_identificacao", nullable = false)
+    private String tipo_identificacao;
 
     @ManyToOne
     @NotNull
@@ -48,10 +45,6 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
     @ManyToOne
     @NotNull
     private Tbc_sub_grupo tbc_sub_grupo;
-
-    @ManyToOne
-    @NotNull
-    private Tbc_grupo_analise tbc_grupo_analise;
 
     @ManyToOne
     private Tbc_tipo_cadastro tbc_tipo_cadastro;
@@ -77,19 +70,6 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
         this.nome = nome;
     }
 
-    public String getMetodo() {
-        return metodo;
-    }
-
-    public Tbc_formulario metodo(String metodo) {
-        this.metodo = metodo;
-        return this;
-    }
-
-    public void setMetodo(String metodo) {
-        this.metodo = metodo;
-    }
-
     public String getDescricao() {
         return descricao;
     }
@@ -103,19 +83,6 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
         this.descricao = descricao;
     }
 
-    public Integer getDiasliberacao() {
-        return diasliberacao;
-    }
-
-    public Tbc_formulario diasliberacao(Integer diasliberacao) {
-        this.diasliberacao = diasliberacao;
-        return this;
-    }
-
-    public void setDiasliberacao(Integer diasliberacao) {
-        this.diasliberacao = diasliberacao;
-    }
-
     public Boolean isRemovido() {
         return removido;
     }
@@ -127,6 +94,19 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
 
     public void setRemovido(Boolean removido) {
         this.removido = removido;
+    }
+
+    public String getTipo_identificacao() {
+        return tipo_identificacao;
+    }
+
+    public Tbc_formulario tipo_identificacao(String tipo_identificacao) {
+        this.tipo_identificacao = tipo_identificacao;
+        return this;
+    }
+
+    public void setTipo_identificacao(String tipo_identificacao) {
+        this.tipo_identificacao = tipo_identificacao;
     }
 
     public Tbc_instituicao getTbc_instituicao() {
@@ -153,19 +133,6 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
 
     public void setTbc_sub_grupo(Tbc_sub_grupo tbc_sub_grupo) {
         this.tbc_sub_grupo = tbc_sub_grupo;
-    }
-
-    public Tbc_grupo_analise getTbc_grupo_analise() {
-        return tbc_grupo_analise;
-    }
-
-    public Tbc_formulario tbc_grupo_analise(Tbc_grupo_analise tbc_grupo_analise) {
-        this.tbc_grupo_analise = tbc_grupo_analise;
-        return this;
-    }
-
-    public void setTbc_grupo_analise(Tbc_grupo_analise tbc_grupo_analise) {
-        this.tbc_grupo_analise = tbc_grupo_analise;
     }
 
     public Tbc_tipo_cadastro getTbc_tipo_cadastro() {
@@ -206,10 +173,9 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
         return "Tbc_formulario{" +
             "id=" + id +
             ", nome='" + nome + "'" +
-            ", metodo='" + metodo + "'" +
             ", descricao='" + descricao + "'" +
-            ", diasliberacao='" + diasliberacao + "'" +
             ", removido='" + removido + "'" +
+            ", tipo_identificacao='" + tipo_identificacao + "'" +
             '}';
     }
 }

@@ -20,12 +20,6 @@
                                  referencedColumnNames="id"
                                  referencedTableName="tbc_sub_grupo"/>
 
-        <addForeignKeyConstraint baseColumnNames="tbc_grupo_analise_id"
-                                 baseTableName="tbc_formulario"
-                                 constraintName="fk_tbc_formulario_tbc_grupo_analise_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="tbc_grupo_analise"/>
-
         <addForeignKeyConstraint baseColumnNames="tbc_tipo_cadastro_id"
                                  baseTableName="tbc_formulario"
                                  constraintName="fk_tbc_formulario_tbc_tipo_cadastro_id"

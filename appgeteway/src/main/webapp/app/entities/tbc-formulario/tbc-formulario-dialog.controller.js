@@ -5,9 +5,9 @@
         .module('appgetewayApp')
         .controller('Tbc_formularioDialogController', Tbc_formularioDialogController);
 
-    Tbc_formularioDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tbc_formulario', 'Tbc_instituicao', 'Tbc_sub_grupo', 'Tbc_grupo_analise', 'Tbc_tipo_cadastro'];
+    Tbc_formularioDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tbc_formulario', 'Tbc_instituicao', 'Tbc_sub_grupo', 'Tbc_tipo_cadastro'];
 
-    function Tbc_formularioDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tbc_formulario, Tbc_instituicao, Tbc_sub_grupo, Tbc_grupo_analise, Tbc_tipo_cadastro) {
+    function Tbc_formularioDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tbc_formulario, Tbc_instituicao, Tbc_sub_grupo, Tbc_tipo_cadastro) {
         var vm = this;
 
         vm.tbc_formulario = entity;
@@ -15,7 +15,6 @@
         vm.save = save;
         vm.tbc_instituicaos = Tbc_instituicao.query();
         vm.tbc_sub_grupos = Tbc_sub_grupo.query();
-        vm.tbc_grupo_analises = Tbc_grupo_analise.query();
         vm.tbc_tipo_cadastros = Tbc_tipo_cadastro.query();
 
         $timeout(function (){

@@ -1,0 +1,30 @@
+{
+    "appgetewayApp": {
+        "tbc_convenio" : {
+            "home": {
+                "title": "Tbc Convenios",
+                "createLabel": "Create a new Tbc Convenio",
+                "createOrEditLabel": "Create or edit a Tbc Convenio",
+                "search": "Search for Tbc Convenio"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Convenio {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Convenio"
+            },
+            "nome": "Nome",
+            "cnpj": "Cnpj",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_convenio" : {
+            "created": "A new Tbc Convenio is created with identifier {{ param }}",
+            "updated": "A Tbc Convenio is updated with identifier {{ param }}",
+            "deleted": "A Tbc Convenio is deleted with identifier {{ param }}"
+        }
+    }
+}

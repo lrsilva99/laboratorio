@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_convenio" : {
+            "home": {
+                "title": "Convênio"
+            },
+            "detail": {
+                "title": "Convênio registro: "
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_convenio" : {
+            "created": "Um novo Tbc Convenio é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Convenio é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Convenio é deletado com o identificador {{ param }}"
+        }
+    }
+}
