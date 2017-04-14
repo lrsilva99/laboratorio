@@ -5,6 +5,7 @@ import com.labotech.lims.LimsApp;
 import com.labotech.lims.domain.Tbc_formulario;
 import com.labotech.lims.domain.Tbc_instituicao;
 import com.labotech.lims.domain.Tbc_sub_grupo;
+import com.labotech.lims.domain.Tbc_status;
 import com.labotech.lims.repository.Tbc_formularioRepository;
 import com.labotech.lims.service.Tbc_formularioService;
 import com.labotech.lims.repository.search.Tbc_formularioSearchRepository;
@@ -107,6 +108,11 @@ public class Tbc_formularioResourceIntTest {
         em.persist(tbc_sub_grupo);
         em.flush();
         tbc_formulario.setTbc_sub_grupo(tbc_sub_grupo);
+        // Add required entity
+        Tbc_status tbc_status = Tbc_statusResourceIntTest.createEntity(em);
+        em.persist(tbc_status);
+        em.flush();
+        tbc_formulario.setTbc_status(tbc_status);
         return tbc_formulario;
     }
 

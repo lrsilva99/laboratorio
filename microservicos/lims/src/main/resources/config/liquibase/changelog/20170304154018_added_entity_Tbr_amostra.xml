@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="mysql,h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="now" value="sysdate" dbms="oracle"/>
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+
+    <property name="autoIncrement" value="true" dbms="mysql,h2,postgresql,oracle,mssql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Tbr_amostra.
+    -->
+    <changeSet id="20170304154018-1" author="jhipster">
+        <createTable tableName="tbr_amostra">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="urgencia" type="bit">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="proprietario" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="resp_colheita" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="req_texto" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="historico_clinico" type="clob">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="numero_for" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="recebimento_rec_data" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="suspeita_clinica" type="clob">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="coleta_data" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="sexo" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="raca" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="idade" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="identificao_amostra" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="autorizado_por" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="autorizado_data" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="cancelado_por" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="cancelado_data" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="suspenso_por" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="suspenso_data" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="rejeitado_por" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="rejeitado_data" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="disponivel_por" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="disponivel_data" type="timestamp">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="plano_teste" type="clob">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="plano_teste_a" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="plano_teste_b" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="plano_teste_c" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="plano_teste_d" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="plano_teste_e" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="plano_teste_f" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="numero_etiqueta" type="integer">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="tbc_especie_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_sub_grupo_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_status_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_cliente_id" type="bigint">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="tbc_proprietario_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_cooperativa_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_fazenda_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_forma_armazenamento_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_formulario_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_convenio_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_genero_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="tbc_qualidade_amostra_id" type="bigint">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="created_by" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_date" type="timestamp" defaultValueDate="${now}">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="varchar(50)"/>
+            <column name="last_modified_date" type="timestamp"/>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        <dropDefaultValue tableName="tbr_amostra" columnName="recebimento_rec_data" columnDataType="datetime"/>
+        <dropDefaultValue tableName="tbr_amostra" columnName="coleta_data" columnDataType="datetime"/>
+        <dropDefaultValue tableName="tbr_amostra" columnName="autorizado_data" columnDataType="datetime"/>
+        <dropDefaultValue tableName="tbr_amostra" columnName="cancelado_data" columnDataType="datetime"/>
+        <dropDefaultValue tableName="tbr_amostra" columnName="suspenso_data" columnDataType="datetime"/>
+        <dropDefaultValue tableName="tbr_amostra" columnName="rejeitado_data" columnDataType="datetime"/>
+        <dropDefaultValue tableName="tbr_amostra" columnName="disponivel_data" columnDataType="datetime"/>
+        
+    </changeSet>
+</databaseChangeLog>

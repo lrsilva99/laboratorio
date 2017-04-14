@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Tbr_amostra.
+    -->
+    <changeSet id="20170304154018-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tbc_especie_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_especie_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_especie"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_sub_grupo_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_sub_grupo_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_sub_grupo"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_status_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_cliente_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_cliente_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_cliente"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_proprietario_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_proprietario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_proprietario"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_cooperativa_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_cooperativa_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_cooperativa"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_fazenda_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_fazenda_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_fazenda"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_forma_armazenamento_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_forma_armazenamento_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_forma_armazenamento"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_formulario_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_formulario_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_formulario"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_convenio_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_convenio_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_convenio"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_genero_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_genero_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_genero"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_qualidade_amostra_id"
+                                 baseTableName="tbr_amostra"
+                                 constraintName="fk_tbr_amostra_tbc_qualidade_amostra_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_qualidade_amostra"/>
+
+    </changeSet>
+</databaseChangeLog>

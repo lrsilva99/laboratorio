@@ -1,0 +1,45 @@
+{
+    "appgetewayApp": {
+        "tbr_analise" : {
+            "home": {
+                "title": "Gerenciamento de análises",
+                "md_tab_analise": "Análises",
+                "md_tab_resultado": "Resultado",
+
+                "createLabel": "Criar novo Tbr Analise",
+                "createOrEditLabel": "Criar ou editar Tbr Analise",
+                "search": "Pesquisar por Tbr Analise"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbr Analise {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbr Analise"
+            },
+            "autorizado_por": "Autorizado Por",
+            "autorizado_data": "Autorizado Data",
+            "cancelado_por": "Cancelado Por",
+            "cancelado_data": "Cancelado Data",
+            "suspenso_por": "Suspenso Por",
+            "suspenso_data": "Suspenso Data",
+            "rejeitado_por": "Rejeitado Por",
+            "rejeitado_data": "Rejeitado Data",
+            "disponivel_por": "Disponivel Por",
+            "disponivel_data": "Disponivel Data",
+            "observacao": "Observacao",
+            "forma_cadastro": "Forma Cadastro",
+            "anotacao_status": "Anotacao Status",
+            "directiva_data_atu": "Directiva Data Atu",
+            "tbr_amostra": "Tbr Amostra",
+            "tbc_status": "Tbc Status",
+            "tbc_analises": "Tbc Analises"
+        }
+    },
+    "limsApp": {
+        "tbr_analise" : {
+            "created": "Um novo Tbr Analise é criado com o identificador {{ param }}",
+            "updated": "Um Tbr Analise é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbr Analise é deletado com o identificador {{ param }}"
+        }
+    }
+}

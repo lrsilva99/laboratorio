@@ -13,7 +13,9 @@ html {
   -webkit-text-size-adjust: 100%; }
 
 body {
-  margin: 0; }
+  margin: 0;
+   background-color: #fff;
+   }
 
 article,
 aside,
@@ -26,9 +28,11 @@ hgroup,
 main,
 menu,
 nav,
+md-toolbar,
 section,
 summary {
-  display: block; }
+  display: block;
+  }
 
 audio,
 canvas,
@@ -1143,7 +1147,8 @@ h1, h2, h3, h4, h5, h6,
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
-  color: inherit; }
+  color: inherit;
+  }
   h1 small,
   h1 .small, h2 small,
   h2 .small, h3 small,
@@ -1165,7 +1170,7 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 20px;
+  margin-top: auto;
   margin-bottom: 10px; }
   h1 small,
   h1 .small, .h1 small,
@@ -1688,7 +1693,9 @@ pre {
   margin-left: 58.33333%; }
 
 .col-xs-offset-8 {
-  margin-left: 66.66667%; }
+  margin-left: 66.66667%;
+
+  }
 
 .col-xs-offset-9 {
   margin-left: 75%; }
@@ -2305,7 +2312,7 @@ output {
 
 .form-control {
   display: block;
-  width: 100%;
+  width: 100% !important;
   height: 34px;
   padding: 6px 12px;
   font-size: 14px;
@@ -2403,7 +2410,8 @@ input[type="search"] {
     line-height: 46px; } }
 
 .form-group {
-  margin-bottom: 15px; }
+  margin-bottom: 5px;
+  }
 
 .radio,
 .checkbox {
@@ -2710,12 +2718,17 @@ select[multiple].input-lg,
 @media (min-width: 768px) {
   .form-inline .form-group {
     display: inline-block;
+    width: 100%;
     margin-bottom: 0;
-    vertical-align: middle; }
+    vertical-align: middle;
+
+     }
   .form-inline .form-control {
     display: inline-block;
     width: auto;
-    vertical-align: middle; }
+    vertical-align: middle;
+    width: 100%;
+    }
   .form-inline .form-control-static {
     display: inline-block; }
   .form-inline .input-group {
@@ -2866,9 +2879,9 @@ fieldset[disabled] a.btn {
     background-color: #333; }
 
 .btn-primary {
-  color: #fff;
-  background-color: #337ab7;
-  border-color: #2e6da4; }
+  color: #337ab7;
+  background-color: transparent;
+  border-color: transparent; }
   .btn-primary:focus, .btn-primary.focus {
     color: #fff;
     background-color: #286090;
@@ -2940,9 +2953,52 @@ fieldset[disabled] a.btn {
     background-color: #fff; }
 
 .btn-info {
-  color: #fff;
-  background-color: #5bc0de;
-  border-color: #46b8da; }
+  color: #5bc0de;
+  background-color: transparent;
+  border-color: transparent;
+  }
+  .btn-info2 {
+              color: #fff;
+              background-color: #5bc0de;
+              border-color: #46b8da;
+              }
+
+   .btn-info2:focus, .btn-info.focus {
+                  color: #fff;
+                  background-color: #31b0d5;
+                  border-color: #1b6d85;
+                }
+   .btn-info:hover {
+        color: #fff;
+        background-color: #31b0d5;
+        border-color: #269abc;
+    }
+    .btn-info2:active, .btn-info.active,.open > .btn-info.dropdown-toggle {
+        color: #fff;
+        background-color: #31b0d5;
+        border-color: #269abc;
+     }
+     .btn-info2:active:hover, .btn-info2:active:focus, .btn-info2:active.focus, .btn-info2.active:hover, .btn-info2.active:focus, .btn-info2.active.focus,
+                  .open > .btn-info2.dropdown-toggle:hover,
+                  .open > .btn-info2.dropdown-toggle:focus,
+                  .open > .btn-info2.dropdown-toggle.focus {
+                    color: #fff;
+                    background-color: #269abc;
+                    border-color: #1b6d85; }
+                .btn-info:active, .btn-info.active,
+                .open > .btn-info2.dropdown-toggle {
+                  background-image: none; }
+                .btn-info2.disabled:hover, .btn-info2.disabled:focus, .btn-info2.disabled.focus, .btn-info2[disabled]:hover, .btn-info2[disabled]:focus, .btn-info2[disabled].focus,
+                fieldset[disabled] .btn-info2:hover,
+                fieldset[disabled] .btn-info2:focus,
+                fieldset[disabled] .btn-info2.focus {
+                  background-color: #5bc0de;
+                  border-color: #46b8da; }
+                .btn-info2.badge {
+                  color: #5bc0de;
+                  background-color: #fff; }
+
+
   .btn-info:focus, .btn-info.focus {
     color: #fff;
     background-color: #31b0d5;
@@ -3014,9 +3070,9 @@ fieldset[disabled] a.btn {
     background-color: #fff; }
 
 .btn-danger {
-  color: #fff;
-  background-color: #d9534f;
-  border-color: #d43f3a; }
+  color: #d9534f;
+  background-color: transparent;
+  border-color: transparent; }
   .btn-danger:focus, .btn-danger.focus {
     color: #fff;
     background-color: #c9302c;
@@ -3538,7 +3594,9 @@ tbody.collapse.in {
 .nav {
   margin-bottom: 0;
   padding-left: 0;
-  list-style: none; }
+  list-style: none;
+  }
+
   .nav:before, .nav:after {
     content: " ";
     display: table; }
@@ -3945,7 +4003,8 @@ tbody.collapse.in {
   .navbar-default .navbar-text {
     color: #777; }
   .navbar-default .navbar-nav > li > a {
-    color: #777; }
+    color: #fff;
+    }
     .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
       color: #333;
       background-color: transparent; }
@@ -5020,7 +5079,7 @@ button.list-group-item-danger {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: #f5f5f5;
+background-color: #fff;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -5816,6 +5875,48 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: #f6f6f6 !important;
+    border: 1px solid #e1e1e1; !important}
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background: white; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
+
 /* endinject */
 /* bower:sass */
 /* endinject */
+
+CSS
+HTMLJSCSS
+.fabSpeedDialdemoBasicUsage .text-capitalize {
+  text-transform: capitalize; }
+
+.fabSpeedDialdemoBasicUsage .md-fab:hover, .fabSpeedDialdemoBasicUsage .md-fab.md-focused {
+  background-color: #000 !important; }
+
+.fabSpeedDialdemoBasicUsage p.note {
+  font-size: 1.2rem; }
+
+.fabSpeedDialdemoBasicUsage .lock-size {
+  min-width: 300px;
+  min-height: 300px;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+ .status{
+ font-weight: bold;
+ text-align: center;
+ }
+ .group_status{
+  height: 5px;
+  }
+
+
+
+

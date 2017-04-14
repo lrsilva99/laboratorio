@@ -20,14 +20,27 @@
         <dd>
             <span>{{vm.tbc_formulario_componentes.unidade_medida}}</span>
         </dd>
+        <dt><span data-translate="global.field.tamanho">Tamanho</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.tamanho}}</span>
+        </dd>
         <dt><span data-translate="global.field.valor_padrao">Valor Padrao</span></dt>
         <dd>
             <span>{{vm.tbc_formulario_componentes.valor_padrao}}</span>
         </dd>
+
         <dt><span data-translate="global.field.configuracao">Configuracao</span></dt>
         <dd>
             <span>{{vm.tbc_formulario_componentes.configuracao}}</span>
         </dd>
+
+        <dt><span data-translate="global.field.nome_campo_destino">Nome Campo Destino</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.nome_campo_destino}}</span>
+        </dd>
+
+
+
         <dt><span data-translate="global.field.tbc_formulario">Tbc Formulario</span></dt>
         <dd>
             <a ui-sref="tbc-formulario-detail({id:vm.tbc_formulario_componentes.tbc_formulario.id})">{{vm.tbc_formulario_componentes.tbc_formulario.nome}}</a>
@@ -36,16 +49,23 @@
         <dd>
             <a ui-sref="tbc-tipo-campo-detail({id:vm.tbc_formulario_componentes.tbc_tipo_campo.id})">{{vm.tbc_formulario_componentes.tbc_tipo_campo.nome}}</a>
         </dd>
+        <dt><span data-translate="global.field.obrigatorio">Obrigatorio</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.obrigatorio}}</span>
+        </dd>
+        <dt><span data-translate="global.field.visivel">Visivel</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.visivel}}</span>
+        </dd>
+        <dt><span data-translate="global.field.bloqueado">Bloqueado</span></dt>
+        <dd>
+            <span>{{vm.tbc_formulario_componentes.bloqueado}}</span>
+        </dd>
     </dl>
 
     <button type="submit"
             ui-sref="tbc-formulario-componentes({idFormulario:vm.tbc_formulario_componentes.tbc_formulario.id})"
             class="btn btn-info">
         <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
-    </button>
-
-    <button type="button" ui-sref="tbc-formulario-componentes-detail.edit({id:vm.tbc_formulario_componentes.id})" class="btn btn-primary">
-        <span class="glyphicon glyphicon-pencil"></span>
-        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
     </button>
 </div>

@@ -49,6 +49,10 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
     @ManyToOne
     private Tbc_tipo_cadastro tbc_tipo_cadastro;
 
+    @ManyToOne
+    @NotNull
+    private Tbc_status tbc_status;
+
     public Long getId() {
         return id;
     }
@@ -146,6 +150,19 @@ public class Tbc_formulario extends AbstractAuditingEntity implements Serializab
 
     public void setTbc_tipo_cadastro(Tbc_tipo_cadastro tbc_tipo_cadastro) {
         this.tbc_tipo_cadastro = tbc_tipo_cadastro;
+    }
+
+    public Tbc_status getTbc_status() {
+        return tbc_status;
+    }
+
+    public Tbc_formulario tbc_status(Tbc_status tbc_status) {
+        this.tbc_status = tbc_status;
+        return this;
+    }
+
+    public void setTbc_status(Tbc_status tbc_status) {
+        this.tbc_status = tbc_status;
     }
 
     @Override

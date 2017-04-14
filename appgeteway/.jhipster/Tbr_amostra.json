@@ -1,0 +1,227 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_especie",
+            "otherEntityName": "tbc_especie",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_sub_grupo",
+            "otherEntityName": "tbc_sub_grupo",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_status",
+            "otherEntityName": "tbc_status",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_cliente",
+            "otherEntityName": "tbc_cliente",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_proprietario",
+            "otherEntityName": "tbc_proprietario",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_cooperativa",
+            "otherEntityName": "tbc_cooperativa",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_fazenda",
+            "otherEntityName": "tbc_fazenda",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_forma_armazenamento",
+            "otherEntityName": "tbc_forma_armazenamento",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_formulario",
+            "otherEntityName": "tbc_formulario",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_convenio",
+            "otherEntityName": "tbc_convenio",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_genero",
+            "otherEntityName": "tbc_genero",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_qualidade_amostra",
+            "otherEntityName": "tbc_qualidade_amostra",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbr_analise",
+            "otherEntityName": "tbr_analise",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "tbr_amostra"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "urgencia",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "proprietario",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "resp_colheita",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "req_texto",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "historico_clinico",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "numero_for",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "recebimento_rec_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "suspeita_clinica",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "coleta_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "sexo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "raca",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "idade",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "identificao_amostra",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "autorizado_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "autorizado_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "cancelado_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cancelado_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "suspenso_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "suspenso_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "rejeitado_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rejeitado_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "disponivel_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "disponivel_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "plano_teste",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "plano_teste_a",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plano_teste_b",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plano_teste_c",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plano_teste_d",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plano_teste_e",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "plano_teste_f",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "numero_etiqueta",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170304154018",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbr_amostra",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

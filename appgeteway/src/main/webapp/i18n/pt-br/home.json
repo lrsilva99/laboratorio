@@ -1,19 +1,19 @@
 {
     "home": {
-        "title": "Bem vindo, Java Hipster!",
+        "title": "Bem vindo, LAB NUVEM!",
         "subtitle": "Esta é  a página principal",
         "logged": {
             "message": "Você está logado como \"{{username}}\"."
         },
-        "question": "Em caso de dúvida sobre o JHipster:",
+        "question": "Em caso de dúvida sobre o Lab Nuvem:",
         "link": {
-            "homepage": "JHipster homepage",
-            "stackoverflow": "JHipster no Stack Overflow",
-            "bugtracker": "JHipster bug tracker",
-            "chat": "JHipster public chat room",
-            "follow": "contate @java_hipster on Twitter"
+            "homepage": "LAB NUVEM",
+            "stackoverflow": "Lab Nuvem no Stack Overflow",
+            "bugtracker": "Lab Nuvem bug tracker",
+            "chat": "Lab Nuvem public chat room",
+            "follow": "contate @lab_nuvem no Twitter"
         },
-        "like": "Se você gosta do JHipster, não se esqueça de avaliar no",
+        "like": "Se você gosta do Lab Nuvem, não se esqueça de avaliar no",
         "github": "GitHub"
     }
 }

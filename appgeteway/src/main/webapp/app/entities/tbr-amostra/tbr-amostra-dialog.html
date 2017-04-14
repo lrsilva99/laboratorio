@@ -1,0 +1,345 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTbr_amostraLabel" data-translate="appgetewayApp.tbr_amostra.home.createOrEditLabel" translate-values="{id: '{{vm.requisicao()}}'}">Create or edit a Tbr Amostra</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.tbr_amostra.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                   ng-model="vm.tbr_amostra.id" readonly />
+        </div>
+        <md-content>
+            <md-tabs class=" md-dynamic-height md-border-bottom  md-primary md-hue-1">
+                <md-tab label="{{ 'appgetewayApp.tbr_amostra.home.md_tab_dados_amostra' | translate }}">
+                    <md-tab-label>
+                        <span class="glyphicon glyphicon-tint"></span>&nbsp;
+                        <span data-translate="appgetewayApp.tbr_amostra.home.md_tab_dados_amostra">Tbc Formulario</span>
+                    </md-tab-label>
+                    <md-tab-body>
+                    <div ng-repeat="tbc_formulario_componentes in vm.tbc_formulario_componentes">
+                        <div class="form-group">
+                            <span ng-if="tbc_formulario_componentes.obrigatorio">
+                                <span class="glyphicon glyphicon-asterisk" for="tbc_formulario_componentes.nome_campo_destino"> </span>
+                            </span>
+                            <label class="control-label" for="tbc_formulario_componentes.nome_campo_destino">{{tbc_formulario_componentes.nome}}</label>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'Urgencia'">
+
+                                <md-checkbox
+                                    ng-model="vm.tbr_amostra.urgencia"
+                                    class="form-control"
+                                    name="urgencia"
+                                    id="field_urgencia">
+                                </md-checkbox>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'numero_etiqueta'">
+                                <input type="number"
+                                       class="form-control"
+                                       name="numero_etiqueta"
+                                       id="field_numero_etiqueta"
+                                       ng-model="vm.tbr_amostra.numero_etiqueta"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"/>
+
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_cliente'">
+                                <select class="form-control"
+                                        id="field_tbc_cliente"
+                                        name="tbc_cliente"
+                                        ng-model="vm.tbr_amostra.tbc_cliente"
+                                        ng-options="tbc_cliente as tbc_cliente.nome for tbc_cliente in vm.tbc_clientes track by tbc_cliente.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'proprietario'">
+                                <input type="text"
+                                       class="form-control"
+                                       name="proprietario"
+                                       id="field_proprietario"
+                                       ng-model="vm.tbr_amostra.proprietario"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"/>
+
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'numero_for'">
+                                <input type="text"
+                                       class="form-control"
+                                       name="numero_for"
+                                       id="field_numero_for"
+                                       ng-model="vm.tbr_amostra.numero_for"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"/>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'resp_colheita'">
+                                <input type="text"
+                                       class="form-control"
+                                       name="resp_colheita"
+                                       id="field_resp_colheita"
+                                       ng-model="vm.tbr_amostra.resp_colheita"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"
+                                />
+
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'suspeita_clinica'">
+                                <textarea class="form-control"
+                                          name="suspeita_clinica"
+                                          id="field_suspeita_clinica"
+                                          ng-model="vm.tbr_amostra.suspeita_clinica"
+                                          ng-required= "tbc_formulario_componentes.obrigatorio" >
+
+                                </textarea>
+
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_convenio'">
+                                <select class="form-control"
+                                        id="field_tbc_convenio"
+                                        name="tbc_convenio"
+                                        ng-model="vm.tbr_amostra.tbc_convenio"
+                                        ng-options="tbc_convenio as tbc_convenio.nome for tbc_convenio in vm.tbc_convenios track by tbc_convenio.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'historico_clinico'">
+                                <textarea class="form-control"
+                                          name="historico_clinico"
+                                          id="field_historico_clinico"
+                                          ng-model="vm.tbr_amostra.historico_clinico"
+                                          ng-required= "tbc_formulario_componentes.obrigatorio">
+
+                                </textarea>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_formulario'">
+                                <select class="form-control"
+                                        id="field_tbc_formulario"
+                                        name="tbc_formulario"
+                                        ng-model="vm.tbr_amostra.tbc_formulario"
+                                        ng-options="tbc_formulario as tbc_formulario.nome for tbc_formulario in vm.tbc_formularios track by tbc_formulario.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'recebimento_rec_data'">
+                                <div class="input-group">
+                                    <input id="field_recebimento_rec_data"
+                                           type="text"
+                                           class="form-control"
+                                           name="recebimento_rec_data"
+                                           datetime-picker="{{dateformat}}"
+                                           ng-model-options="{timezone: 'UTC'}"
+                                           ng-model="vm.tbr_amostra.recebimento_rec_data"
+                                           is-open="vm.datePickerOpenStatus.recebimento_rec_data"
+                                           ng-required= "tbc_formulario_componentes.obrigatorio"/>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('recebimento_rec_data')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'coleta_data'">
+                                <div class="input-group">
+                                    <input
+                                        id="field_coleta_data"
+                                        type="text"
+                                        class="form-control"
+                                        name="coleta_data"
+                                        datetime-picker="{{dateformat}}"
+                                        ng-model="vm.tbr_amostra.coleta_data"
+                                        is-open="vm.datePickerOpenStatus.coleta_data"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio"/>
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('coleta_data')"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_especie'">
+                                <select class="form-control"
+                                        id="field_tbc_especie"
+                                        name="tbc_especie"
+                                        ng-model="vm.tbr_amostra.tbc_especie"
+                                        ng-options="tbc_especie as tbc_especie.nome for tbc_especie in vm.tbc_especies track by tbc_especie.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'sexo'">
+                                <input type="text"
+                                       class="form-control"
+                                       name="sexo"
+                                       id="field_sexo"
+                                       ng-model="vm.tbr_amostra.sexo"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"/>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'raca'">
+                                <input type="text"
+                                       class="form-control"
+                                       name="raca"
+                                       id="field_raca"
+                                       ng-model="vm.tbr_amostra.raca"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"/>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'idade'">
+                                <input type="text"
+                                       class="form-control"
+                                       name="idade" i
+                                       d="field_idade"
+                                       ng-model="vm.tbr_amostra.idade"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"/>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'identificao_amostra'">
+                                <input type="text"
+                                       class="form-control"
+                                       name="identificao_amostra"
+                                       id="field_identificao_amostra"
+                                       ng-model="vm.tbr_amostra.identificao_amostra"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"/>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_qualidade_amostra'">
+                                <select class="form-control"
+                                        id="field_tbc_qualidade_amostra"
+                                        name="tbc_qualidade_amostra"
+                                        ng-model="vm.tbr_amostra.tbc_qualidade_amostra"
+                                        ng-options="tbc_qualidade_amostra as tbc_qualidade_amostra.nome for tbc_qualidade_amostra in vm.tbc_qualidade_amostras track by tbc_qualidade_amostra.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_forma_armazenamento'">
+                                <select class="form-control"
+                                        id="field_tbc_forma_armazenamento"
+                                        name="tbc_forma_armazenamento"
+                                        ng-model="vm.tbr_amostra.tbc_forma_armazenamento"
+                                        ng-options="tbc_forma_armazenamento as tbc_forma_armazenamento.nome for tbc_forma_armazenamento in vm.tbc_forma_armazenamentos track by tbc_forma_armazenamento.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'plano_teste'">
+                                <textarea class="form-control"
+                                          name="plano_teste"
+                                          id="field_plano_teste"
+                                          ng-model="vm.tbr_amostra.plano_teste"
+                                          ng-required= "tbc_formulario_componentes.obrigatorio">
+                                </textarea>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_status'">
+                                <select class="form-control"
+                                        id="field_tbc_status"
+                                        name="tbc_status"
+                                        ng-model="vm.tbr_amostra.tbc_status"
+                                        ng-options="tbc_status as tbc_status.nome for tbc_status in vm.tbc_statuses track by tbc_status.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_sub_grupo'">
+                                <select class="form-control"
+                                        id="field_tbc_sub_grupo"
+                                        name="tbc_sub_grupo"
+                                        ng-model="vm.tbr_amostra.tbc_sub_grupo"
+                                        ng-options="tbc_sub_grupo as tbc_sub_grupo.nome for tbc_sub_grupo in vm.tbc_sub_grupos track by tbc_sub_grupo.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_proprietario'">
+                                <select class="form-control"
+                                        id="field_tbc_proprietario"
+                                        name="tbc_proprietario"
+                                        ng-model="vm.tbr_amostra.tbc_proprietario"
+                                        ng-options="tbc_proprietario as tbc_proprietario.nome for tbc_proprietario in vm.tbc_proprietarios track by tbc_proprietario.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_cooperativa'">
+                                <select class="form-control"
+                                        id="field_tbc_cooperativa"
+                                        name="tbc_cooperativa"
+                                        ng-model="vm.tbr_amostra.tbc_cooperativa"
+                                        ng-options="tbc_cooperativa as tbc_cooperativa.nome for tbc_cooperativa in vm.tbc_cooperativas track by tbc_cooperativa.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_genero'">
+                                <select class="form-control"
+                                        id="field_tbc_genero"
+                                        name="tbc_genero"
+                                        ng-model="vm.tbr_amostra.tbc_genero"
+                                        ng-options="tbc_genero as tbc_genero.nome for tbc_genero in vm.tbc_generos track by tbc_genero.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div ng-if="tbc_formulario_componentes.nome_campo_destino == 'tbc_fazenda'">
+                                <select class="form-control"
+                                        id="field_tbc_fazenda"
+                                        name="tbc_fazenda"
+                                        ng-model="vm.tbr_amostra.tbc_fazenda"
+                                        ng-options="tbc_fazenda as tbc_fazenda.nome for tbc_fazenda in vm.tbc_fazendas track by tbc_fazenda.id"
+                                        ng-required= "tbc_formulario_componentes.obrigatorio">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    </md-tab-body>
+                </md-tab>
+                <md-tab readonly>
+                    <md-tab-label>
+                        <span class="glyphicon glyphicon-tint"></span>&nbsp;
+                        <span data-translate="appgetewayApp.tbr_amostra.home.md_tab_dados_analise">Tbc Formulario</span>
+                    </md-tab-label>
+                    <md-tab-body>
+                    <div class="form-group">
+                        <ui-select class="form-control" multiple  ng-model="vm.tbc_analise" theme="bootstrap" >
+                            <ui-select-match placeholder="{{'appgetewayApp.tbr_amostra.home.ui_select_match_analise' | translate }}">{{$item.nome}}</ui-select-match>
+                            <ui-select-choices
+                                refresh="vm.refresh($select.search)"
+                                refresh-delay="0"
+                                repeat="tbc_analise in vm.tbc_analises | filter:$select.search">
+                                <div ng-bind-html="tbc_analise.nome | highlight: $select.search"></div>
+                                <small>
+                                    Laboratório: <span ng-bind-html="''+tbc_analise.tbc_sub_grupo.nome | highlight: $select.search"></span>
+                                    Grupo: <span ng-bind-html="''+tbc_analise.tbc_grupo_analise.nome | highlight: $select.search"></span>
+                                </small>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                    <ui-select class="form-control" multiple  ng-model="vm.tbc_plano_teste" theme="bootstrap" >
+                        <ui-select-match placeholder="{{'appgetewayApp.tbr_amostra.home.ui_select_match_plano_teste' | translate }}">{{$item.nome}}</ui-select-match>
+                        <ui-select-choices refresh-delay="0" repeat="tbc_plano_teste in vm.tbc_plano_testes | filter:$select.search">
+                            {{tbc_plano_teste.nome}}
+                        </ui-select-choices>
+                    </ui-select>
+                    <p><br> <br> <br> <br> <br><br><br><br><br><br> <br></p>
+                    </md-tab-body>
+                </md-tab>
+            </md-tabs>
+        </md-content>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;
+            <span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;
+            <span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

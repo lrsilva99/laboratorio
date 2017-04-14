@@ -1,0 +1,50 @@
+{
+    "appgetewayApp": {
+        "tbr_analise_resultado" : {
+            "home": {
+                "title": "Tbr Analise Resultados",
+                "createLabel": "Criar novo Tbr Analise Resultado",
+                "createOrEditLabel": "Criar ou editar Tbr Analise Resultado",
+                "search": "Pesquisar por Tbr Analise Resultado"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbr Analise Resultado {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbr Analise Resultado"
+            }
+            ,
+            "reativar" : "Reativar",
+            "liberar" : "Liberar",
+            "selecionada": "Identificação:({{ param }})",
+            "analises_componente": "Analises Componente",
+            "resultado": "Resultado",
+            "autorizado_por": "Autorizado Por",
+            "autorizado_data": "Autorizado Data",
+            "cancelado_por": "Cancelado Por",
+            "cancelado_data": "Cancelado Data",
+            "suspenso_por": "Suspenso Por",
+            "suspenso_data": "Suspenso Data",
+            "rejeitado_por": "Rejeitado Por",
+            "rejeitado_data": "Rejeitado Data",
+            "disponivel_por": "Disponivel Por",
+            "disponivel_data": "Disponivel Data",
+            "resultado_digitado": "Resultado Digitado",
+            "unidade_medida": "Unidade Medida",
+            "tbr_analise_id": "Tbr Analise Id",
+            "resultado_texto": "Resultado Texto",
+            "repetido": "Repetido",
+            "tbr_amostra_id": "Tbr Amostra Id",
+            "tbc_status": "Tbc Status",
+            "tbc_status_ultimo": "Tbc Status Ultimo",
+            "tbc_analises_componente": "Tbc Analises Componente"
+        }
+    },
+    "limsApp": {
+        "tbr_analise_resultado" : {
+            "created": "Um novo Tbr Analise Resultado é criado com o identificador {{ param }}",
+            "updated": "Um Tbr Analise Resultado é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbr Analise Resultado é deletado com o identificador {{ param }}"
+        }
+    }
+}

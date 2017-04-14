@@ -2,12 +2,12 @@
     "appgetewayApp": {
         "tbc_formulario_componentes" : {
             "home": {
-                "title": "Componentes"
+                "title": "Formulário componentes"
             },
             "detail": {
-                "title": "Componentes registro: "
+                "title": "Components registro:"
             },
-            "selecionada": "Análise selecionada:({{ param }})"
+            "selecionada": "Formulário selecionada:({{ param }})"
         }
     },
     "limsApp": {

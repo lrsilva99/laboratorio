@@ -6,7 +6,7 @@
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="tbc-tipo-campo.new" >
                     <span class="glyphicon glyphicon-plus"></span>
-                    <span class="hidden-xs"  data-translate="appgetewayApp.tbc_tipo_campo.home.createLabel">
+                    <span class="hidden-xs"  data-translate="entity.home.createLabel">
                         Create new Tbc Tipo Campo
                     </span>
                 </button>
@@ -14,7 +14,7 @@
             <div class="col-xs-8 no-padding-right">
                 <form name="searchForm" class="form-inline">
                     <div class="input-group pull-right" >
-                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'appgetewayApp.tbc_tipo_campo.home.search' | translate }}">
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'entity.home.search' | translate }}">
                         <span  class="input-group-btn width-min" >
                             <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -36,8 +36,8 @@
             <thead>
                 <tr jh-sort="vm.predicate" ascending="vm.reverse" callback="vm.transition()">
                     <th jh-sort-by="id"><span data-translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="nome"><span data-translate="appgetewayApp.tbc_tipo_campo.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
-                    <th jh-sort-by="descricao"><span data-translate="appgetewayApp.tbc_tipo_campo.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="nome"><span data-translate="global.field.nome">Nome</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="descricao"><span data-translate="global.field.descricao">Descricao</span> <span class="glyphicon glyphicon-sort"></span></th>
                     <th></th>
                 </tr>
             </thead>

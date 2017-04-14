@@ -48,7 +48,7 @@
             <tr ng-repeat="tbc_formulario_componentes in vm.tbc_formulario_componentes track by tbc_formulario_componentes.id">
                 <td><a ui-sref="tbc-formulario-componentes-detail({id:tbc_formulario_componentes.id})">{{tbc_formulario_componentes.id}}</a></td>
                 <td>{{tbc_formulario_componentes.nome}}</td>
-                <td>{{tbc_formulario_componentes.descricao}}</td>
+                <td>{{tbc_formulario_componentes.nome_campo_destino}}</td>
                 <td class="text-right">
                     <div class="btn-group flex-btn-group-container">
                         <button type="submit"

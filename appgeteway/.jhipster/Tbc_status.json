@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nome",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descricao",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text"
+        },
+        {
+            "fieldName": "removido",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "icone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cor",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170304021143",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "tbc_status",
+    "pagination": "pager",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

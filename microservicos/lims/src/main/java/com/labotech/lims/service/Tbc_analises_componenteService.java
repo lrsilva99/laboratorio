@@ -4,6 +4,8 @@ import com.labotech.lims.domain.Tbc_analises_componente;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 /**
  * Service Interface for managing Tbc_analises_componente.
  */
@@ -49,4 +51,13 @@ public interface Tbc_analises_componenteService {
      *  @return the list of entities
      */
     Page<Tbc_analises_componente> search(String query, Pageable pageable);
+
+    /**
+     * Search for the tbc_analises_componente corresponding to the query.
+     *
+     *  @param id the tbc_analises of the tbc_analises_componente;
+     *
+     *  @return the list of entities
+     */
+    List<Tbc_analises_componente> findAllListForAnalise(Long id);
 }

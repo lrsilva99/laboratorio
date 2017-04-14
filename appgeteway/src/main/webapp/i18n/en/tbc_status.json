@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_status" : {
+            "home": {
+                "title": "Tbc Statuses",
+                "createLabel": "Create a new Tbc Status",
+                "createOrEditLabel": "Create or edit a Tbc Status",
+                "search": "Search for Tbc Status"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Status {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Status"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "icone": "Icone"
+        }
+    },
+    "limsApp": {
+        "tbc_status" : {
+            "created": "A new Tbc Status is created with identifier {{ param }}",
+            "updated": "A Tbc Status is updated with identifier {{ param }}",
+            "deleted": "A Tbc Status is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,209 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myTbc_analise_resultadoLabel" data-translate="appgetewayApp.tbc_analise_resultado.home.createOrEditLabel">Create or edit a Tbc Analise Resultado</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.tbc_analise_resultado.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.tbc_analise_resultado.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.analises_componente" for="field_analises_componente">Analises Componente</label>
+            <input type="text" class="form-control" name="analises_componente" id="field_analises_componente"
+                    ng-model="vm.tbc_analise_resultado.analises_componente"
+                    required />
+            <div ng-show="editForm.analises_componente.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.analises_componente.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.resultado" for="field_resultado">Resultado</label>
+            <input type="text" class="form-control" name="resultado" id="field_resultado"
+                    ng-model="vm.tbc_analise_resultado.resultado"
+                    required />
+            <div ng-show="editForm.resultado.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.resultado.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.autorizado_por" for="field_autorizado_por">Autorizado Por</label>
+            <input type="text" class="form-control" name="autorizado_por" id="field_autorizado_por"
+                    ng-model="vm.tbc_analise_resultado.autorizado_por"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.autorizado_data" for="field_autorizado_data">Autorizado Data</label>
+                <div class="input-group">
+                    <input id="field_autorizado_data" type="text" class="form-control" name="autorizado_data" datetime-picker="{{dateformat}}" ng-model="vm.tbc_analise_resultado.autorizado_data" is-open="vm.datePickerOpenStatus.autorizado_data"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('autorizado_data')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.cancelado_por" for="field_cancelado_por">Cancelado Por</label>
+            <input type="text" class="form-control" name="cancelado_por" id="field_cancelado_por"
+                    ng-model="vm.tbc_analise_resultado.cancelado_por"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.cancelado_data" for="field_cancelado_data">Cancelado Data</label>
+                <div class="input-group">
+                    <input id="field_cancelado_data" type="text" class="form-control" name="cancelado_data" datetime-picker="{{dateformat}}" ng-model="vm.tbc_analise_resultado.cancelado_data" is-open="vm.datePickerOpenStatus.cancelado_data"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('cancelado_data')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.suspenso_por" for="field_suspenso_por">Suspenso Por</label>
+            <input type="text" class="form-control" name="suspenso_por" id="field_suspenso_por"
+                    ng-model="vm.tbc_analise_resultado.suspenso_por"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.suspenso_data" for="field_suspenso_data">Suspenso Data</label>
+                <div class="input-group">
+                    <input id="field_suspenso_data" type="text" class="form-control" name="suspenso_data" datetime-picker="{{dateformat}}" ng-model="vm.tbc_analise_resultado.suspenso_data" is-open="vm.datePickerOpenStatus.suspenso_data"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('suspenso_data')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.rejeitado_por" for="field_rejeitado_por">Rejeitado Por</label>
+            <input type="text" class="form-control" name="rejeitado_por" id="field_rejeitado_por"
+                    ng-model="vm.tbc_analise_resultado.rejeitado_por"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.rejeitado_data" for="field_rejeitado_data">Rejeitado Data</label>
+                <div class="input-group">
+                    <input id="field_rejeitado_data" type="text" class="form-control" name="rejeitado_data" datetime-picker="{{dateformat}}" ng-model="vm.tbc_analise_resultado.rejeitado_data" is-open="vm.datePickerOpenStatus.rejeitado_data"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('rejeitado_data')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.disponivel_por" for="field_disponivel_por">Disponivel Por</label>
+            <input type="text" class="form-control" name="disponivel_por" id="field_disponivel_por"
+                    ng-model="vm.tbc_analise_resultado.disponivel_por"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.disponivel_data" for="field_disponivel_data">Disponivel Data</label>
+                <div class="input-group">
+                    <input id="field_disponivel_data" type="text" class="form-control" name="disponivel_data" datetime-picker="{{dateformat}}" ng-model="vm.tbc_analise_resultado.disponivel_data" is-open="vm.datePickerOpenStatus.disponivel_data"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('disponivel_data')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.resultado_digitado" for="field_resultado_digitado">Resultado Digitado</label>
+            <input type="text" class="form-control" name="resultado_digitado" id="field_resultado_digitado"
+                    ng-model="vm.tbc_analise_resultado.resultado_digitado"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.unidade_medida" for="field_unidade_medida">Unidade Medida</label>
+            <input type="text" class="form-control" name="unidade_medida" id="field_unidade_medida"
+                    ng-model="vm.tbc_analise_resultado.unidade_medida"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.tbr_analise_id" for="field_tbr_analise_id">Tbr Analise Id</label>
+            <input type="number" class="form-control" name="tbr_analise_id" id="field_tbr_analise_id"
+                    ng-model="vm.tbc_analise_resultado.tbr_analise_id"
+                    required />
+            <div ng-show="editForm.tbr_analise_id.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tbr_analise_id.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.tbr_analise_id.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.resultado_texto" for="field_resultado_texto">Resultado Texto</label>
+                <textarea class="form-control" name="resultado_texto" id="field_resultado_texto"
+                    ng-model="vm.tbc_analise_resultado.resultado_texto" required ></textarea>
+            <div ng-show="editForm.resultado_texto.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.resultado_texto.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.repetido" for="field_repetido">Repetido</label>
+            <input type="checkbox" class="form-control" name="repetido" id="field_repetido"
+                    ng-model="vm.tbc_analise_resultado.repetido"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="appgetewayApp.tbc_analise_resultado.tbc_amostra_id" for="field_tbc_amostra_id">Tbc Amostra Id</label>
+            <input type="number" class="form-control" name="tbc_amostra_id" id="field_tbc_amostra_id"
+                    ng-model="vm.tbc_analise_resultado.tbc_amostra_id"
+                    required />
+            <div ng-show="editForm.tbc_amostra_id.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.tbc_amostra_id.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.tbc_amostra_id.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="appgetewayApp.tbc_analise_resultado.tbc_status" for="field_tbc_status">Tbc Status</label>
+            <select class="form-control" id="field_tbc_status" name="tbc_status" ng-model="vm.tbc_analise_resultado.tbc_status" ng-options="tbc_status as tbc_status.id for tbc_status in vm.tbc_statuses track by tbc_status.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_status.$invalid">
+            <p class="help-block"
+                ng-show="editForm.tbc_status.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label data-translate="appgetewayApp.tbc_analise_resultado.tbc_status_ultimo" for="field_tbc_status_ultimo">Tbc Status Ultimo</label>
+            <select class="form-control" id="field_tbc_status_ultimo" name="tbc_status_ultimo" ng-model="vm.tbc_analise_resultado.tbc_status_ultimo" ng-options="tbc_status as tbc_status.id for tbc_status in vm.tbc_statuses track by tbc_status.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

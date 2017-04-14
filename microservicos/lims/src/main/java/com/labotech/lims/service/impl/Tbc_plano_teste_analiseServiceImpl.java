@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 
+import java.util.List;
+
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
@@ -91,5 +93,10 @@ public class Tbc_plano_teste_analiseServiceImpl implements Tbc_plano_teste_anali
         log.debug("Request to search for a page of Tbc_plano_teste_analises for query {}", query);
         Page<Tbc_plano_teste_analise> result = tbc_plano_teste_analiseSearchRepository.search(queryStringQuery(query), pageable);
         return result;
+    }
+
+    @Override
+    public List<Tbc_plano_teste_analise> listAllPlanoTeste(Long plano_teste_id) {
+        return tbc_plano_teste_analiseRepository.listAllPlanoTeste(plano_teste_id);
     }
 }

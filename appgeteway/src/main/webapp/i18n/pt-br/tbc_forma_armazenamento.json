@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_forma_armazenamento" : {
+            "home": {
+                "title": "Forma Armazenamento"
+            },
+            "detail": {
+                "title": "Forma Armazenamento registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_forma_armazenamento" : {
+            "created": "Um novo Tbc Forma Armazenamento é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Forma Armazenamento é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Forma Armazenamento é deletado com o identificador {{ param }}"
+        }
+    }
+}

@@ -50,6 +50,23 @@ public class Tbc_formulario_componentes extends AbstractAuditingEntity implement
     @Column(name = "configuracao", nullable = false)
     private String configuracao;
 
+    @Column(name = "obrigatorio")
+    private Boolean obrigatorio;
+
+    @NotNull
+    @Column(name = "nome_campo_destino", nullable = false)
+    private String nome_campo_destino;
+
+    @Column(name = "visivel")
+    private Boolean visivel;
+
+    @Column(name = "bloqueado")
+    private Boolean bloqueado;
+
+    @NotNull
+    @Column(name = "tamanho", nullable = false)
+    private Integer tamanho;
+
     @ManyToOne
     @NotNull
     private Tbc_formulario tbc_formulario;
@@ -144,6 +161,71 @@ public class Tbc_formulario_componentes extends AbstractAuditingEntity implement
         this.configuracao = configuracao;
     }
 
+    public Boolean isObrigatorio() {
+        return obrigatorio;
+    }
+
+    public Tbc_formulario_componentes obrigatorio(Boolean obrigatorio) {
+        this.obrigatorio = obrigatorio;
+        return this;
+    }
+
+    public void setObrigatorio(Boolean obrigatorio) {
+        this.obrigatorio = obrigatorio;
+    }
+
+    public String getNome_campo_destino() {
+        return nome_campo_destino;
+    }
+
+    public Tbc_formulario_componentes nome_campo_destino(String nome_campo_destino) {
+        this.nome_campo_destino = nome_campo_destino;
+        return this;
+    }
+
+    public void setNome_campo_destino(String nome_campo_destino) {
+        this.nome_campo_destino = nome_campo_destino;
+    }
+
+    public Boolean isVisivel() {
+        return visivel;
+    }
+
+    public Tbc_formulario_componentes visivel(Boolean visivel) {
+        this.visivel = visivel;
+        return this;
+    }
+
+    public void setVisivel(Boolean visivel) {
+        this.visivel = visivel;
+    }
+
+    public Boolean isBloqueado() {
+        return bloqueado;
+    }
+
+    public Tbc_formulario_componentes bloqueado(Boolean bloqueado) {
+        this.bloqueado = bloqueado;
+        return this;
+    }
+
+    public void setBloqueado(Boolean bloqueado) {
+        this.bloqueado = bloqueado;
+    }
+
+    public Integer getTamanho() {
+        return tamanho;
+    }
+
+    public Tbc_formulario_componentes tamanho(Integer tamanho) {
+        this.tamanho = tamanho;
+        return this;
+    }
+
+    public void setTamanho(Integer tamanho) {
+        this.tamanho = tamanho;
+    }
+
     public Tbc_formulario getTbc_formulario() {
         return tbc_formulario;
     }
@@ -200,6 +282,11 @@ public class Tbc_formulario_componentes extends AbstractAuditingEntity implement
             ", unidade_medida='" + unidade_medida + "'" +
             ", valor_padrao='" + valor_padrao + "'" +
             ", configuracao='" + configuracao + "'" +
+            ", obrigatorio='" + obrigatorio + "'" +
+            ", nome_campo_destino='" + nome_campo_destino + "'" +
+            ", visivel='" + visivel + "'" +
+            ", bloqueado='" + bloqueado + "'" +
+            ", tamanho='" + tamanho + "'" +
             '}';
     }
 }

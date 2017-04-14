@@ -30,6 +30,7 @@
             <textarea class="form-control" name="descricao" id="field_descricao"
                       ng-model="vm.tbc_formulario_componentes.descricao"  ></textarea>
         </div>
+
         <div class="form-group">
             <label class="control-label" data-translate="global.field.linha" for="field_linha">Linha</label>
             <input type="number" class="form-control" name="linha" id="field_linha"
@@ -47,6 +48,22 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="control-label" data-translate="global.field.tamanho" for="field_tamanho">Tamanho</label>
+            <input type="number" class="form-control" name="tamanho" id="field_tamanho"
+                   ng-model="vm.tbc_formulario_componentes.tamanho"
+                   required />
+            <div ng-show="editForm.tamanho.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.tamanho.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                   ng-show="editForm.tamanho.$error.number" data-translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="control-label" data-translate="global.field.unidade_medida" for="field_unidade_medida">Unidade Medida</label>
             <input type="text" class="form-control" name="unidade_medida" id="field_unidade_medida"
                    ng-model="vm.tbc_formulario_componentes.unidade_medida"
@@ -54,6 +71,31 @@
             <div ng-show="editForm.unidade_medida.$invalid">
                 <p class="help-block"
                    ng-show="editForm.unidade_medida.$error.required" data-translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label data-translate="global.field.tbc_tipo_campo" for="field_tbc_tipo_campo">Tbc Tipo Campo</label>
+            <select class="form-control" id="field_tbc_tipo_campo" name="tbc_tipo_campo" ng-model="vm.tbc_formulario_componentes.tbc_tipo_campo" ng-options="tbc_tipo_campo as tbc_tipo_campo.nome for tbc_tipo_campo in vm.tbc_tipo_campos track by tbc_tipo_campo.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div ng-show="editForm.tbc_tipo_campo.$invalid">
+            <p class="help-block"
+               ng-show="editForm.tbc_tipo_campo.$error.required" data-translate="entity.validation.required">
+                This field is required.
+            </p>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="global.field.nome_campo_destino" for="field_nome_campo_destino">Nome Campo Destino</label>
+            <input type="text" class="form-control" name="nome_campo_destino" id="field_nome_campo_destino"
+                   ng-model="vm.tbc_formulario_componentes.nome_campo_destino"
+                   required />
+            <div ng-show="editForm.nome_campo_destino.$invalid">
+                <p class="help-block"
+                   ng-show="editForm.nome_campo_destino.$error.required" data-translate="entity.validation.required">
                     This field is required.
                 </p>
             </div>
@@ -80,26 +122,23 @@
                 </p>
             </div>
         </div>
-
-
-        <div ng-show="editForm.tbc_formulario.$invalid">
-            <p class="help-block"
-               ng-show="editForm.tbc_formulario.$error.required" data-translate="entity.validation.required">
-                This field is required.
-            </p>
-        </div>
         <div class="form-group">
-            <label data-translate="global.field.tbc_tipo_campo" for="field_tbc_tipo_campo">Tbc Tipo Campo</label>
-            <select class="form-control" id="field_tbc_tipo_campo" name="tbc_tipo_campo" ng-model="vm.tbc_formulario_componentes.tbc_tipo_campo" ng-options="tbc_tipo_campo as tbc_tipo_campo.id for tbc_tipo_campo in vm.tbc_tipo_campos track by tbc_tipo_campo.id" required>
-                <option value=""></option>
-            </select>
+            <label for="field_obrigatorio">
+                <input type="checkbox" class="form-control" name="imprimir" id="field_obrigatorio" ng-model="vm.tbc_formulario_componentes.obrigatorio"/>
+                <span data-translate="global.field.obrigatorio">Activated</span>
+            </label>
+            <label for="field_visivel">
+                <input type="checkbox" class="form-control" name="enviar_email" id="field_visivel" ng-model="vm.tbc_formulario_componentes.visivel"/>
+                <span data-translate="global.field.visivel">Activated</span>
+            </label>
+            <label for="field_bloquear">
+                <input type="checkbox" class="form-control" name="bloquear" id="field_bloquear"
+                       ng-model="vm.tbc_formulario_componentes.bloqueado"
+                />
+                <span data-translate="global.field.field_bloquear">Activated</span>
+            </label>
         </div>
-        <div ng-show="editForm.tbc_tipo_campo.$invalid">
-            <p class="help-block"
-               ng-show="editForm.tbc_tipo_campo.$error.required" data-translate="entity.validation.required">
-                This field is required.
-            </p>
-        </div>
+
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">

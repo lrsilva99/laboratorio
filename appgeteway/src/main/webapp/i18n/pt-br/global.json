@@ -1,6 +1,6 @@
 {
     "global": {
-        "title": "SIS LAB",
+        "title": "LAB NUVEM",
         "operacao": "Operação realizada com sucesso",
         "browsehappy": "Você está usando um navegador <strong>desatualizado</strong>. Favor <a href=\"http://browsehappy.com/?locale=pt_BR\">atualizar o seu navegador</a> para ter uma experiência melhor.",
         "menu": {
@@ -31,10 +31,22 @@
                 "tbcCooperativa": "Cooperativa",
                 "tbcProprietario": "Proprietário",
                 "tbcFormulario": "Formulário",
+                "tbcFormularioComponentes": "Tbc Formulario Componentes",
+                "tbcStatus": "Status da amostra",
+                "tbcFormaArmazenamento": "Forma Armazenamento",
+                "tbrAmostra": "Amostra",
+                "tbrAmostra": "Tbr Amostra",
+                "tbcFormulario": "Formulário",
+                "tbcGenero": "Tbc Genero",
+                "tbcQualidadeAmostra": "Tbc Qualidade Amostra",
+                "tbrAnalise": "Tbr Analise",
+                "tbcAnaliseResultado": "Tbc Analise Resultado",
+                "tbrAnaliseResultado": "Tbr Analise Resultado",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
                 "subconfiglab": "Laboratório",
                 "subconfiganalise": "Análise",
                 "subgrandesanimais": "Grandes Animal"
+
             },
             "account": {
                 "main": "Conta",
@@ -142,9 +154,15 @@
             "cnpj": "CNPJ",
             "codigo": "Código",
             "tipo_identificacao": "Inicias identificação",
-            "tbc_formulario" : "Formulário"
-
-
+            "tbc_formulario" : "Formulário",
+            "visivel": "Visível",
+            "obrigatorio": "Obrigatório",
+            "bloqueado" : "Bloqueado",
+            "nome_campo_destino": "Campo destino",
+            "tamanho": "Tamanho",
+            "icone": "Ícone",
+            "tbc_status": "Status",
+            "cor": "Cor"
         },
         "ribbon": {
             "dev":"Development"
@@ -161,7 +179,13 @@
             "open": "Open",
             "save": "Salvar",
             "view": "Visualizar",
-            "frases_opçoes": "Opções"
+            "frases_opçoes": "Opções",
+            "tbc_analise": "Análise",
+            "detalhe": "detalhes",
+            "autorizar": "Autorizar",
+            "tbr_analise_resultado": "Resultado",
+            "observacao": "Observação"
+
 
         },
         "detail": {
@@ -194,7 +218,8 @@
             "createLabel": "Novo registro",
             "createOrEditLabel": "Criar ou editar",
             "search": "Pesquisar",
-            "searchcombo": "Análises"
+            "searchcombo": "Análises",
+            "createSample": "Nova amostra"
         }
     },
     "error": {

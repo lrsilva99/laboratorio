@@ -15,10 +15,8 @@
         vm.byteSize = DataUtils.byteSize;
         vm.openFile = DataUtils.openFile;
         vm.save = save;
+        vm.tbc_formularios = Tbc_formulario.query();
         vm.tbc_tipo_campos = Tbc_tipo_campo.query();
-        vm.Formulario =  Tbc_formulario.get({id : $stateParams.idFormulario});
-        vm.tbc_formulario_componentes.tbc_formulario = vm.Formulario;
-
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

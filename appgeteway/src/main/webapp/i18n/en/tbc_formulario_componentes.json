@@ -19,6 +19,11 @@
             "unidade_medida": "Unidade Medida",
             "valor_padrao": "Valor Padrao",
             "configuracao": "Configuracao",
+            "obrigatorio": "Obrigatorio",
+            "nome_campo_destino": "Nome Campo Destino",
+            "visivel": "Visivel",
+            "bloqueado": "Bloqueado",
+            "tamanho": "Tamanho",
             "tbc_formulario": "Tbc Formulario",
             "tbc_tipo_campo": "Tbc Tipo Campo"
         }

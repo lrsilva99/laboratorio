@@ -1,0 +1,42 @@
+{
+    "appgetewayApp": {
+        "tbr_analise" : {
+            "home": {
+                "title": "Tbr Analises",
+                "createLabel": "Create a new Tbr Analise",
+                "createOrEditLabel": "Create or edit a Tbr Analise",
+                "search": "Search for Tbr Analise"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbr Analise {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbr Analise"
+            },
+            "autorizado_por": "Autorizado Por",
+            "autorizado_data": "Autorizado Data",
+            "cancelado_por": "Cancelado Por",
+            "cancelado_data": "Cancelado Data",
+            "suspenso_por": "Suspenso Por",
+            "suspenso_data": "Suspenso Data",
+            "rejeitado_por": "Rejeitado Por",
+            "rejeitado_data": "Rejeitado Data",
+            "disponivel_por": "Disponivel Por",
+            "disponivel_data": "Disponivel Data",
+            "observacao": "Observacao",
+            "forma_cadastro": "Forma Cadastro",
+            "anotacao_status": "Anotacao Status",
+            "directiva_data_atu": "Directiva Data Atu",
+            "tbr_amostra": "Tbr Amostra",
+            "tbc_status": "Tbc Status",
+            "tbc_analises": "Tbc Analises"
+        }
+    },
+    "limsApp": {
+        "tbr_analise" : {
+            "created": "A new Tbr Analise is created with identifier {{ param }}",
+            "updated": "A Tbr Analise is updated with identifier {{ param }}",
+            "deleted": "A Tbr Analise is deleted with identifier {{ param }}"
+        }
+    }
+}

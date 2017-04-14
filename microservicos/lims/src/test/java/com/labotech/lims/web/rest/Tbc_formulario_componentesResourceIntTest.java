@@ -60,6 +60,21 @@ public class Tbc_formulario_componentesResourceIntTest {
     private static final String DEFAULT_CONFIGURACAO = "AAAAAAAAAA";
     private static final String UPDATED_CONFIGURACAO = "BBBBBBBBBB";
 
+    private static final Boolean DEFAULT_OBRIGATORIO = false;
+    private static final Boolean UPDATED_OBRIGATORIO = true;
+
+    private static final String DEFAULT_NOME_CAMPO_DESTINO = "AAAAAAAAAA";
+    private static final String UPDATED_NOME_CAMPO_DESTINO = "BBBBBBBBBB";
+
+    private static final Boolean DEFAULT_VISIVEL = false;
+    private static final Boolean UPDATED_VISIVEL = true;
+
+    private static final Boolean DEFAULT_BLOQUEADO = false;
+    private static final Boolean UPDATED_BLOQUEADO = true;
+
+    private static final Integer DEFAULT_TAMANHO = 1;
+    private static final Integer UPDATED_TAMANHO = 2;
+
     @Inject
     private Tbc_formulario_componentesRepository tbc_formulario_componentesRepository;
 
@@ -105,7 +120,12 @@ public class Tbc_formulario_componentesResourceIntTest {
                 .linha(DEFAULT_LINHA)
                 .unidade_medida(DEFAULT_UNIDADE_MEDIDA)
                 .valor_padrao(DEFAULT_VALOR_PADRAO)
-                .configuracao(DEFAULT_CONFIGURACAO);
+                .configuracao(DEFAULT_CONFIGURACAO)
+                .obrigatorio(DEFAULT_OBRIGATORIO)
+                .nome_campo_destino(DEFAULT_NOME_CAMPO_DESTINO)
+                .visivel(DEFAULT_VISIVEL)
+                .bloqueado(DEFAULT_BLOQUEADO)
+                .tamanho(DEFAULT_TAMANHO);
         // Add required entity
         Tbc_formulario tbc_formulario = Tbc_formularioResourceIntTest.createEntity(em);
         em.persist(tbc_formulario);
@@ -147,6 +167,11 @@ public class Tbc_formulario_componentesResourceIntTest {
         assertThat(testTbc_formulario_componentes.getUnidade_medida()).isEqualTo(DEFAULT_UNIDADE_MEDIDA);
         assertThat(testTbc_formulario_componentes.getValor_padrao()).isEqualTo(DEFAULT_VALOR_PADRAO);
         assertThat(testTbc_formulario_componentes.getConfiguracao()).isEqualTo(DEFAULT_CONFIGURACAO);
+        assertThat(testTbc_formulario_componentes.isObrigatorio()).isEqualTo(DEFAULT_OBRIGATORIO);
+        assertThat(testTbc_formulario_componentes.getNome_campo_destino()).isEqualTo(DEFAULT_NOME_CAMPO_DESTINO);
+        assertThat(testTbc_formulario_componentes.isVisivel()).isEqualTo(DEFAULT_VISIVEL);
+        assertThat(testTbc_formulario_componentes.isBloqueado()).isEqualTo(DEFAULT_BLOQUEADO);
+        assertThat(testTbc_formulario_componentes.getTamanho()).isEqualTo(DEFAULT_TAMANHO);
 
         // Validate the Tbc_formulario_componentes in ElasticSearch
         Tbc_formulario_componentes tbc_formulario_componentesEs = tbc_formulario_componentesSearchRepository.findOne(testTbc_formulario_componentes.getId());
@@ -265,6 +290,42 @@ public class Tbc_formulario_componentesResourceIntTest {
 
     @Test
     @Transactional
+    public void checkNome_campo_destinoIsRequired() throws Exception {
+        int databaseSizeBeforeTest = tbc_formulario_componentesRepository.findAll().size();
+        // set the field null
+        tbc_formulario_componentes.setNome_campo_destino(null);
+
+        // Create the Tbc_formulario_componentes, which fails.
+
+        restTbc_formulario_componentesMockMvc.perform(post("/api/tbc-formulario-componentes")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(tbc_formulario_componentes)))
+            .andExpect(status().isBadRequest());
+
+        List<Tbc_formulario_componentes> tbc_formulario_componentesList = tbc_formulario_componentesRepository.findAll();
+        assertThat(tbc_formulario_componentesList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
+    public void checkTamanhoIsRequired() throws Exception {
+        int databaseSizeBeforeTest = tbc_formulario_componentesRepository.findAll().size();
+        // set the field null
+        tbc_formulario_componentes.setTamanho(null);
+
+        // Create the Tbc_formulario_componentes, which fails.
+
+        restTbc_formulario_componentesMockMvc.perform(post("/api/tbc-formulario-componentes")
+            .contentType(TestUtil.APPLICATION_JSON_UTF8)
+            .content(TestUtil.convertObjectToJsonBytes(tbc_formulario_componentes)))
+            .andExpect(status().isBadRequest());
+
+        List<Tbc_formulario_componentes> tbc_formulario_componentesList = tbc_formulario_componentesRepository.findAll();
+        assertThat(tbc_formulario_componentesList).hasSize(databaseSizeBeforeTest);
+    }
+
+    @Test
+    @Transactional
     public void getAllTbc_formulario_componentes() throws Exception {
         // Initialize the database
         tbc_formulario_componentesRepository.saveAndFlush(tbc_formulario_componentes);
@@ -279,7 +340,12 @@ public class Tbc_formulario_componentesResourceIntTest {
             .andExpect(jsonPath("$.[*].linha").value(hasItem(DEFAULT_LINHA)))
             .andExpect(jsonPath("$.[*].unidade_medida").value(hasItem(DEFAULT_UNIDADE_MEDIDA.toString())))
             .andExpect(jsonPath("$.[*].valor_padrao").value(hasItem(DEFAULT_VALOR_PADRAO.toString())))
-            .andExpect(jsonPath("$.[*].configuracao").value(hasItem(DEFAULT_CONFIGURACAO.toString())));
+            .andExpect(jsonPath("$.[*].configuracao").value(hasItem(DEFAULT_CONFIGURACAO.toString())))
+            .andExpect(jsonPath("$.[*].obrigatorio").value(hasItem(DEFAULT_OBRIGATORIO.booleanValue())))
+            .andExpect(jsonPath("$.[*].nome_campo_destino").value(hasItem(DEFAULT_NOME_CAMPO_DESTINO.toString())))
+            .andExpect(jsonPath("$.[*].visivel").value(hasItem(DEFAULT_VISIVEL.booleanValue())))
+            .andExpect(jsonPath("$.[*].bloqueado").value(hasItem(DEFAULT_BLOQUEADO.booleanValue())))
+            .andExpect(jsonPath("$.[*].tamanho").value(hasItem(DEFAULT_TAMANHO)));
     }
 
     @Test
@@ -298,7 +364,12 @@ public class Tbc_formulario_componentesResourceIntTest {
             .andExpect(jsonPath("$.linha").value(DEFAULT_LINHA))
             .andExpect(jsonPath("$.unidade_medida").value(DEFAULT_UNIDADE_MEDIDA.toString()))
             .andExpect(jsonPath("$.valor_padrao").value(DEFAULT_VALOR_PADRAO.toString()))
-            .andExpect(jsonPath("$.configuracao").value(DEFAULT_CONFIGURACAO.toString()));
+            .andExpect(jsonPath("$.configuracao").value(DEFAULT_CONFIGURACAO.toString()))
+            .andExpect(jsonPath("$.obrigatorio").value(DEFAULT_OBRIGATORIO.booleanValue()))
+            .andExpect(jsonPath("$.nome_campo_destino").value(DEFAULT_NOME_CAMPO_DESTINO.toString()))
+            .andExpect(jsonPath("$.visivel").value(DEFAULT_VISIVEL.booleanValue()))
+            .andExpect(jsonPath("$.bloqueado").value(DEFAULT_BLOQUEADO.booleanValue()))
+            .andExpect(jsonPath("$.tamanho").value(DEFAULT_TAMANHO));
     }
 
     @Test
@@ -325,7 +396,12 @@ public class Tbc_formulario_componentesResourceIntTest {
                 .linha(UPDATED_LINHA)
                 .unidade_medida(UPDATED_UNIDADE_MEDIDA)
                 .valor_padrao(UPDATED_VALOR_PADRAO)
-                .configuracao(UPDATED_CONFIGURACAO);
+                .configuracao(UPDATED_CONFIGURACAO)
+                .obrigatorio(UPDATED_OBRIGATORIO)
+                .nome_campo_destino(UPDATED_NOME_CAMPO_DESTINO)
+                .visivel(UPDATED_VISIVEL)
+                .bloqueado(UPDATED_BLOQUEADO)
+                .tamanho(UPDATED_TAMANHO);
 
         restTbc_formulario_componentesMockMvc.perform(put("/api/tbc-formulario-componentes")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -342,6 +418,11 @@ public class Tbc_formulario_componentesResourceIntTest {
         assertThat(testTbc_formulario_componentes.getUnidade_medida()).isEqualTo(UPDATED_UNIDADE_MEDIDA);
         assertThat(testTbc_formulario_componentes.getValor_padrao()).isEqualTo(UPDATED_VALOR_PADRAO);
         assertThat(testTbc_formulario_componentes.getConfiguracao()).isEqualTo(UPDATED_CONFIGURACAO);
+        assertThat(testTbc_formulario_componentes.isObrigatorio()).isEqualTo(UPDATED_OBRIGATORIO);
+        assertThat(testTbc_formulario_componentes.getNome_campo_destino()).isEqualTo(UPDATED_NOME_CAMPO_DESTINO);
+        assertThat(testTbc_formulario_componentes.isVisivel()).isEqualTo(UPDATED_VISIVEL);
+        assertThat(testTbc_formulario_componentes.isBloqueado()).isEqualTo(UPDATED_BLOQUEADO);
+        assertThat(testTbc_formulario_componentes.getTamanho()).isEqualTo(UPDATED_TAMANHO);
 
         // Validate the Tbc_formulario_componentes in ElasticSearch
         Tbc_formulario_componentes tbc_formulario_componentesEs = tbc_formulario_componentesSearchRepository.findOne(testTbc_formulario_componentes.getId());
@@ -404,6 +485,11 @@ public class Tbc_formulario_componentesResourceIntTest {
             .andExpect(jsonPath("$.[*].linha").value(hasItem(DEFAULT_LINHA)))
             .andExpect(jsonPath("$.[*].unidade_medida").value(hasItem(DEFAULT_UNIDADE_MEDIDA.toString())))
             .andExpect(jsonPath("$.[*].valor_padrao").value(hasItem(DEFAULT_VALOR_PADRAO.toString())))
-            .andExpect(jsonPath("$.[*].configuracao").value(hasItem(DEFAULT_CONFIGURACAO.toString())));
+            .andExpect(jsonPath("$.[*].configuracao").value(hasItem(DEFAULT_CONFIGURACAO.toString())))
+            .andExpect(jsonPath("$.[*].obrigatorio").value(hasItem(DEFAULT_OBRIGATORIO.booleanValue())))
+            .andExpect(jsonPath("$.[*].nome_campo_destino").value(hasItem(DEFAULT_NOME_CAMPO_DESTINO.toString())))
+            .andExpect(jsonPath("$.[*].visivel").value(hasItem(DEFAULT_VISIVEL.booleanValue())))
+            .andExpect(jsonPath("$.[*].bloqueado").value(hasItem(DEFAULT_BLOQUEADO.booleanValue())))
+            .andExpect(jsonPath("$.[*].tamanho").value(hasItem(DEFAULT_TAMANHO)));
     }
 }

@@ -17,8 +17,11 @@
             'infinite-scroll',
             'ui.select',
             'ngSanitize',
+            'angular-loading-bar',
+            'ngMaterial',
+            'textAngular'
             // jhipster-needle-angularjs-add-module JHipster will add new module here
-            'angular-loading-bar'
+
         ])
         .run(run);
 

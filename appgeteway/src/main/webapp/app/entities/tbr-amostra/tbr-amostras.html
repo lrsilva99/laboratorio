@@ -1,0 +1,145 @@
+                    <div>
+                        <jhi-alert></jhi-alert>
+                        <div ng-cloak>
+                            <h2 data-translate="appgetewayApp.tbr_amostra.home.title1">Tbr Amostras</h2>
+                            <md-content>
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xs-4 no-padding-left"></div>
+                                        <div class="col-xs-8 no-padding-right">
+                                            <form name="searchForm" class="form-inline">
+                                                <div class="input-group pull-right" >
+                                                    <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'entity.home.search' | translate }}">
+                                                    <span  class="input-group-btn width-min" >
+                                                <button class="btn btn-info2" ng-click="vm.search(vm.searchQuery)">
+                                                    <span class="glyphicon glyphicon-search"></span>
+                                                </button>
+                                            </span>
+                                                    <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                                                <button class="btn btn-info" ng-click="vm.clear()">
+                                                    <span class="glyphicon glyphicon-trash"></span>
+                                                </button>
+                                            </span>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <md-tabs class=" md-dynamic-height md-border-bottom  md-primary">
+                                    <md-tab>
+                                        <md-tab-label>
+                                            <span class="glyphicon glyphicon-list-alt"></span>&nbsp;
+                                            <span data-translate="appgetewayApp.tbr_amostra.home.title">Tbc Formulario</span>
+                                        </md-tab-label>
+                                        <md-tab-body>
+                                            <md-content class="md-padding" layout-xs="column" layout="column">
+                                                <div flex-xs flex-gt-xs="100" layout="column" ng-repeat="tbr_amostra in vm.tbr_amostras track by tbr_amostra.id">
+                                                    <md-card md-theme-watch>
+                                                        <div class= "group_status" md-colors="{background: '{{tbr_amostra.tbc_status.cor  }}-A200'}"  md-justified="column" class="primary line">
+                                                            <span class="status"> </span>&nbsp;
+                                                        </div>
+                                                        <md-card-title>
+                                                            <md-card-title-text>
+                                                                <span class="md-headline"> {{tbr_amostra.identificao_amostra}}</span>
+                                                                <span class="md-subhead">{{tbr_amostra.proprietario}}</span>
+                                                                <h7>
+                                                                    <a ng-click="show = !show">{{ 'entity.action.detalhe' | translate }}</a>
+                                                                </h7>
+                                                                <div layout="column"ng-show = show>
+                                                <span class="md-subhead">
+                                                    <a ui-sref="tbc-cliente-detail({id:tbr_amostra.tbc_cliente.id})">{{tbr_amostra.tbc_cliente.nome}}</a>
+                                                </span>
+                                                                    <span class="md-subhead">Código laboratório:{{tbr_amostra.req_texto}}</span>
+                                                                    <span class="md-subhead">Data recebimento:{{tbr_amostra.recebimento_rec_data | date:'medium'}}</span>
+                                                                    <span class="md-subhead">Status:{{tbr_amostra.tbc_status.nome}}</span>
+                                                                </div>
+                                                            </md-card-title-text>
+                                                        </md-card-title>
+                                                        <md-card-actions layout="row" layout-align="end center">
+                                                            <div class="btn-group flex-btn-group-container">
+                                                                <div class="btn-group flex-btn-group-container">
+                                                                    <button type="submit"
+                                                                            ui-sref="tbr-amostra-detail({id:tbr_amostra.id})"
+                                                                            class="btn btn-info btn-sm">
+                                                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                                                        <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                                                                    </button>
+                                                                    <button type="submit"
+                                                                            ui-sref="tbr-amostra.edit({id:tbr_amostra.id})"
+                                                                            class="btn btn-primary btn-sm">
+                                                                        <span class="glyphicon glyphicon-pencil"></span>
+                                                                        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                                                                    </button>
+                                                                    <button type="submit"
+                                                                            ui-sref="tbr-amostra.delete({id:tbr_amostra.id})"
+                                                                            class="btn btn-danger btn-sm">
+                                                                        <span class="glyphicon glyphicon-remove-circle"></span>
+                                                                        <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                                                                    </button>
+                                                                    <button type="submit"
+                                                                            ui-sref="tbr-analise({id_Amostra:tbr_amostra.id})"
+                                                                            class="btn btn-primary btn-sm">
+                                                                        <span class="glyphicon glyphicon-tint"></span>
+                                                                        <span class="hidden-xs hidden-sm" data-translate="entity.action.tbc_analise"></span>
+                                                                    </button>
+                                                                    <button type="submit"
+                                                                            ui-sref="tbr-analise({id_Amostra:tbr_amostra.id})"
+                                                                            class="btn btn-primary btn-sm">
+                                                                        <span class="glyphicon glyphicon-check"></span>
+                                                                        <span class="hidden-xs hidden-sm" data-translate="entity.action.autorizar"></span>
+                                                                    </button>
+                                                                    <button type="submit"
+                                                                            ui-sref="tbr-analise-resultado({tbr_amostra_id:tbr_amostra.id})"
+                                                                            class="btn btn-primary btn-sm">
+                                                                        <span class="glyphicon glyphicon-menu-hamburger"></span>
+                                                                        <span class="hidden-xs hidden-sm" data-translate="entity.action.tbr_analise_resultado"></span>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </md-card-actions>
+                                                    </md-card>
+                                                </div>
+                                            </md-content>
+                                            <div class="text-center">
+                                                <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+                                            </div>
+                                            <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+                                        </md-tab-body>
+                                    </md-tab>
+                                    <md-tab  ng-click="vm.carregaFormulario()">
+                                        <md-tab-label>
+                                            <span class="glyphicon glyphicon-tags"></span>&nbsp;
+                                            <span data-translate="appgetewayApp.tbr_amostra.home.criarAmostra">Tbc Formulario</span>
+                                        </md-tab-label>
+                                        <md-tab-body>
+                                            <md-content class="md-padding" layout-xs="column" layout="row">
+                                                <div ng-repeat="tbc_formulario in vm.tbc_formularios track by tbc_formulario.id">
+                                                    <div flex-xs flex-gt-xs="100" layout="column">
+                                                        <md-card md-theme="{{ showDarkTheme ? 'formulario' : 'default' }}" md-theme-watch>
+                                                            <md-card-title>
+                                                                <md-card-title-text>
+                                                                    <span class="md-headline">{{tbc_formulario.nome}}</span>
+                                                                    <span class="md-subhead">{{tbc_formulario.descricao}}</span>
+                                                                </md-card-title-text>
+
+                                                            </md-card-title>
+                                                            <md-card-actions layout="row" layout-align="end center">
+                                                                <div class="btn-group flex-btn-group-container">
+                                                                    <button ng-disabled="vm.tbc_formulario === null"
+                                                                            class="btn btn-primary" ui-sref="tbr-amostra.new({tbc_formulario_id:tbc_formulario.id})" >
+                                                                        <span class="glyphicon glyphicon-plus"></span>
+                                                                        <span class="hidden-xs"  data-translate="entity.home.createSample">Create new Tbr</span>
+                                                                    </button>
+                                                                </div>
+                                                            </md-card-actions>
+                                                        </md-card>
+                                                    </div>
+                                                </div>
+                                            </md-content>
+                                        </md-tab-body>
+                                    </md-tab>
+                                </md-tabs>
+                            </md-content>
+                        </div>
+                    </div>

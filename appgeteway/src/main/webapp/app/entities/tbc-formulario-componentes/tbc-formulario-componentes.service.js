@@ -10,6 +10,15 @@
         var resourceUrl =  'lims/' + 'api/tbc-formulario-componentes/:id';
 
         return $resource(resourceUrl, {}, {
+         'query2': { method: 'GET',
+                    isArray: true,
+                    transformResponse: function (data) {
+                                        if (data) {
+                                            data = angular.fromJson(data);
+                                        }
+                                        return data;
+                                        }
+                    },
             'query': { method: 'GET', isArray: true},
             'get': {
                 method: 'GET',

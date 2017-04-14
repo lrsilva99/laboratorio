@@ -10,7 +10,7 @@
     function stateConfig($stateProvider) {
         $stateProvider
         .state('tbc-convenio', {
-            parent: 'entity',
+            parent: 'laboratorio',
             url: '/tbc-convenio?page&sort&search',
             data: {
                 authorities: ['ROLE_USER'],
@@ -52,7 +52,7 @@
             }
         })
         .state('tbc-convenio-detail', {
-            parent: 'entity',
+            parent: 'laboratorio',
             url: '/tbc-convenio/{id}',
             data: {
                 authorities: ['ROLE_USER'],

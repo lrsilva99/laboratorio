@@ -1,0 +1,87 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbr_analise.detail.title">Tbr Analise</span> {{vm.tbr_analise.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbr_analise.autorizado_por">Autorizado Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.autorizado_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.autorizado_data">Autorizado Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.autorizado_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.cancelado_por">Cancelado Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.cancelado_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.cancelado_data">Cancelado Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.cancelado_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.suspenso_por">Suspenso Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.suspenso_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.suspenso_data">Suspenso Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.suspenso_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.rejeitado_por">Rejeitado Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.rejeitado_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.rejeitado_data">Rejeitado Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.rejeitado_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.disponivel_por">Disponivel Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.disponivel_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.disponivel_data">Disponivel Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.disponivel_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.observacao">Observacao</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.observacao}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.forma_cadastro">Forma Cadastro</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.forma_cadastro}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.anotacao_status">Anotacao Status</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.anotacao_status}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.directiva_data_atu">Directiva Data Atu</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise.directiva_data_atu | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.tbr_amostra">Tbr Amostra</span></dt>
+        <dd>
+            <a ui-sref="tbr-amostra-detail({id:vm.tbr_analise.tbr_amostra.id})">{{vm.tbr_analise.tbr_amostra.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.tbc_status">Tbc Status</span></dt>
+        <dd>
+            <a ui-sref="tbc-status-detail({id:vm.tbr_analise.tbc_status.id})">{{vm.tbr_analise.tbc_status.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise.tbc_analises">Tbc Analises</span></dt>
+        <dd>
+            <a ui-sref="tbc-analises-detail({id:vm.tbr_analise.tbc_analises.id})">{{vm.tbr_analise.tbc_analises.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbr-analise-detail.edit({id:vm.tbr_analise.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

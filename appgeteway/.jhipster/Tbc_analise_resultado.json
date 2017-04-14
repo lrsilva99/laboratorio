@@ -1,0 +1,118 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "tbc_status",
+            "otherEntityName": "tbc_status",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_status_ultimo",
+            "otherEntityName": "tbc_status",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "analises_componente",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "resultado",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "autorizado_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "autorizado_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "cancelado_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "cancelado_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "suspenso_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "suspenso_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "rejeitado_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "rejeitado_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "disponivel_por",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "disponivel_data",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldName": "resultado_digitado",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "unidade_medida",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "tbr_analise_id",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "resultado_texto",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "text",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "repetido",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "tbc_amostra_id",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170401194951",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "tbc_analise_resultado",
+    "pagination": "no",
+    "microserviceName": "lims",
+    "searchEngine": "elasticsearch",
+    "enableEntityAudit": true
+}

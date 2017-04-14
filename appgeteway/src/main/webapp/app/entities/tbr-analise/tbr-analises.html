@@ -1,0 +1,76 @@
+<div>
+    <h2 data-translate="appgetewayApp.tbr_analise.home.title">Tbr Analises</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tbr-analise.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="appgetewayApp.tbr_analise.home.createLabel">
+                        Create new Tbr Analise
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'appgetewayApp.tbr_analise.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button type="submit" class="btn btn-info" ui-sref="tbr-analise({id_Amostra:vm.searchQuery})">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+        <span flex-gt-xs="100" layout="column" ng-repeat="tbr_analise in vm.tbr_analises track by tbr_analise.id">
+            <md-card md-theme-watch >
+                <div class= "group_status"  md-colors="{background: '{{tbr_analise.tbc_status.cor}}-A200'}"  md-justified="column" class="primary line">
+                    <span class="status"></span>&nbsp;
+                </div>
+                <md-card-title>
+                    <md-card-title-text>
+                        <span class="md-headline"> {{tbr_analise.tbc_analises.nome}}</span>
+                        <span class="md-subhead"> {{tbr_analise.tbc_analises.tbc_sub_grup.nome}}</span>
+                    </md-card-title-text>
+                </md-card-title>
+                <md-card-actions layout="row" layout-align="end center">
+                    <div class="btn-group flex-btn-group-container">
+                        <button type="submit"
+                                ui-sref="tbr-analise-detail({id:tbr_analise.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>
+                            <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="tbr-analise.edit({id:tbr_analise.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                            <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="tbr-analise.delete({id:tbr_analise.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>
+                            <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                        </button>
+                    </div>
+                </md-card-actions>
+            </md-card>
+        </span>
+    <div class="text-center">
+        <jhi-item-count page="vm.page" total="vm.queryCount" items-per-page="vm.itemsPerPage"></jhi-item-count>
+    </div>
+    <uib-pager total-items="vm.totalItems" ng-model="vm.page" ng-change="vm.transition()"></uib-pager>
+
+    <md-content>
+    </md-content>
+</div>

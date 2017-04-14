@@ -26,5 +26,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="tbc_tipo_cadastro"/>
 
+        <addForeignKeyConstraint baseColumnNames="tbc_status_id"
+                                 baseTableName="tbc_formulario"
+                                 constraintName="fk_tbc_formulario_tbc_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_status"/>
+
     </changeSet>
 </databaseChangeLog>

@@ -1,0 +1,77 @@
+{
+    "appgetewayApp": {
+        "tbr_amostra" : {
+            "home": {
+                "title": "CADASTRADAS",
+                "criarAmostra": "NOVA",
+                "createLabel": "Criar / editar {{ id }}",
+                "createOrEditLabel": "Criar / editar {{ id }}",
+                "search": "Pesquisar por Tbr Amostra",
+                "title1": "Gerenciamento de amostra",
+                "md_tab_dados_amostra": "DADOS AMOSTRA",
+                "md_tab_dados_analise": "ANÁLISE",
+                "ui_select_match_plano_teste": "Selecione um ou mais plano de teste",
+                "ui_select_match_analise": "Selecione um ou mais nálise"
+
+
+
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbr Amostra {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbr Amostra"
+            },
+            "urgencia": "Urgencia",
+            "proprietario": "Proprietario",
+            "resp_colheita": "Resp Colheita",
+            "req_texto": "Req Texto",
+            "historico_clinico": "Historico Clinico",
+            "numero_for": "Numero For",
+            "recebimento_rec_data": "Recebimento Rec Data",
+            "suspeita_clinica": "Suspeita Clinica",
+            "coleta_data": "Coleta Data",
+            "sexo": "Sexo",
+            "raca": "Raca",
+            "idade": "Idade",
+            "identificao_amostra": "Identificao Amostra",
+            "autorizado_por": "Autorizado Por",
+            "autorizado_data": "Autorizado Data",
+            "cancelado_por": "Cancelado Por",
+            "cancelado_data": "Cancelado Data",
+            "suspenso_por": "Suspenso Por",
+            "suspenso_data": "Suspenso Data",
+            "rejeitado_por": "Rejeitado Por",
+            "rejeitado_data": "Rejeitado Data",
+            "disponivel_por": "Disponivel Por",
+            "disponivel_data": "Disponivel Data",
+            "plano_teste": "Plano Teste",
+            "plano_teste_a": "Plano Teste A",
+            "plano_teste_b": "Plano Teste B",
+            "plano_teste_c": "Plano Teste C",
+            "plano_teste_d": "Plano Teste D",
+            "plano_teste_e": "Plano Teste E",
+            "plano_teste_f": "Plano Teste F",
+            "numero_etiqueta": "Numero Etiqueta",
+            "tbc_especie": "Tbc Especie",
+            "tbc_sub_grupo": "Tbc Sub Grupo",
+            "tbc_status": "Tbc Status",
+            "tbc_cliente": "Tbc Cliente",
+            "tbc_proprietario": "Tbc Proprietario",
+            "tbc_cooperativa": "Tbc Cooperativa",
+            "tbc_fazenda": "Tbc Fazenda",
+            "tbc_forma_armazenamento": "Tbc Forma Armazenamento",
+            "tbc_formulario": "Tbc Formulario",
+            "tbc_convenio": "Tbc Convenio",
+            "tbc_genero": "Tbc Genero",
+            "tbc_qualidade_amostra": "Tbc Qualidade Amostra"
+        }
+    },
+    "limsApp": {
+        "tbr_amostra" : {
+            "created": "Um novo Tbr Amostra é criado com o identificador {{ param }}",
+            "updated": "Um Tbr Amostra é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbr Amostra é deletado com o identificador {{ param }}"
+        }
+    }
+}

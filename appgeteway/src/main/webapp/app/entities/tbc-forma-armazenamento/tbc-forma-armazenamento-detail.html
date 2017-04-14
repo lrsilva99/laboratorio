@@ -1,0 +1,36 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_forma_armazenamento.detail.title">Tbc Forma Armazenamento</span> {{vm.tbc_forma_armazenamento.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="global.field.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_forma_armazenamento.nome}}</span>
+        </dd>
+        <dt><span data-translate="global.field.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_forma_armazenamento.descricao}}</span>
+        </dd>
+
+        <dt><span data-translate="appgetewayApp.tbc_forma_armazenamento.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_forma_armazenamento.tbc_instituicao.id})">{{vm.tbc_forma_armazenamento.tbc_instituicao.nome}}</a>
+        </dd>
+        <dt><span data-translate="global.field.removido">Removido</span></dt>
+        <dd>
+            <span>{{vm.tbc_forma_armazenamento.removido}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-forma-armazenamento-detail.edit({id:vm.tbc_forma_armazenamento.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

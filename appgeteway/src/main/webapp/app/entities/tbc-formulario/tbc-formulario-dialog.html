@@ -75,6 +75,12 @@
             </select>
         </div>
         <div class="form-group">
+            <label data-translate="global.field.tbc_status" for="field_tbc_status">Tbc Status</label>
+            <select class="form-control" id="field_tbc_status" name="tbc_status" ng-model="vm.tbc_formulario.tbc_status" ng-options="tbc_status as tbc_status.nome for tbc_status in vm.tbc_statuses track by tbc_status.id" required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
             <label for="activated">
                 <input ng-disabled="vm.tbc_formulario.id === null" type="checkbox" id="activated" name="activated" data-reverse ng-model="vm.tbc_formulario.removido">
                 <span data-translate="global.field.removido">Activated</span>

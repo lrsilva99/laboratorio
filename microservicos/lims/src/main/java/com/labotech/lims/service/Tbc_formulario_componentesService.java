@@ -24,7 +24,7 @@ public interface Tbc_formulario_componentesService {
      *  @param pageable the pagination information
      *  @return the list of entities
      */
-    Page<Tbc_formulario_componentes> findAll(Long idformulario,Pageable pageable);
+    Page<Tbc_formulario_componentes> findAll(Long idFormulario, Pageable pageable);
 
     /**
      *  Get the "id" tbc_formulario_componentes.

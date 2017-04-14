@@ -53,9 +53,9 @@ public class Tbc_formulario_componentesServiceImpl implements Tbc_formulario_com
      *  @return the list of entities
      */
     @Transactional(readOnly = true)
-    public Page<Tbc_formulario_componentes> findAll(Long idformulario, Pageable pageable) {
+    public Page<Tbc_formulario_componentes> findAll(Long idFormulario,Pageable pageable) {
         log.debug("Request to get all Tbc_formulario_componentes");
-        Page<Tbc_formulario_componentes> result = tbc_formulario_componentesRepository.findAllForFormulario(idformulario, pageable);
+        Page<Tbc_formulario_componentes> result = tbc_formulario_componentesRepository.findAllForFormulario(idFormulario,pageable);
         return result;
     }
 

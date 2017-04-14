@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Tbr_analise.
+    -->
+    <changeSet id="20170324163219-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="tbr_amostra_id"
+                                 baseTableName="tbr_analise"
+                                 constraintName="fk_tbr_analise_tbr_amostra_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbr_amostra"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_status_id"
+                                 baseTableName="tbr_analise"
+                                 constraintName="fk_tbr_analise_tbc_status_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_status"/>
+
+        <addForeignKeyConstraint baseColumnNames="tbc_analises_id"
+                                 baseTableName="tbr_analise"
+                                 constraintName="fk_tbr_analise_tbc_analises_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="tbc_analises"/>
+
+    </changeSet>
+</databaseChangeLog>

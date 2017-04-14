@@ -48,6 +48,26 @@
                 <constraints nullable="false" />
             </column>
             
+            <column name="obrigatorio" type="bit">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="nome_campo_destino" type="varchar(255)">
+                <constraints nullable="false" />
+            </column>
+            
+            <column name="visivel" type="bit">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="bloqueado" type="bit">
+                <constraints nullable="true" />
+            </column>
+            
+            <column name="tamanho" type="integer">
+                <constraints nullable="false" />
+            </column>
+            
             <column name="tbc_formulario_id" type="bigint">
                 <constraints nullable="false" />
             </column>

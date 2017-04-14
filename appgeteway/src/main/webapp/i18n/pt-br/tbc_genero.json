@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_genero" : {
+            "home": {
+                "title": "Tbc Generos",
+                "createLabel": "Criar novo Tbc Genero",
+                "createOrEditLabel": "Criar ou editar Tbc Genero",
+                "search": "Pesquisar por Tbc Genero"
+            },
+            "delete": {
+                "question": "Tem certeza de que deseja excluir Tbc Genero {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Genero"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "remover": "Remover",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_genero" : {
+            "created": "Um novo Tbc Genero é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Genero é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Genero é deletado com o identificador {{ param }}"
+        }
+    }
+}

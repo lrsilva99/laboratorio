@@ -1,0 +1,115 @@
+<div>
+    <h2 data-translate="appgetewayApp.tbc_analise_resultado.home.title">Tbc Analise Resultados</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tbc-analise-resultado.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="appgetewayApp.tbc_analise_resultado.home.createLabel">
+                        Create new Tbc Analise Resultado
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'appgetewayApp.tbc_analise_resultado.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.analises_componente">Analises Componente</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.resultado">Resultado</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.autorizado_por">Autorizado Por</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.autorizado_data">Autorizado Data</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.cancelado_por">Cancelado Por</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.cancelado_data">Cancelado Data</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.suspenso_por">Suspenso Por</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.suspenso_data">Suspenso Data</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.rejeitado_por">Rejeitado Por</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.rejeitado_data">Rejeitado Data</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.disponivel_por">Disponivel Por</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.disponivel_data">Disponivel Data</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.resultado_digitado">Resultado Digitado</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.unidade_medida">Unidade Medida</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.tbr_analise_id">Tbr Analise Id</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.resultado_texto">Resultado Texto</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.repetido">Repetido</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.tbc_amostra_id">Tbc Amostra Id</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.tbc_status">Tbc Status</span></th>
+                    <th><span data-translate="appgetewayApp.tbc_analise_resultado.tbc_status_ultimo">Tbc Status Ultimo</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="tbc_analise_resultado in vm.tbc_analise_resultados track by tbc_analise_resultado.id">
+                    <td><a ui-sref="tbc-analise-resultado-detail({id:tbc_analise_resultado.id})">{{tbc_analise_resultado.id}}</a></td>
+                    <td>{{tbc_analise_resultado.analises_componente}}</td>
+                    <td>{{tbc_analise_resultado.resultado}}</td>
+                    <td>{{tbc_analise_resultado.autorizado_por}}</td>
+                    <td>{{tbc_analise_resultado.autorizado_data | date:'medium'}}</td>
+                    <td>{{tbc_analise_resultado.cancelado_por}}</td>
+                    <td>{{tbc_analise_resultado.cancelado_data | date:'medium'}}</td>
+                    <td>{{tbc_analise_resultado.suspenso_por}}</td>
+                    <td>{{tbc_analise_resultado.suspenso_data | date:'medium'}}</td>
+                    <td>{{tbc_analise_resultado.rejeitado_por}}</td>
+                    <td>{{tbc_analise_resultado.rejeitado_data | date:'medium'}}</td>
+                    <td>{{tbc_analise_resultado.disponivel_por}}</td>
+                    <td>{{tbc_analise_resultado.disponivel_data | date:'medium'}}</td>
+                    <td>{{tbc_analise_resultado.resultado_digitado}}</td>
+                    <td>{{tbc_analise_resultado.unidade_medida}}</td>
+                    <td>{{tbc_analise_resultado.tbr_analise_id}}</td>
+                    <td>{{tbc_analise_resultado.resultado_texto}}</td>
+                    <td>{{tbc_analise_resultado.repetido}}</td>
+                    <td>{{tbc_analise_resultado.tbc_amostra_id}}</td>
+                    <td>
+                        <a ui-sref="tbc-status-detail({id:tbc_analise_resultado.tbc_status.id})">{{tbc_analise_resultado.tbc_status.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="tbc-status-detail({id:tbc_analise_resultado.tbc_status_ultimo.id})">{{tbc_analise_resultado.tbc_status_ultimo.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="tbc-analise-resultado-detail({id:tbc_analise_resultado.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-analise-resultado.edit({id:tbc_analise_resultado.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="tbc-analise-resultado.delete({id:tbc_analise_resultado.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

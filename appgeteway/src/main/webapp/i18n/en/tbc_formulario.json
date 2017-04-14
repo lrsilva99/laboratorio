@@ -19,7 +19,8 @@
             "tipo_identificacao": "Tipo Identificacao",
             "tbc_instituicao": "Tbc Instituicao",
             "tbc_sub_grupo": "Tbc Sub Grupo",
-            "tbc_tipo_cadastro": "Tbc Tipo Cadastro"
+            "tbc_tipo_cadastro": "Tbc Tipo Cadastro",
+            "tbc_status": "Tbc Status"
         }
     },
     "limsApp": {

@@ -4,6 +4,8 @@ import com.labotech.lims.domain.Tbc_plano_teste_analise;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 
 /**
  * Service Interface for managing Tbc_plano_teste_analise.
@@ -50,4 +52,12 @@ public interface Tbc_plano_teste_analiseService {
      *  @return the list of entities
      */
     Page<Tbc_plano_teste_analise> search(String query, Pageable pageable);
+    /**
+     *
+     *
+     *  @param plano_teste_id tbc plano teste
+     *
+     *  @return the list of entities
+     */
+    List<Tbc_plano_teste_analise> listAllPlanoTeste (Long plano_teste_id);
 }

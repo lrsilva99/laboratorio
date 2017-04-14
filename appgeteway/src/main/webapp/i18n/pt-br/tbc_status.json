@@ -1,0 +1,19 @@
+{
+    "appgetewayApp": {
+        "tbc_status" : {
+            "home": {
+                "title": "Status da amostra"
+            },
+            "detail": {
+                "title": "Status registro:"
+            }
+        }
+    },
+    "limsApp": {
+        "tbc_status" : {
+            "created": "Um novo Tbc Status é criado com o identificador {{ param }}",
+            "updated": "Um Tbc Status é atualizado com o identificador {{ param }}",
+            "deleted": "Um Tbc Status é deletado com o identificador {{ param }}"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_qualidade_amostra" : {
+            "home": {
+                "title": "Tbc Qualidade Amostras",
+                "createLabel": "Create a new Tbc Qualidade Amostra",
+                "createOrEditLabel": "Create or edit a Tbc Qualidade Amostra",
+                "search": "Search for Tbc Qualidade Amostra"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Qualidade Amostra {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Qualidade Amostra"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "remover": "Remover",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_qualidade_amostra" : {
+            "created": "A new Tbc Qualidade Amostra is created with identifier {{ param }}",
+            "updated": "A Tbc Qualidade Amostra is updated with identifier {{ param }}",
+            "deleted": "A Tbc Qualidade Amostra is deleted with identifier {{ param }}"
+        }
+    }
+}

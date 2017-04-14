@@ -29,9 +29,18 @@
     <include file="classpath:config/liquibase/changelog/20170301085649_added_entity_Tbc_cooperativa.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170301091729_added_entity_Tbc_proprietario.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170301092236_added_entity_Tbc_fazenda.xml" relativeToChangelogFile="false"/>
-    <include file="classpath:config/liquibase/changelog/20170302210207_added_entity_Tbc_formulario_compnentes.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170303184221_added_entity_Tbc_formulario_componentes.xml" relativeToChangelogFile="false"/>
-    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="classpath:config/liquibase/changelog/20170304021143_added_entity_Tbc_status.xml" relativeToChangelogFile="false"/>
+
+  <include file="classpath:config/liquibase/changelog/20170304154018_added_entity_Tbr_amostra.xml" relativeToChangelogFile="false"/>
+  <include file="classpath:config/liquibase/changelog/20170304154434_added_entity_Tbc_forma_armazenamento.xml" relativeToChangelogFile="false"/>
+  <include file="classpath:config/liquibase/changelog/20170318192007_added_entity_Tbc_genero.xml" relativeToChangelogFile="false"/>
+  <include file="classpath:config/liquibase/changelog/20170318194225_added_entity_Tbc_qualidade_amostra.xml" relativeToChangelogFile="false"/>
+  <include file="classpath:config/liquibase/changelog/20170324123046_added_entity_Tbc_numeracao.xml" relativeToChangelogFile="false"/>
+  <include file="classpath:config/liquibase/changelog/20170324163219_added_entity_Tbr_analise.xml" relativeToChangelogFile="false"/>
+
+  <include file="classpath:config/liquibase/changelog/20170401194951_added_entity_Tbr_analise_resultado.xml" relativeToChangelogFile="false"/>
+  <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="classpath:config/liquibase/changelog/20170116101235_added_entity_constraints_Tbc_sub_grupo.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170116232156_added_entity_constraints_Tbc_grupo_analise.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170117200507_added_entity_constraints_Tbc_frases.xml" relativeToChangelogFile="false"/>
@@ -54,5 +63,11 @@
     <include file="classpath:config/liquibase/changelog/20170301091729_added_entity_constraints_Tbc_proprietario.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170301092236_added_entity_constraints_Tbc_fazenda.xml" relativeToChangelogFile="false"/>
     <include file="classpath:config/liquibase/changelog/20170303184221_added_entity_constraints_Tbc_formulario_componentes.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170304154434_added_entity_constraints_Tbc_forma_armazenamento.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170304154018_added_entity_constraints_Tbr_amostra.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170318192007_added_entity_constraints_Tbc_genero.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170318194225_added_entity_constraints_Tbc_qualidade_amostra.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170324163219_added_entity_constraints_Tbr_analise.xml" relativeToChangelogFile="false"/>
+    <include file="classpath:config/liquibase/changelog/20170401194951_added_entity_constraints_Tbr_analise_resultado.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

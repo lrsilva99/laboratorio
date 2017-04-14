@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbc_genero.detail.title">Tbc Genero</span> {{vm.tbc_genero.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbc_genero.nome">Nome</span></dt>
+        <dd>
+            <span>{{vm.tbc_genero.nome}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_genero.descricao">Descricao</span></dt>
+        <dd>
+            <span>{{vm.tbc_genero.descricao}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_genero.remover">Remover</span></dt>
+        <dd>
+            <span>{{vm.tbc_genero.remover}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbc_genero.tbc_instituicao">Tbc Instituicao</span></dt>
+        <dd>
+            <a ui-sref="tbc-instituicao-detail({id:vm.tbc_genero.tbc_instituicao.id})">{{vm.tbc_genero.tbc_instituicao.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbc-genero-detail.edit({id:vm.tbc_genero.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,29 @@
+<div id="go-to-top" style="position:fixed; bottom:0; right:0">
+    <div class="lock-size md-primary " layout="row" layout-align="center center" ng-cloak>
+        <md-fab-speed-dial md-open="false" md-direction="up"
+                           class="md-fling ">
+            <md-fab-trigger>
+                <md-button aria-label="menu" class="md-fab md-primary">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </md-button>
+            </md-fab-trigger>
+            <md-fab-actions>
+                <md-button aria-label="Twitter" class="md-fab md-raised md-mini" ui-sref="tbr-amostra">
+                    <md-icon md-svg-src="img/icons/twitter.svg" aria-label="Twitter"></md-icon>
+                    <md-tooltip md-direction="bottom" md-visible="tooltipVisible"
+                                md-autohide="false"> Amostra
+                    </md-tooltip>
+                </md-button>
+                <md-button aria-label="Facebook" class="md-fab md-raised md-mini" ui-sref="tbr-analise">
+                    <span class="glyphicon glyphicon-tint"></span>
+                    <md-tooltip md-direction="bottom" md-visible="tooltipVisible"
+                                md-autohide="false"> Análise
+                    </md-tooltip>
+                </md-button>
+                <md-button aria-label="Google Hangout" class="md-fab md-raised md-mini">
+                    <md-icon md-svg-src="img/icons/hangout.svg" aria-label="Google Hangout"></md-icon>
+                </md-button>
+            </md-fab-actions>
+        </md-fab-speed-dial>
+    </div>
+</div>

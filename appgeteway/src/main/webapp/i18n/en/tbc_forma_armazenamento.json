@@ -1,0 +1,29 @@
+{
+    "appgetewayApp": {
+        "tbc_forma_armazenamento" : {
+            "home": {
+                "title": "Tbc Forma Armazenamentos",
+                "createLabel": "Create a new Tbc Forma Armazenamento",
+                "createOrEditLabel": "Create or edit a Tbc Forma Armazenamento",
+                "search": "Search for Tbc Forma Armazenamento"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Forma Armazenamento {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Forma Armazenamento"
+            },
+            "nome": "Nome",
+            "descricao": "Descricao",
+            "removido": "Removido",
+            "tbc_instituicao": "Tbc Instituicao"
+        }
+    },
+    "limsApp": {
+        "tbc_forma_armazenamento" : {
+            "created": "A new Tbc Forma Armazenamento is created with identifier {{ param }}",
+            "updated": "A Tbc Forma Armazenamento is updated with identifier {{ param }}",
+            "deleted": "A Tbc Forma Armazenamento is deleted with identifier {{ param }}"
+        }
+    }
+}

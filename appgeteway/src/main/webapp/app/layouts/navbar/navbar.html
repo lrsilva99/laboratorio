@@ -1,5 +1,5 @@
 
-<nav class="navbar navbar-default" role="navigation">
+<md-toolbar class="navbar navbar-default md-primary" role="navigation">
 
     <div class="container">
         <div class="navbar-header">
@@ -72,6 +72,12 @@
                                 <span data-translate="global.menu.entities.tbcLabTercerizado">Tbc Lab Tercerizado</span>
                             </a>
                         </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-convenio" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-hospital-o"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcConvenio">Tbc Convenio</span>
+                            </a>
+                        </li>
                         <li class="divider"></li>
                         <!-- \/ Menu Análise-->
 
@@ -82,13 +88,13 @@
                                     <span data-translate="global.menu.entities.tbcGrupoAnalise">Tbc Grupo Analise</span>
                                 </a>
                             </li>
-
                         <li ui-sref-active="active">
-                                <a ui-sref="tbc-analises" ng-click="vm.collapseNavbar()">
-                                    <span class="glyphicon glyphicon-tint"></span>&nbsp;
-                                    <span data-translate="global.menu.entities.tbcAnalises">Tbc Formulario</span>
-                                </a>
-                            </li>
+                            <a ui-sref="tbc-analises" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-tint"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcAnalises">Tbc Formulario</span>
+                            </a>
+                        </li>
+
 
                         <li ui-sref-active="active">
                             <a ui-sref="tbc-plano-teste" ng-click="vm.collapseNavbar()">
@@ -96,8 +102,14 @@
                                 <span data-translate="global.menu.entities.tbcPlanoTeste">Tbc Plano Teste</span>
                             </a>
                         </li>
+                        <li class="divider"></li>
 
-
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-formulario" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcFormulario">Tbc Formulario</span>
+                            </a>
+                        </li>
 
                         <!-- /\ Menu Análise-->
                     </ul>
@@ -165,12 +177,7 @@
                                 <span data-translate="global.menu.entities.tbcTipoCampo">Tbc Tipo Campo</span>
                             </a>
                         </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="tbc-convenio" ng-click="vm.collapseNavbar()">
-                                <span class="fa fa-hospital-o"></span>&nbsp;
-                                <span data-translate="global.menu.entities.tbcConvenio">Tbc Convenio</span>
-                            </a>
-                        </li>
+
                         <li ui-sref-active="active">
                             <a ui-sref="tbc-especie" ng-click="vm.collapseNavbar()">
                                 <span class="fa fa-paw"></span>&nbsp;
@@ -184,10 +191,64 @@
                             </a>
                         </li>
 
-                        <li ui-sref-active="active">
+                        <!--<li ui-sref-active="active">
                             <a ui-sref="tbc-formulario" ng-click="vm.collapseNavbar()">
                                 <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
                                 <span data-translate="global.menu.entities.tbcFormulario">Tbc Formulario</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-formulario-componentes" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcFormularioComponentes">Tbc Formulario Componentes</span>
+                            </a>
+                        </li>-->
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-status" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcStatus">Tbc Status</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-forma-armazenamento" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcFormaArmazenamento">Tbc Forma Armazenamento</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbr-amostra" ng-click="vm.collapseNavbar()">
+                                <span class="fa fa-flask"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbrAmostra">Tbr Amostra</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-genero" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcGenero">Tbc Genero</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-qualidade-amostra" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcQualidadeAmostra">Tbc Qualidade Amostra</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbr-analise" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbrAnalise">Tbr Analise</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbc-analise-resultado" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbcAnaliseResultado">Tbc Analise Resultado</span>
+                            </a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="tbr-analise-resultado" ng-click="vm.collapseNavbar()">
+                                <span class="glyphicon glyphicon-asterisk"></span>&nbsp;
+                                <span data-translate="global.menu.entities.tbrAnaliseResultado">Tbr Analise Resultado</span>
                             </a>
                         </li>
                         <!-- jhipster-needle-add-entity-to-menu - JHipster will add entities to the menu here -->
@@ -322,4 +383,4 @@
             </ul>
         </div>
     </div>
-</nav>
+</md-toolbar>

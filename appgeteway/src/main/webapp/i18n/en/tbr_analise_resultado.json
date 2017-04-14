@@ -1,0 +1,46 @@
+{
+    "appgetewayApp": {
+        "tbr_analise_resultado" : {
+            "home": {
+                "title": "Tbr Analise Resultados",
+                "createLabel": "Create a new Tbr Analise Resultado",
+                "createOrEditLabel": "Create or edit a Tbr Analise Resultado",
+                "search": "Search for Tbr Analise Resultado"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbr Analise Resultado {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbr Analise Resultado"
+            },
+            "analises_componente": "Analises Componente",
+            "resultado": "Resultado",
+            "autorizado_por": "Autorizado Por",
+            "autorizado_data": "Autorizado Data",
+            "cancelado_por": "Cancelado Por",
+            "cancelado_data": "Cancelado Data",
+            "suspenso_por": "Suspenso Por",
+            "suspenso_data": "Suspenso Data",
+            "rejeitado_por": "Rejeitado Por",
+            "rejeitado_data": "Rejeitado Data",
+            "disponivel_por": "Disponivel Por",
+            "disponivel_data": "Disponivel Data",
+            "resultado_digitado": "Resultado Digitado",
+            "unidade_medida": "Unidade Medida",
+            "tbr_analise_id": "Tbr Analise Id",
+            "resultado_texto": "Resultado Texto",
+            "repetido": "Repetido",
+            "tbr_amostra_id": "Tbr Amostra Id",
+            "tbc_status": "Tbc Status",
+            "tbc_status_ultimo": "Tbc Status Ultimo",
+            "tbc_analises_componente": "Tbc Analises Componente"
+        }
+    },
+    "limsApp": {
+        "tbr_analise_resultado" : {
+            "created": "A new Tbr Analise Resultado is created with identifier {{ param }}",
+            "updated": "A Tbr Analise Resultado is updated with identifier {{ param }}",
+            "deleted": "A Tbr Analise Resultado is deleted with identifier {{ param }}"
+        }
+    }
+}

@@ -5,9 +5,9 @@
         .module('appgetewayApp')
         .controller('Tbc_formularioDialogController', Tbc_formularioDialogController);
 
-    Tbc_formularioDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tbc_formulario', 'Tbc_instituicao', 'Tbc_sub_grupo', 'Tbc_tipo_cadastro'];
+    Tbc_formularioDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', 'entity', 'Tbc_formulario', 'Tbc_instituicao', 'Tbc_sub_grupo', 'Tbc_tipo_cadastro','Tbc_status'];
 
-    function Tbc_formularioDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tbc_formulario, Tbc_instituicao, Tbc_sub_grupo, Tbc_tipo_cadastro) {
+    function Tbc_formularioDialogController ($timeout, $scope, $stateParams, $uibModalInstance, entity, Tbc_formulario, Tbc_instituicao, Tbc_sub_grupo, Tbc_tipo_cadastro, Tbc_status) {
         var vm = this;
 
         vm.tbc_formulario = entity;
@@ -16,6 +16,7 @@
         vm.tbc_instituicaos = Tbc_instituicao.query();
         vm.tbc_sub_grupos = Tbc_sub_grupo.query();
         vm.tbc_tipo_cadastros = Tbc_tipo_cadastro.query();
+        vm.tbc_statuses = Tbc_status.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();
@@ -43,7 +44,6 @@
         function onSaveError () {
             vm.isSaving = false;
         }
-
 
     }
 })();

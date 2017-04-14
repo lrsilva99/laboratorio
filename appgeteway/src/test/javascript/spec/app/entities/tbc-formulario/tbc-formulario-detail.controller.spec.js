@@ -4,7 +4,7 @@ describe('Controller Tests', function() {
 
     describe('Tbc_formulario Management Detail Controller', function() {
         var $scope, $rootScope;
-        var MockEntity, MockPreviousState, MockTbc_formulario, MockTbc_instituicao, MockTbc_sub_grupo, MockTbc_tipo_cadastro;
+        var MockEntity, MockPreviousState, MockTbc_formulario, MockTbc_instituicao, MockTbc_sub_grupo, MockTbc_tipo_cadastro, MockTbc_status;
         var createController;
 
         beforeEach(inject(function($injector) {
@@ -16,6 +16,7 @@ describe('Controller Tests', function() {
             MockTbc_instituicao = jasmine.createSpy('MockTbc_instituicao');
             MockTbc_sub_grupo = jasmine.createSpy('MockTbc_sub_grupo');
             MockTbc_tipo_cadastro = jasmine.createSpy('MockTbc_tipo_cadastro');
+            MockTbc_status = jasmine.createSpy('MockTbc_status');
             
 
             var locals = {
@@ -26,7 +27,8 @@ describe('Controller Tests', function() {
                 'Tbc_formulario': MockTbc_formulario,
                 'Tbc_instituicao': MockTbc_instituicao,
                 'Tbc_sub_grupo': MockTbc_sub_grupo,
-                'Tbc_tipo_cadastro': MockTbc_tipo_cadastro
+                'Tbc_tipo_cadastro': MockTbc_tipo_cadastro,
+                'Tbc_status': MockTbc_status
             };
             createController = function() {
                 $injector.get('$controller')("Tbc_formularioDetailController", locals);

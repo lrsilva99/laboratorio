@@ -2,19 +2,11 @@
     "appgetewayApp": {
         "tbc_tipo_campo" : {
             "home": {
-                "title": "Tbc Tipo Campos",
-                "createLabel": "Criar novo Tbc Tipo Campo",
-                "createOrEditLabel": "Criar ou editar Tbc Tipo Campo",
-                "search": "Pesquisar por Tbc Tipo Campo"
-            },
-            "delete": {
-                "question": "Tem certeza de que deseja excluir Tbc Tipo Campo {{ id }}?"
+                "title": "Tipos de campos"
             },
             "detail": {
                 "title": "Tbc Tipo Campo"
-            },
-            "nome": "Nome",
-            "descricao": "Descricao"
+            }
         }
     },
     "limsApp": {

@@ -1,0 +1,45 @@
+{
+    "appgetewayApp": {
+        "tbc_analise_resultado" : {
+            "home": {
+                "title": "Tbc Analise Resultados",
+                "createLabel": "Create a new Tbc Analise Resultado",
+                "createOrEditLabel": "Create or edit a Tbc Analise Resultado",
+                "search": "Search for Tbc Analise Resultado"
+            },
+            "delete": {
+                "question": "Are you sure you want to delete Tbc Analise Resultado {{ id }}?"
+            },
+            "detail": {
+                "title": "Tbc Analise Resultado"
+            },
+            "analises_componente": "Analises Componente",
+            "resultado": "Resultado",
+            "autorizado_por": "Autorizado Por",
+            "autorizado_data": "Autorizado Data",
+            "cancelado_por": "Cancelado Por",
+            "cancelado_data": "Cancelado Data",
+            "suspenso_por": "Suspenso Por",
+            "suspenso_data": "Suspenso Data",
+            "rejeitado_por": "Rejeitado Por",
+            "rejeitado_data": "Rejeitado Data",
+            "disponivel_por": "Disponivel Por",
+            "disponivel_data": "Disponivel Data",
+            "resultado_digitado": "Resultado Digitado",
+            "unidade_medida": "Unidade Medida",
+            "tbr_analise_id": "Tbr Analise Id",
+            "resultado_texto": "Resultado Texto",
+            "repetido": "Repetido",
+            "tbc_amostra_id": "Tbc Amostra Id",
+            "tbc_status": "Tbc Status",
+            "tbc_status_ultimo": "Tbc Status Ultimo"
+        }
+    },
+    "limsApp": {
+        "tbc_analise_resultado" : {
+            "created": "A new Tbc Analise Resultado is created with identifier {{ param }}",
+            "updated": "A Tbc Analise Resultado is updated with identifier {{ param }}",
+            "deleted": "A Tbc Analise Resultado is deleted with identifier {{ param }}"
+        }
+    }
+}

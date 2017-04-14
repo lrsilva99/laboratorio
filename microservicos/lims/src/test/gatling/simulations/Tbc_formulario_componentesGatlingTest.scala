@@ -68,7 +68,7 @@ class Tbc_formulario_componentesGatlingTest extends Simulation {
             .exec(http("Create new tbc_formulario_componentes")
             .post("/lims/api/tbc-formulario-componentes")
             .headers(headers_http_authenticated)
-            .body(StringBody("""{"id":null, "nome":"SAMPLE_TEXT", "descricao":null, "linha":"0", "unidade_medida":"SAMPLE_TEXT", "valor_padrao":null, "configuracao":null}""")).asJSON
+            .body(StringBody("""{"id":null, "nome":"SAMPLE_TEXT", "descricao":null, "linha":"0", "unidade_medida":"SAMPLE_TEXT", "valor_padrao":null, "configuracao":null, "obrigatorio":null, "nome_campo_destino":"SAMPLE_TEXT", "visivel":null, "bloqueado":null, "tamanho":"0"}""")).asJSON
             .check(status.is(201))
             .check(headerRegex("Location", "(.*)").saveAs("new_tbc_formulario_componentes_url"))).exitHereIfFailed
             .pause(10)

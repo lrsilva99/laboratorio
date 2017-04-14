@@ -62,6 +62,32 @@
             "fieldValidateRules": [
                 "required"
             ]
+        },
+        {
+            "fieldName": "obrigatorio",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "nome_campo_destino",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "visivel",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "bloqueado",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "tamanho",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
         }
     ],
     "changelogDate": "20170303184221",

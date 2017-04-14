@@ -24,6 +24,15 @@
             "otherEntityName": "tbc_tipo_cadastro",
             "relationshipType": "many-to-one",
             "otherEntityField": "id"
+        },
+        {
+            "relationshipName": "tbc_status",
+            "otherEntityName": "tbc_status",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "id"
         }
     ],
     "fields": [

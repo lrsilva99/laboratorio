@@ -1,0 +1,181 @@
+<div>
+    <h2 data-translate="appgetewayApp.tbr_analise_resultado.home.title">Tbr Analise Resultados</h2>
+    <jhi-alert></jhi-alert>
+        <a   ui-sref="tbr-amostra" data-translate="appgetewayApp.tbr_analise_resultado.selecionada" translate-values="{param: '{{vm.tbr_amostra.identificao_amostra}}'}">voltar</a>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="tbr-analise-resultado.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span class="hidden-xs"  data-translate="appgetewayApp.tbr_analise_resultado.home.createLabel">
+                        Create new Tbr Analise Resultado
+                    </span>
+                </button>
+            </div>
+            <div class="col-xs-8 no-padding-right">
+                <form name="searchForm" class="form-inline">
+                    <div class="input-group pull-right" >
+                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery" placeholder="{{ 'appgetewayApp.tbr_analise_resultado.home.search' | translate }}">
+                        <span  class="input-group-btn width-min" >
+                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
+                                <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                        </span>
+                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
+                            <button class="btn btn-info" ng-click="vm.clear()">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <md-input-container >
+        <md-switch class="md-primary" ng-model="vm.detalhes" ng-click="selecionado = vm.atualizaCamposStatus()">Opções</md-switch>
+    </md-input-container>
+    <div flex-xs flex-gt-xs="100" layout="column" ng-repeat="grupo_tbr_analise_resultado in vm.tbr_analise_resultados">
+        <md-card md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <div ng-repeat="tbr_analise_resultado in grupo_tbr_analise_resultado.tbr_analise_resultados ">
+                        <div class= "group_status"
+                             md-colors="{background: '{{tbr_analise_resultado.tbc_status.cor  }}-A200'}"
+                             md-justified="column"
+                             class="primary line"
+                             ng-show = !vm.detalhes>
+                            <span class="status"></span>&nbsp;
+                        </div>
+                        <div ng-if="vm.validaGrupoAnalise(tbr_analise_resultado.tbc_analises_componente.tbc_analises) != ''" layout-align="center">
+                            <h4 class="control-label"  >{{tbr_analise_resultado.tbc_analises_componente.tbc_analises.nome}}</h4>
+                        </div>
+
+                        <div class="form-group"   >
+                            <label class="control-label" >{{tbr_analise_resultado.analises_componente || tbr_analise_resultado.unidade_medida}}</label>
+                            <span  ng-if="tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome == 'Texto'">
+                                <input type="text"
+                                       class="form-control"
+                                       ng-model="tbr_analise_resultado.resultado"
+                                       ng-blur="vm.verificarCalculo(grupo_tbr_analise_resultado, $index)"
+                                       ng-disabled = "{{vm.desableComponentEntradaResultado(tbr_analise_resultado.tbc_status)}}"
+                                />
+                            </span>
+                            <span  ng-if="tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome == 'Calculo'">
+                                <input ng-disabled = 'true'
+                                       type="text"
+                                       class="form-control"
+                                       ng-model="tbr_analise_resultado.resultado"/>
+                            </span>
+                            <span  ng-if="tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome == 'Inteiro'">
+                                <input type="number"
+                                       class="form-control"
+                                       string-to-number
+                                       ng-model="tbr_analise_resultado.resultado"
+                                       ng-required= "tbc_formulario_componentes.obrigatorio"
+                                       ng-blur="vm.verificarCalculo(grupo_tbr_analise_resultado, $index)"
+                                       ng-disabled = "{{vm.desableComponentEntradaResultado(tbr_analise_resultado.tbc_status)}}"
+                                />
+                            </span>
+                            <span  ng-if="tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome == 'Double'">
+                                <input type="number"
+                                       class="form-control"
+                                       string-to-number
+                                       name="{{tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome}}"
+                                       id = "{{tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome}}"
+                                       ng-model="tbr_analise_resultado.resultado"
+                                       ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"
+                                       ng-blur="vm.verificarCalculo(grupo_tbr_analise_resultado, $index)"
+                                       ng-disabled = "{{vm.desableComponentEntradaResultado(tbr_analise_resultado.tbc_status)}}"
+                                />
+                            </span>
+                            <span  ng-if="tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome == 'Editor HTML'">
+                                <div text-angular ng-model="tbr_analise_resultado.resultado"
+                                     ta-disabled = "{{vm.desableComponentEntradaResultado(tbr_analise_resultado.tbc_status)}}"
+                                ></div>
+                            </span>
+                            <span  ng-if="tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome == 'Lista de Valores'">
+                                <select class="form-control" ng-model="tbr_analise_resultado.resultado" ng-options="x for x in vm.opcaoNgOptions(tbr_analise_resultado.tbc_analises_componente.configuracao)"></select>
+                            </span>
+
+                            <div ng-show="vm.detalhes">
+                                <div class="form-group">
+                                    <md-switch
+                                        class="md-primary"
+                                        ng-model="tbr_analise_resultado.repetido"
+                                        ng-show = vm.detalhes
+                                        ng-disabled = "{{vm.desableComponentEntradaResultado(tbr_analise_resultado.tbc_status)}}">
+                                        Rep. Confirmado
+                                    </md-switch>
+
+
+                                    <span ng-if="vm.agrupaGrupoAnalise(tbr_analise_resultado.tbr_analise_id) ==  true">
+                                        <md-switch class="md-primary"
+                                                   ng-click="selecionado = vm.liberaReativaAnalise(grupo_tbr_analise_resultado,selecionado)"
+                                                   ng-show="vm.ngshowTbc_status(grupo_tbr_analise_resultado)"
+                                                   if = "tbr_analise_resultado.tbr_analise_id   "
+                                        >
+                                                <span>{{ vm.validaAtivado(tbr_analise_resultado) | translate }}</span>
+                                            </md-switch>
+
+                                        <span  ng-if="tbr_analise_resultado.tbc_analises_componente.tbc_tipo_campo.nome != 'Editor HTML'">
+
+                                            <a ng-click="show = vm.ativaObservacao(show)">{{ 'entity.action.observacao' | translate }}</a>
+                                            <div text-angular ng-model="grupo_tbr_analise_resultado.observacao" ng-show = show  || {{grupo_tbr_analise_resultado.analise !=""}} ng-click="vm.validaObservacao(grupo_tbr_analise_resultado, tbr_analise_resultado)"
+                                                 ta-disabled = "{{vm.desableComponentEntradaResultado(tbr_analise_resultado.tbc_status)}}">
+                                            </div>
+                                        </span>
+                                    </span>
+                                </div>
+                                <div md-colors="{background: '{{tbr_analise_resultado.tbc_status.cor  }}-A200'}"  md-justified="column" class="primary line">
+                                    <span class="status">{{tbr_analise_resultado.tbc_status.nome}}  </span>&nbsp;
+                                </div>
+                            </div>
+                        </div>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <div class="btn-group flex-btn-group-container" ng-show = vm.detalhes>
+                                <button type="submit"
+                                        ui-sref="tbr-amostra-detail({id:tbr_amostra.id})"
+                                        class="btn btn-info btn-sm">
+                                    <span class="glyphicon glyphicon-eye-open"></span>
+                                    <span class="hidden-xs hidden-sm" data-translate="entity.action.view"></span>
+                                </button>
+                                <button type="submit"
+                                        ui-sref="tbr-analise-resultado.delete({id:tbr_analise_resultado.id})"
+                                        class="btn btn-danger btn-sm"
+                                        ng-show="vm.ngshowTbc_status(grupo_tbr_analise_resultado)"
+                                        ng-disabled = "{{vm.desableComponentEntradaResultado(tbr_analise_resultado.tbc_status)}}">
+                                >
+                                    <span class="glyphicon glyphicon-remove-circle"></span>
+                                    <span class="hidden-xs hidden-sm" data-translate="entity.action.delete"></span>
+                                </button>
+                                <button type="submit"
+                                        ui-sref="tbr-analise({id_Amostra:vm.tbr_amostra_id})"
+                                        class="btn btn-primary btn-sm">
+                                    <span class="glyphicon glyphicon-tint"></span>
+                                    <span class="hidden-xs hidden-sm" data-translate="entity.action.tbc_analise"></span>
+                                </button>
+                            </div>
+                        </md-card-actions>
+                    </div>
+                </md-card-title-text>
+                <md-card-title-media ng-show = vm.detalhes >
+                    <md-input-container >
+                        <md-switch class="md-primary md-noneMobile" ng-model="vm.detalhes">Opçoes</md-switch>
+                    </md-input-container>
+
+                </md-card-title-media>
+            </md-card-title>
+        </md-card>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary" ng-click="vm.save()" >
+            <span class="glyphicon glyphicon-save"></span>&nbsp;
+            <span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</div>

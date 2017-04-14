@@ -17,4 +17,7 @@ public interface Tbc_analises_componenteRepository extends JpaRepository<Tbc_ana
 
     @Query("select u from Tbc_analises_componente u where u.tbc_analises.id = ?1")
     Page<Tbc_analises_componente> findAllForAnalises(@Param("id") Long id, Pageable pageable);
+
+    @Query("select u from Tbc_analises_componente u where u.tbc_analises.id = ?1 order by u.linha")
+    List<Tbc_analises_componente> findAllListForAnalise(@Param("id") Long id);
 }

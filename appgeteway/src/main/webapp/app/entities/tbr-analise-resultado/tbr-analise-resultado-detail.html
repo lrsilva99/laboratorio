@@ -1,0 +1,103 @@
+
+<div>
+    <h2><span data-translate="appgetewayApp.tbr_analise_resultado.detail.title">Tbr Analise Resultado</span> {{vm.tbr_analise_resultado.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.analises_componente">Analises Componente</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.analises_componente}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.resultado">Resultado</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.resultado}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.autorizado_por">Autorizado Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.autorizado_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.autorizado_data">Autorizado Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.autorizado_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.cancelado_por">Cancelado Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.cancelado_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.cancelado_data">Cancelado Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.cancelado_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.suspenso_por">Suspenso Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.suspenso_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.suspenso_data">Suspenso Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.suspenso_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.rejeitado_por">Rejeitado Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.rejeitado_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.rejeitado_data">Rejeitado Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.rejeitado_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.disponivel_por">Disponivel Por</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.disponivel_por}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.disponivel_data">Disponivel Data</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.disponivel_data | date:'medium'}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.resultado_digitado">Resultado Digitado</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.resultado_digitado}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.unidade_medida">Unidade Medida</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.unidade_medida}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.tbr_analise_id">Tbr Analise Id</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.tbr_analise_id}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.resultado_texto">Resultado Texto</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.resultado_texto}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.repetido">Repetido</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.repetido}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.tbr_amostra_id">Tbr Amostra Id</span></dt>
+        <dd>
+            <span>{{vm.tbr_analise_resultado.tbr_amostra_id}}</span>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.tbc_status">Tbc Status</span></dt>
+        <dd>
+            <a ui-sref="tbc-status-detail({id:vm.tbr_analise_resultado.tbc_status.id})">{{vm.tbr_analise_resultado.tbc_status.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.tbc_status_ultimo">Tbc Status Ultimo</span></dt>
+        <dd>
+            <a ui-sref="tbc-status-detail({id:vm.tbr_analise_resultado.tbc_status_ultimo.id})">{{vm.tbr_analise_resultado.tbc_status_ultimo.id}}</a>
+        </dd>
+        <dt><span data-translate="appgetewayApp.tbr_analise_resultado.tbc_analises_componente">Tbc Analises Componente</span></dt>
+        <dd>
+            <a ui-sref="tbc-analises-componente-detail({id:vm.tbr_analise_resultado.tbc_analises_componente.id})">{{vm.tbr_analise_resultado.tbc_analises_componente.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="tbr-analise-resultado-detail.edit({id:vm.tbr_analise_resultado.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

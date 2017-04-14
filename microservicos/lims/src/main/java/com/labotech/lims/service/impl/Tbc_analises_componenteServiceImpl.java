@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
 
+import java.util.List;
+
 import static org.elasticsearch.index.query.QueryBuilders.*;
 
 /**
@@ -91,5 +93,12 @@ public class Tbc_analises_componenteServiceImpl implements Tbc_analises_componen
         log.debug("Request to search for a page of Tbc_analises_componentes for query {}", query);
         Page<Tbc_analises_componente> result = tbc_analises_componenteSearchRepository.search(queryStringQuery(query), pageable);
         return result;
+    }
+
+    @Override
+    public List<Tbc_analises_componente> findAllListForAnalise(Long id) {
+
+        List<Tbc_analises_componente> tbc_analises_componentes = tbc_analises_componenteRepository.findAllListForAnalise(id);
+        return tbc_analises_componentes;
     }
 }
